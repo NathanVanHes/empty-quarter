@@ -47,19 +47,19 @@
   <div style="margin-top:54px">
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;height:300px;border:1px solid rgba(38,40,46,.16);background:rgba(38,40,46,.16)">
       <div style="position:relative;overflow:hidden;background:#BC5A37">
-        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.2)" stroke-width="1"><sc-for list="{{ facetCoverTris }}" as="t" hint-placeholder-count="60"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg>
-      </div>
-      <div style="position:relative;overflow:hidden;background:#E2D6BE">
-        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,#BC5A37 2.1px,transparent 2.6px);background-size:17px 17px;-webkit-mask-image:linear-gradient(115deg,#000 30%,transparent 95%);mask-image:linear-gradient(115deg,#000 30%,transparent 95%)"></div>
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.8)" stroke-width="1"><sc-for list="{{ facetCoverTris }}" as="t" hint-placeholder-count="60"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg>
       </div>
       <div style="position:relative;overflow:hidden;background:#4F6157">
         <div style="position:absolute;inset:0;opacity:.85"><svg width="100%" height="100%" style="display:block"><defs><pattern id="oct-cover" width="84" height="84" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(241,235,221,.22)" stroke-width="1.1"><rect x="12.3" y="12.3" width="59.5" height="59.5"></rect><polygon points="42,0 84,42 42,84 0,42"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-cover)"></rect></svg></div>
       </div>
+      <div style="position:relative;overflow:hidden;background:#E2D6BE">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,#BC5A37 2.1px,transparent 2.6px);background-size:17px 17px"></div>
+      </div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:12px">
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.6)">01 · Facet</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.6)">02 · Mesh</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.6)">03 · Khatam</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.6)">02 · Khatam</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.6)">03 · Pinboard</div>
     </div>
   </div>
 
@@ -147,7 +147,7 @@
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">Pattern system</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">الأنماط</span>
     </div>
-    <p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 14px">Two working pattern languages — Facet and Mesh — with the khatam star as a supporting ornament tile. Each is abstract, the desert as geometry, and each tiles seamlessly from a wall mural down to a 14px app texture.</p>
+    <p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 14px">Three pattern languages — Facet, Khatam and Pinboard — each shown in both voices, at scale, and in UI. Facet is taken directly from the classroom walls: one faceted lattice in two intensities, dunes (orange) and plaster (light). Abstract, the desert as geometry, from a wall mural down to a 14px app texture.</p>
   </section>
 
   <!-- ============ 01 · FACET ============ -->
@@ -156,49 +156,73 @@
     <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:18px">
       <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.16em;color:#BC5A37">01</span>
       <h3 style="font-family:'Hanken Grotesk';font-weight:600;font-size:23px;letter-spacing:-.01em;margin:0">Facet</h3>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.45)">the canyon, broken to planes</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.45)">the classroom wall, broken to planes</span>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:19px;color:rgba(38,40,46,.42);margin-left:auto">الأوجه</span>
     </div>
-    <!-- hero band -->
+    <!-- dunes band — the orange voice -->
     <div style="position:relative;height:320px;overflow:hidden;border-radius:4px;background:#BC5A37">
-      <svg viewBox="0 0 1180 320" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.2)" stroke-width="1"><sc-for list="{{ facetHeroTris }}" as="t" hint-placeholder-count="120"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg>
+      <svg viewBox="0 0 1180 320" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.8)" stroke-width="1"><sc-for list="{{ facetHeroTris }}" as="t" hint-placeholder-count="120"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg>
     </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facet grid · shaded to the lattice</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facet · dunes — the orange voice, cream seams between planes</div>
 
-    <!-- strata band — the tile, repeating -->
-    <div style="position:relative;height:320px;overflow:hidden;border-radius:4px;margin-top:24px">
-      <svg width="100%" height="100%" style="display:block">
-        <defs><pattern id="sed-tile" width="400" height="300" patternUnits="userSpaceOnUse"><rect width="400" height="300" fill="#D09C6E"></rect><sc-for list="{{ sedimentBands }}" as="b" hint-placeholder-count="10"><path d="{{ b.d }}" fill="{{ b.fill }}"></path></sc-for></pattern></defs>
-        <rect width="100%" height="100%" fill="url(#sed-tile)"></rect>
-      </svg>
+    <!-- plaster band — the light voice -->
+    <div style="position:relative;height:320px;overflow:hidden;border-radius:4px;background:#EFE7D5;border:1px solid rgba(38,40,46,.12);margin-top:24px">
+      <svg viewBox="0 0 1180 320" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(255,255,255,.95)" stroke-width="2"><sc-for list="{{ facetLightPolys }}" as="t" hint-placeholder-count="60"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg>
     </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Strata · sediment — seamless tile, shown repeating</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facet · plaster — the light voice, larger planes, white seams</div>
 
-    <!-- khatam band -->
-    <div style="position:relative;height:320px;overflow:hidden;border-radius:4px;background:#4F6157;margin-top:24px">
-      <svg width="100%" height="100%" style="display:block"><defs><pattern id="oct-hero3" width="92" height="92" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(241,235,221,.2)" stroke-width="1.1"><rect x="13.5" y="13.5" width="65" height="65"></rect><polygon points="46,0 92,46 46,92 0,46"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-hero3)"></rect></svg>
+    <!-- scale study — same lattice, three densities -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37;margin:28px 0 14px">At scale — the same lattice, three densities</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div><div style="position:relative;height:200px;border-radius:3px;overflow:hidden;background:#BC5A37"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.85)" stroke-width="1.4"><sc-for list="{{ duneScale1 }}" as="t" hint-placeholder-count="12"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Wall · 1×</div></div>
+      <div><div style="position:relative;height:200px;border-radius:3px;overflow:hidden;background:#BC5A37"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.85)" stroke-width="1"><sc-for list="{{ duneScale2 }}" as="t" hint-placeholder-count="40"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Card · 2×</div></div>
+      <div><div style="position:relative;height:200px;border-radius:3px;overflow:hidden;background:#BC5A37"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.85)" stroke-width=".7"><sc-for list="{{ duneScale3 }}" as="t" hint-placeholder-count="120"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Texture · 4×</div></div>
     </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Khatam · the one ornament — signage, watermarks, dividers</div>
-    <p style="font-family:'Hanken Grotesk';font-size:13.5px;color:rgba(38,40,46,.58);max-width:640px;margin:16px 0 0"><b style="font-weight:600;color:rgba(38,40,46,.8)">Where it lives:</b> hero brand moments, wall murals, section covers, posters and splash. The bold, terracotta-led voice.</p>
-  </section>
-  </sc-if>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px">
+      <div><div style="position:relative;height:200px;border-radius:3px;overflow:hidden;background:#EFE7D5;border:1px solid rgba(38,40,46,.12)"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(255,255,255,.95)" stroke-width="2"><sc-for list="{{ plasterScale1 }}" as="t" hint-placeholder-count="12"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Wall · 1× · plaster</div></div>
+      <div><div style="position:relative;height:200px;border-radius:3px;overflow:hidden;background:#EFE7D5;border:1px solid rgba(38,40,46,.12)"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(255,255,255,.95)" stroke-width="1.4"><sc-for list="{{ plasterScale2 }}" as="t" hint-placeholder-count="40"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Card · 2× · plaster</div></div>
+      <div><div style="position:relative;height:200px;border-radius:3px;overflow:hidden;background:#EFE7D5;border:1px solid rgba(38,40,46,.12)"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(255,255,255,.95)" stroke-width="1"><sc-for list="{{ plasterScale3 }}" as="t" hint-placeholder-count="120"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Texture · 4× · plaster</div></div>
+    </div>
 
-  <!-- ============ FACET AT SCALE · TERRAIN MURAL ============ -->
-  <section style="margin-top:84px">
-    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:18px">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.16em;color:#BC5A37">Facet · at scale</span>
-      <h3 style="font-family:'Hanken Grotesk';font-weight:600;font-size:23px;letter-spacing:-.01em;margin:0">The terrain</h3>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.45)">the desert, built from planes — pure pattern</span>
-      <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:19px;color:rgba(38,40,46,.42);margin-left:auto">التضاريس</span>
-    </div>
+    <!-- terrain — an application of the lattice -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37;margin:28px 0 14px">Applied — terrain, built from the lattice</div>
     <div style="border-radius:4px;overflow:hidden;border:1px solid rgba(38,40,46,.14)">
       <svg viewBox="0 0 1180 460" style="width:100%;height:auto;display:block">
         <rect x="0" y="0" width="1180" height="460" fill="#EFE7D5"></rect>
-        <sc-for list="{{ muralTris }}" as="t" hint-placeholder-count="120"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for>
+        <sc-for list="{{ muralTris }}" as="t" hint-placeholder-count="150"><polygon points="{{ t.pts }}" fill="{{ t.fill }}" stroke="rgba(255,255,255,.7)" stroke-width="1"></polygon></sc-for>
       </svg>
     </div>
-    <p style="font-family:'Hanken Grotesk';font-size:13.5px;color:rgba(38,40,46,.58);max-width:680px;margin:14px 0 0">The mural is pattern, nothing more — dunes built from planes, running edge to edge. Nothing sits on top of it. It works as a wall, a hero band, a cover; the journey lives in its own UI layer below.</p>
+    <p style="font-family:'Hanken Grotesk';font-size:13.5px;color:rgba(38,40,46,.58);max-width:680px;margin:14px 0 0">Terrain is not a separate pattern — it is Facet doing landscape. The same lattice runs edge to edge; planes assigned to the dune palette become masses, planes left in plaster become sky and plain. This is exactly how the classroom artworks are constructed.</p>
+
+    <!-- in UI -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37;margin:28px 0 14px">In UI — light &amp; dark</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <div style="border-radius:12px;overflow:hidden;background:#F1EBDD;border:1px solid rgba(38,40,46,.12)">
+          <div style="position:relative;height:110px;overflow:hidden"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(255,255,255,.95)" stroke-width="1.4"><sc-for list="{{ plasterScale2 }}" as="t" hint-placeholder-count="40"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div>
+          <div style="padding:18px 20px 20px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#BC5A37">Today's route</div>
+            <div style="font-family:'Hanken Grotesk';font-weight:600;font-size:17px;color:#26282E;margin-top:6px">Chapter 4 · Algebra</div>
+            <div style="margin-top:12px;height:4px;border-radius:2px;background:rgba(38,40,46,.1)"><div style="width:56%;height:100%;border-radius:2px;background:#BC5A37"></div></div>
+          </div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">UI · light — plaster header</div>
+      </div>
+      <div>
+        <div style="border-radius:12px;overflow:hidden;background:#26282E">
+          <div style="position:relative;height:110px;overflow:hidden"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.5)" stroke-width="1"><sc-for list="{{ duneScale2 }}" as="t" hint-placeholder-count="40"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div>
+          <div style="padding:18px 20px 20px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#CB7A50">Tonight's passage</div>
+            <div style="font-family:'Hanken Grotesk';font-weight:600;font-size:17px;color:#F1EBDD;margin-top:6px">Focus session · 25 min</div>
+            <div style="margin-top:12px;height:4px;border-radius:2px;background:rgba(241,235,221,.14)"><div style="width:56%;height:100%;border-radius:2px;background:#CB7A50"></div></div>
+          </div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">UI · dark — dune header on ink</div>
+      </div>
+    </div>
+    <p style="font-family:'Hanken Grotesk';font-size:13.5px;color:rgba(38,40,46,.58);max-width:640px;margin:16px 0 0"><b style="font-weight:600;color:rgba(38,40,46,.8)">Where it lives:</b> one lattice, two intensities — mirroring the physical classroom. <b style="font-weight:600;color:rgba(38,40,46,.8)">Dunes</b> is the artwork and projection voice: hero moments, murals, terrain, covers. <b style="font-weight:600;color:rgba(38,40,46,.8)">Plaster</b> is the wall voice: quiet faceted backgrounds that content sits on.</p>
   </section>
+  </sc-if>
 
   <!-- ============ THE ROUTE · UI SYSTEM ============ -->
   <section style="margin-top:84px">
@@ -264,54 +288,129 @@
     <p style="font-family:'Hanken Grotesk';font-size:13.5px;color:rgba(38,40,46,.58);max-width:680px;margin:16px 0 0">Two glyphs only: the <b style="font-weight:600;color:rgba(38,40,46,.8)">diamond</b> is a point on the route — open ahead, terracotta when cleared, green at arrival. The <b style="font-weight:600;color:rgba(38,40,46,.8)">triangle</b> is you. Solid line behind, dotted line ahead. It lives on clean plaster or ink surfaces, never on pattern.</p>
   </section>
 
-  <!-- ============ 02 · MESH ============ -->
+  <!-- ============ 02 · KHATAM ============ -->
   <sc-if value="{{ show02 }}" hint-placeholder-val="{{ true }}">
   <section style="margin-top:56px">
     <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:18px">
       <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.16em;color:#BC5A37">02</span>
-      <h3 style="font-family:'Hanken Grotesk';font-weight:600;font-size:23px;letter-spacing:-.01em;margin:0">Mesh</h3>
+      <h3 style="font-family:'Hanken Grotesk';font-weight:600;font-size:23px;letter-spacing:-.01em;margin:0">Khatam</h3>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.45)">the eight-point star, drawn in line</span>
+      <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:19px;color:rgba(38,40,46,.42);margin-left:auto">الخاتم</span>
+    </div>
+    <p style="font-family:'Hanken Grotesk';font-size:15px;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 22px">The one ornament. A square and a diamond overlaid — never filled, never dense. It sits quietly behind signage, watermarks and dividers on both surfaces.</p>
+
+    <!-- light band -->
+    <div style="position:relative;height:240px;overflow:hidden;border-radius:4px;background:#EFE7D5;border:1px solid rgba(38,40,46,.12)">
+      <svg width="100%" height="100%" style="display:block"><rect width="100%" height="100%" fill="url(#oct-tc)"></rect></svg>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Khatam · light — terracotta line on plaster</div>
+
+    <!-- dark band -->
+    <div style="position:relative;height:240px;overflow:hidden;border-radius:4px;background:#26282E;margin-top:24px">
+      <svg width="100%" height="100%" style="display:block"><defs><pattern id="oct-cream" width="96" height="96" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(241,235,221,.3)" stroke-width="1.1"><rect x="14" y="14" width="68" height="68"></rect><polygon points="48,0 96,48 48,96 0,48"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-cream)"></rect></svg>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Khatam · dark — cream line on ink</div>
+
+    <!-- scale study -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37;margin:28px 0 14px">At scale — the same star, three densities</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div><div style="height:200px;border-radius:3px;overflow:hidden;background:#EFE7D5;border:1px solid rgba(38,40,46,.12)"><svg width="100%" height="100%" style="display:block"><defs><pattern id="oct-k1" width="132" height="132" patternUnits="userSpaceOnUse"><g fill="none" stroke="#BC5A37" stroke-width="1.2"><rect x="19.3" y="19.3" width="93.4" height="93.4"></rect><polygon points="66,0 132,66 66,132 0,66"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-k1)"></rect></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Wall · 1×</div></div>
+      <div><div style="height:200px;border-radius:3px;overflow:hidden;background:#EFE7D5;border:1px solid rgba(38,40,46,.12)"><svg width="100%" height="100%" style="display:block"><defs><pattern id="oct-k2" width="88" height="88" patternUnits="userSpaceOnUse"><g fill="none" stroke="#BC5A37" stroke-width="1"><rect x="12.9" y="12.9" width="62.3" height="62.3"></rect><polygon points="44,0 88,44 44,88 0,44"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-k2)"></rect></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Card · 1.5×</div></div>
+      <div><div style="height:200px;border-radius:3px;overflow:hidden;background:#EFE7D5;border:1px solid rgba(38,40,46,.12)"><svg width="100%" height="100%" style="display:block"><defs><pattern id="oct-k3" width="48" height="48" patternUnits="userSpaceOnUse"><g fill="none" stroke="#BC5A37" stroke-width=".8"><rect x="7" y="7" width="34" height="34"></rect><polygon points="24,0 48,24 24,48 0,24"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-k3)"></rect></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Texture · 3×</div></div>
+    </div>
+
+    <!-- in UI -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37;margin:28px 0 14px">In UI — light &amp; dark</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <div style="position:relative;border-radius:12px;overflow:hidden;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);padding:22px 24px;min-height:150px">
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.35"><rect width="100%" height="100%" fill="url(#oct-ink)"></rect></svg>
+          <div style="position:relative">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#BC5A37">Certificate</div>
+            <div style="font-family:'Hanken Grotesk';font-weight:600;font-size:17px;color:#26282E;margin-top:6px">Route complete · Chapter 4</div>
+            <div style="font-family:'Hanken Grotesk';font-size:13px;color:rgba(38,40,46,.6);margin-top:4px">Salim A. — 92 waypoints cleared</div>
+          </div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">UI · light — watermark behind certificate</div>
+      </div>
+      <div>
+        <div style="position:relative;border-radius:12px;overflow:hidden;background:#26282E;padding:22px 24px;min-height:150px">
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.5"><rect width="100%" height="100%" fill="url(#oct-cream)"></rect></svg>
+          <div style="position:relative">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#CB7A50">Milestone</div>
+            <div style="font-family:'Hanken Grotesk';font-weight:600;font-size:17px;color:#F1EBDD;margin-top:6px">First passage finished</div>
+            <div style="font-family:'Hanken Grotesk';font-size:13px;color:rgba(241,235,221,.6);margin-top:4px">Night session · 25 min focus</div>
+          </div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">UI · dark — cream line on ink</div>
+      </div>
+    </div>
+    <p style="font-family:'Hanken Grotesk';font-size:13.5px;color:rgba(38,40,46,.58);max-width:640px;margin:16px 0 0"><b style="font-weight:600;color:rgba(38,40,46,.8)">Where it lives:</b> signage, watermarks, certificates, section dividers. Always line, never fill — the ceremonial voice used sparingly.</p>
+  </section>
+  </sc-if>
+
+  <!-- ============ 03 · PINBOARD ============ -->
+  <sc-if value="{{ show03 }}" hint-placeholder-val="{{ true }}">
+  <section style="margin-top:56px">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:18px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.16em;color:#BC5A37">03</span>
+      <h3 style="font-family:'Hanken Grotesk';font-weight:600;font-size:23px;letter-spacing:-.01em;margin:0">Pinboard</h3>
       <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.45)">the perforated panel, the dotted map</span>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:19px;color:rgba(38,40,46,.42);margin-left:auto">التنقيط</span>
     </div>
-    <p style="font-family:'Hanken Grotesk';font-size:15px;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 22px">The dot is the unit. On its own it's texture — but vary its density and it resolves into shape: a map, a tone, a letterform. One field, three jobs.</p>
+    <p style="font-family:'Hanken Grotesk';font-size:15px;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 22px">The pin is the unit — a clean, even field of dots, no fades, no gradients. Shape comes from where pins are and aren't; meaning comes from colour. Green marks the highlighted pin.</p>
 
-    <!-- hero band -->
-    <div style="position:relative;height:320px;overflow:hidden;border-radius:4px;background:#E2D6BE;margin-bottom:16px">
-      <div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,#BC5A37 2.2px,transparent 2.7px);background-size:17px 17px;-webkit-mask-image:linear-gradient(105deg,#000 25%,rgba(0,0,0,.3) 70%,transparent 98%);mask-image:linear-gradient(105deg,#000 25%,rgba(0,0,0,.3) 70%,transparent 98%)"></div>
+    <!-- light band -->
+    <div style="position:relative;height:240px;overflow:hidden;border-radius:4px;background:#EFE7D5;border:1px solid rgba(38,40,46,.12)">
+      <div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,#BC5A37 2.2px,transparent 2.7px);background-size:17px 17px"></div>
     </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Pinboard · light — terracotta pins on plaster</div>
+
+    <!-- dark band -->
+    <div style="position:relative;height:240px;overflow:hidden;border-radius:4px;background:#26282E;margin-top:24px;margin-bottom:16px">
+      <div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(241,235,221,.55) 2.2px,transparent 2.7px);background-size:17px 17px"></div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px;margin-bottom:16px">Pinboard · dark — cream pins on ink</div>
 
     <!-- shape-forming hero: the map made of dots -->
     <div style="position:relative;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);overflow:hidden;padding:30px 34px;display:grid;grid-template-columns:1fr 1.05fr;gap:24px;align-items:center">
       <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37">Mesh → map</div>
-        <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:32px;letter-spacing:-.015em;line-height:1.05;margin-top:12px">The Kingdom,<br>drawn in dots.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37">Pinboard → map</div>
+        <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:32px;letter-spacing:-.015em;line-height:1.05;margin-top:12px">The Kingdom,<br>drawn in pins.</div>
         <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.5);margin-top:10px">شبكة نون</div>
-        <p style="font-family:'Hanken Grotesk';font-size:14px;color:rgba(38,40,46,.64);max-width:300px;margin:16px 0 0;line-height:1.55">No outline — the perforation itself is the territory. Where the dots stop, the border is. The same panel from the break-area wall.</p>
+        <p style="font-family:'Hanken Grotesk';font-size:14px;color:rgba(38,40,46,.64);max-width:300px;margin:16px 0 0;line-height:1.55">No outline — the perforation itself is the territory. Where the pins stop, the border is. Green pins mark the highlight: a city, a live room, an active crew.</p>
       </div>
       <div style="position:relative">
         <svg viewBox="0 0 400 320" style="width:100%;height:auto;display:block">
           <sc-for list="{{ mapDots }}" as="d" hint-placeholder-count="200">
-            <circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="2.3" fill="#BC5A37"></circle>
+            <circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.f }}"></circle>
           </sc-for>
         </svg>
       </div>
     </div>
 
-    <!-- from primitive → field → type -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px">
-      <div><div style="height:220px;border-radius:3px;background-color:#E2D6BE;background-image:radial-gradient(circle at center,#BC5A37 1.9px,transparent 2.4px);background-size:15px 15px"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Primitive · tile</div><div style="font-family:'Hanken Grotesk';font-size:12.5px;color:rgba(38,40,46,.55);margin-top:3px">Even field — pure texture.</div></div>
-      <div><div style="position:relative;height:220px;border-radius:3px;overflow:hidden;background:#F1EBDD"><div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,#BC5A37 1.9px,transparent 2.4px);background-size:15px 15px;-webkit-mask-image:linear-gradient(105deg,#000 6%,transparent 90%);mask-image:linear-gradient(105deg,#000 6%,transparent 90%)"></div></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Field · gradient</div><div style="font-family:'Hanken Grotesk';font-size:12.5px;color:rgba(38,40,46,.55);margin-top:3px">Same dot, fading opacity — tone &amp; depth.</div></div>
-      <div><div style="height:220px;border-radius:3px;overflow:hidden;background:#26282E;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 364 220" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%"><sc-for list="{{ scoreDots }}" as="d" hint-placeholder-count="40"><circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="2.1" fill="#F1EBDD"></circle></sc-for></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Type · matrix</div><div style="font-family:'Hanken Grotesk';font-size:12.5px;color:rgba(38,40,46,.55);margin-top:3px">Numbers built from whole dots.</div></div>
+    <!-- primitive → type -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px">
+      <div><div style="height:220px;border-radius:3px;background-color:#E2D6BE;background-image:radial-gradient(circle at center,#BC5A37 1.9px,transparent 2.4px);background-size:15px 15px"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Primitive · tile</div><div style="font-family:'Hanken Grotesk';font-size:12.5px;color:rgba(38,40,46,.55);margin-top:3px">Even field — pure texture, clean pins everywhere.</div></div>
+      <div><div style="height:220px;border-radius:3px;overflow:hidden;background:#26282E;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 364 220" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%"><sc-for list="{{ scoreDots }}" as="d" hint-placeholder-count="40"><circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="2.1" fill="#F1EBDD"></circle></sc-for></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Type · matrix</div><div style="font-family:'Hanken Grotesk';font-size:12.5px;color:rgba(38,40,46,.55);margin-top:3px">Numbers built from whole pins.</div></div>
     </div>
 
-    <!-- applied -->
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37;margin:28px 0 14px">Applied</div>
+    <!-- scale study -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37;margin:28px 0 14px">At scale — the same field, three densities</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div><div style="height:200px;border-radius:3px;background-color:#EFE7D5;border:1px solid rgba(38,40,46,.12);background-image:radial-gradient(circle at center,#BC5A37 3.2px,transparent 3.7px);background-size:26px 26px"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Wall · 1×</div></div>
+      <div><div style="height:200px;border-radius:3px;background-color:#EFE7D5;border:1px solid rgba(38,40,46,.12);background-image:radial-gradient(circle at center,#BC5A37 1.9px,transparent 2.4px);background-size:15px 15px"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Card · 1.7×</div></div>
+      <div><div style="height:200px;border-radius:3px;background-color:#EFE7D5;border:1px solid rgba(38,40,46,.12);background-image:radial-gradient(circle at center,rgba(188,90,55,.75) 1.1px,transparent 1.5px);background-size:9px 9px"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Texture · 3×</div></div>
+    </div>
+
+    <!-- in UI -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BC5A37;margin:28px 0 14px">In UI — light &amp; dark</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
       <div><div style="position:relative;height:220px;border-radius:3px;overflow:hidden;background:#BC5A37;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 364 220" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%"><sc-for list="{{ roomDots }}" as="d" hint-placeholder-count="20"><circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="2.1" fill="rgba(241,235,221,.92)"></circle></sc-for></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Door number · dots</div></div>
       <div><div style="position:relative;height:220px;border-radius:3px;overflow:hidden;background:#26282E;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 364 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><sc-for list="{{ facadeDots }}" as="d" hint-placeholder-count="200"><circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="2.1" fill="rgba(241,235,221,.3)"></circle></sc-for></svg><img src="assets/noon-logo-light.svg" style="position:relative;height:52px;width:auto"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facade sign</div></div>
       <div><div style="position:relative;height:220px;border-radius:3px;overflow:hidden;background:#F1EBDD;background-image:radial-gradient(circle at center,rgba(38,40,46,.06) 1.4px,transparent 1.9px);background-size:14px 14px;display:flex;align-items:center;justify-content:center"><div style="background:#fff;border:1px solid rgba(38,40,46,.1);border-radius:8px;padding:14px 16px;width:74%;box-shadow:0 6px 18px -10px rgba(38,40,46,.3)"><div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#BC5A37">Crew · 6</div><div style="font-family:'Hanken Grotesk';font-weight:600;font-size:15px;margin-top:5px;color:#26282E">18 jugs filled</div><div style="margin-top:9px;height:4px;border-radius:2px;background:rgba(38,40,46,.1)"><div style="width:72%;height:100%;border-radius:2px;background:#6BAE93"></div></div></div></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">App texture</div></div>
     </div>
-    <p style="font-family:'Hanken Grotesk';font-size:13.5px;color:rgba(38,40,46,.58);max-width:640px;margin:16px 0 0"><b style="font-weight:600;color:rgba(38,40,46,.8)">Where it lives:</b> the community map, facade and door signage, scores and numbers, and quiet texture behind app surfaces. The calm, oak-led voice.</p>
+    <p style="font-family:'Hanken Grotesk';font-size:13.5px;color:rgba(38,40,46,.58);max-width:640px;margin:16px 0 0"><b style="font-weight:600;color:rgba(38,40,46,.8)">Where it lives:</b> the community map, facade and door signage, scores and numbers, and quiet texture behind app surfaces. Always a clean, even field — <b style="font-weight:600;color:#4F8a70">green</b> is reserved for the highlighted pin.</p>
   </section>
   </sc-if>
 
@@ -633,7 +732,7 @@
       <!-- announcement banner -->
       <div>
         <div style="position:relative;border-radius:4px;overflow:hidden;background:#BC5A37">
-          <svg viewBox="0 0 560 190" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.18)" stroke-width="1"><sc-for list="{{ facetHeroTris }}" as="t" hint-placeholder-count="60"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg>
+          <svg viewBox="0 0 560 190" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.35)" stroke-width="1"><sc-for list="{{ facetBannerPolys }}" as="t" hint-placeholder-count="60"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg>
           <div style="position:relative;padding:30px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px">
             <div style="color:#F1EBDD">
               <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.85">Ramadan schedule</div>
@@ -680,7 +779,7 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180},&quot;focus&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;All&quot;,&quot;Facet&quot;,&quot;Mesh&quot;],&quot;default&quot;:&quot;All&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180},&quot;focus&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;All&quot;,&quot;Facet&quot;,&quot;Khatam&quot;,&quot;Pinboard&quot;],&quot;default&quot;:&quot;All&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     const focus = this.props.focus ?? 'All';
@@ -695,9 +794,14 @@ class Component extends DCLogic {
     };
     const mapDots = [];
     const step = 12.5;
+    // highlighted pins — cities marked in green on the pinboard
+    const cities = [[225, 168], [112, 210], [312, 122]];
     for (let y = step / 2; y < 320; y += step) {
       for (let x = step / 2; x < 400; x += step) {
-        if (inside(x, y)) mapDots.push({ cx: x, cy: y });
+        if (inside(x, y)) {
+          const hot = cities.some(c => Math.hypot(x - c[0], y - c[1]) < 8);
+          mapDots.push({ cx: x, cy: y, r: hot ? 4 : 2.3, f: hot ? '#6BAE93' : '#BC5A37' });
+        }
       }
     }
     // 5x7 dot-matrix font — numbers built from whole dots, same idea as the map
@@ -726,129 +830,97 @@ class Component extends DCLogic {
     const scoreDots = dotsFor('92', 112.5, 67.5, 15);
     const roomDots = dotsFor('3', 157.5, 67.5, 15);
 
-    // Facade dots — solid dots mimicking a fade by staggered dropout around the logo
+    // Facade dots — clean even field with a clear zone punched out for the logo
     const facadeDots = [];
     const fCX = 182, fCY = 110, fCell = 15;
     for (let j = 0; j < 15; j++) {
       for (let i = 0; i < 25; i++) {
         const x = 7.5 + i * fCell, y = 7.5 + j * fCell;
-        const d = Math.hypot(x - fCX, y - fCY);
-        let keep;
-        if (d < 56) keep = false;                       // clear zone for the logo
-        else if (d < 74) keep = (i + j) % 2 === 0;      // half
-        else if (d < 92) keep = (i + j) % 4 !== 0;      // dense-ish
-        else keep = true;                               // full field
-        if (keep) facadeDots.push({ cx: x, cy: y });
+        if (Math.hypot(x - fCX, y - fCY) >= 58) facadeDots.push({ cx: x, cy: y });
       }
     }
 
-    // Facet grid — triangular tessellation; large shard shapes rasterized to the grid
-    const pip = (px, py, poly2) => {
-      let c = false;
-      for (let i = 0, j = poly2.length - 1; i < poly2.length; j = i++) {
-        const xi = poly2[i][0], yi = poly2[i][1], xj = poly2[j][0], yj = poly2[j][1];
-        if (((yi > py) !== (yj > py)) && (px < (xj - xi) * (py - yi) / (yj - yi) + xi)) c = !c;
-      }
-      return c;
-    };
-    const facetGrid = (W, HH, s, regions) => {
-      const h = s * 0.866;
-      const rows = Math.ceil(HH / h), cols = Math.ceil(W / (s / 2)) + 2;
-      const tris = [];
-      for (let j = 0; j < rows; j++) {
-        const y0 = j * h, y1 = (j + 1) * h;
-        for (let k = 0; k < cols; k++) {
-          const xa = k * s / 2, xb = (k + 1) * s / 2, xc = (k + 2) * s / 2;
-          const up = (k + j) % 2 === 0;
-          const pts = up ? `${xa.toFixed(1)},${y1.toFixed(1)} ${xc.toFixed(1)},${y1.toFixed(1)} ${xb.toFixed(1)},${y0.toFixed(1)}`
-                         : `${xa.toFixed(1)},${y0.toFixed(1)} ${xc.toFixed(1)},${y0.toFixed(1)} ${xb.toFixed(1)},${y1.toFixed(1)}`;
-          const cx = xb, cy = up ? (y1 + y1 + y0) / 3 : (y0 + y0 + y1) / 3;
-          let fill = 'none';
-          for (const rg of regions) {
-            if (pip(cx, cy, rg.poly)) { fill = rg.fill; break; }
-          }
-          tris.push({ pts, fill });
+    // Facet — the classroom wall system. An irregular lattice of planes with
+    // hairline seams (the white grout lines of the physical walls). Geometry is
+    // generated once; the two voices (dunes, plaster) are palettes mapped onto
+    // the same planes, so both modes show the identical lattice.
+    const facetGeo = (W, HH, cell, seed, jitter, splitP) => {
+      let s = seed;
+      const rnd = () => { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; };
+      const cols = Math.ceil(W / cell), rows = Math.ceil(HH / cell);
+      const grid = [];
+      for (let j = 0; j <= rows; j++) {
+        grid[j] = [];
+        for (let i = 0; i <= cols; i++) {
+          const bx = Math.min(i * cell, W), by = Math.min(j * cell, HH);
+          grid[j][i] = [
+            bx + (i === 0 || i === cols ? 0 : (rnd() - .5) * 2 * jitter * cell),
+            by + (j === 0 || j === rows ? 0 : (rnd() - .5) * 2 * jitter * cell),
+          ];
         }
       }
-      return tris;
-    };
-    const facetHeroTris = facetGrid(1180, 320, 76, [
-      { poly: [[0,0],[210,0],[300,64],[176,150],[220,240],[80,196],[0,258]], fill: 'rgba(38,40,46,.18)' },
-      { poly: [[0,258],[80,196],[220,240],[140,320],[0,320]], fill: 'rgba(203,122,80,.6)' },
-      { poly: [[1180,0],[1180,150],[1050,220],[996,96],[880,40],[960,0]], fill: 'rgba(194,161,113,.5)' },
-      { poly: [[1180,150],[1180,320],[900,320],[1010,236],[1050,220]], fill: 'rgba(38,40,46,.16)' },
-      { poly: [[520,0],[700,0],[640,90],[740,170],[560,150],[600,60]], fill: 'rgba(241,235,221,.12)' },
-      { poly: [[380,320],[470,200],[560,290],[520,320]], fill: 'rgba(203,122,80,.4)' },
-    ]);
-
-    // Sediment — tileable strata. Waves use whole periods across the tile width
-    // (left edge = right edge) and the band stack sums exactly to the tile height
-    // (bottom boundary = top boundary), so the tile repeats seamlessly both ways.
-    const SW = 400, SH = 300, seg = 10, TAU = Math.PI * 2;
-    // thick strata alternating with thin seams; thicknesses sum to exactly SH
-    const sedThick = [40, 8, 52, 10, 34, 6, 46, 8, 56, 10, 30];
-    const sedFills = ['#CB7A50', '#BC6743', '#D2A47A', '#C08054', '#DDC09A', '#C98F62', '#C56F48', '#D8B285', '#BE7A50', '#B26440', '#D09C6E'];
-    const sedBounds = [];
-    let sy = 0;
-    for (let i = 0; i < sedThick.length; i++) {
-      sedBounds.push({
-        y: sy,
-        a1: 1.6 + ((i * 13) % 3), k1: 2 + (i % 2), p1: i * 1.9,
-        a2: 0.8 + ((i * 7) % 2), k2: 4 + (i % 3), p2: i * 0.7 + 2.1,
-      });
-      sy += sedThick[i];
-    }
-    // closing boundary = first boundary shifted down one tile → vertical seam matches
-    sedBounds.push({ ...sedBounds[0], y: SH });
-    const sedY = (bd, x) => bd.y
-      + bd.a1 * Math.sin(TAU * bd.k1 * x / SW + bd.p1)
-      + bd.a2 * Math.sin(TAU * bd.k2 * x / SW + bd.p2);
-    const sedimentBands = [];
-    for (let i = 0; i < sedBounds.length - 1; i++) {
-      const top = sedBounds[i], bot = sedBounds[i + 1];
-      let d = `M0,${sedY(top, 0).toFixed(1)}`;
-      for (let x = seg; x <= SW; x += seg) d += ` L${x},${sedY(top, x).toFixed(1)}`;
-      for (let x = SW; x >= 0; x -= seg) d += ` L${x},${sedY(bot, x).toFixed(1)}`;
-      d += ' Z';
-      sedimentBands.push({ d, fill: sedFills[i] });
-    }
-    const facetCoverTris = facetGrid(300, 300, 62, [
-      { poly: [[0,0],[130,0],[180,56],[80,110],[100,180],[0,140]], fill: 'rgba(38,40,46,.20)' },
-      { poly: [[300,300],[140,300],[200,210],[170,150],[300,190]], fill: 'rgba(241,235,221,.16)' },
-      { poly: [[300,0],[300,140],[200,60]], fill: 'rgba(203,122,80,.5)' },
-    ]);
-
-    // Faceted desert terrain — low-poly dunes generated as triangles
-    const TW = 1180, H = 460, N = 26, mStep = TW / N;
-    const layers = [
-      { y: 138, amp: 14, fills: ['#EBDFC8', '#E2D2B2'] },
-      { y: 172, amp: 18, fills: ['#DBC49C', '#D2B586'] },
-      { y: 210, amp: 20, fills: ['#D2AE7C', '#C49A60'] },
-      { y: 250, amp: 22, fills: ['#CB7A50', '#B8633C'] },
-      { y: 295, amp: 20, fills: ['#BC5A37', '#AC5230'] },
-      { y: 340, amp: 18, fills: ['#A44C2C', '#964526'] },
-      { y: 385, amp: 16, fills: ['#8A3F26', '#7C3620'] },
-      { y: 425, amp: 12, fills: ['#733321', '#662C1C'] },
-    ];
-    layers.forEach((ly, i) => { ly.ph0 = i * 1.7; ly.ph1 = i * 0.8 + 1.1; });
-    const ridge = (ly, k) => ly.y + ly.amp * Math.sin(k * 0.9 + ly.ph0) + ly.amp * 0.4 * Math.sin(k * 2.1 + ly.ph1);
-    const muralTris = [];
-    for (let i = 0; i < layers.length; i++) {
-      const ly = layers[i], below = layers[i + 1];
-      for (let k = 0; k < N; k++) {
-        const x0 = k * mStep, x1 = (k + 1) * mStep;
-        const t0 = ridge(ly, k), t1 = ridge(ly, k + 1);
-        const b1 = below ? ridge(below, k + 1) : H;
-        const b0 = below ? ridge(below, k) : H;
-        muralTris.push({ pts: `${x0.toFixed(1)},${t0.toFixed(1)} ${x1.toFixed(1)},${t1.toFixed(1)} ${x1.toFixed(1)},${b1.toFixed(1)}`, fill: ly.fills[(k + i) % 2] });
-        muralTris.push({ pts: `${x0.toFixed(1)},${t0.toFixed(1)} ${x1.toFixed(1)},${b1.toFixed(1)} ${x0.toFixed(1)},${b0.toFixed(1)}`, fill: ly.fills[(k + i + 1) % 2] });
+      // low-frequency tone → shades cluster into larger masses, like the murals.
+      // u is normalized 0..1 so any palette length maps onto the same clusters.
+      const tone = (x, y) => {
+        const v = Math.sin(x * .006 + seed) * Math.cos(y * .008 - seed) + Math.sin((x + y) * .003 + seed * 2);
+        return (v + 2) / 4;
+      };
+      const P = (p) => `${p[0].toFixed(1)},${p[1].toFixed(1)}`;
+      const out = [];
+      const push = (...ps) => {
+        const cx = ps.reduce((t, p) => t + p[0], 0) / ps.length;
+        const cy = ps.reduce((t, p) => t + p[1], 0) / ps.length;
+        const u = Math.max(0, Math.min(1, tone(cx, cy) + (rnd() - .5) * .24));
+        out.push({ pts: ps.map(P).join(' '), cx, cy, u });
+      };
+      for (let j = 0; j < rows; j++) {
+        for (let i = 0; i < cols; i++) {
+          const a = grid[j][i], b = grid[j][i + 1], c = grid[j + 1][i + 1], d = grid[j + 1][i];
+          if (rnd() < splitP) {
+            if (rnd() < .5) { push(a, b, c); push(a, c, d); }
+            else { push(a, b, d); push(b, c, d); }
+          } else {
+            push(a, b, c, d);
+          }
+        }
       }
-    }
+      return out;
+    };
+    const voice = (geo, fills) => geo.map(g => ({ pts: g.pts, fill: fills[Math.round(g.u * (fills.length - 1))] }));
+    // dunes — the orange voice, from the artwork palette
+    const duneFills = ['#8A3F26', '#A44C2C', '#B26440', '#BC5A37', '#C4714A', '#CB7A50', '#C98F62', '#D2A47A', '#DDC09A'];
+    // plaster — the light voice, from the classroom walls
+    const plasterFills = ['#E4D8BE', '#E9DECA', '#EDE4D0', '#EFE7D5', '#F2ECDE', '#F6F0E4'];
+    // banner — a quiet dune, narrow tonal range so UI text stays legible on top
+    const bannerFills = ['#B04F30', '#B65534', '#BC5A37', '#C1603B', '#C6663F'];
+    // one lattice, both voices — identical planes in both bands
+    const heroGeo = facetGeo(1180, 320, 168, 11, .46, .5);
+    const facetHeroTris = voice(heroGeo, duneFills);
+    const facetLightPolys = voice(heroGeo, plasterFills);
+    const facetCoverTris = voice(facetGeo(300, 300, 96, 3, .44, .55), duneFills);
+    const facetBannerPolys = voice(facetGeo(560, 190, 120, 5, .44, .5), bannerFills);
+    // scale study — same seed at three densities, both voices
+    const scaleGeos = [150, 76, 38].map(c => facetGeo(380, 220, c, 9, .45, .55));
+    const [duneScale1, duneScale2, duneScale3] = scaleGeos.map(g => voice(g, duneFills));
+    const [plasterScale1, plasterScale2, plasterScale3] = scaleGeos.map(g => voice(g, plasterFills));
+
+    // Terrain — an application of Facet, built exactly like the classroom
+    // artworks: one irregular lattice, with planes assigned to dune masses
+    // (left and right, plus a dune floor) or left as plaster sky and plain.
+    const terrGeo = facetGeo(1180, 460, 92, 17, .46, .62);
+    const leftMass = (x, y) => x < 150 + Math.max(0, y - 30) * .62;
+    const rightMass = (x, y) => x > 1030 - Math.max(0, y - 30) * .62;
+    const floorY = (x) => 398 + 24 * Math.sin(x * .006 + 2);
+    const muralTris = terrGeo.map(g => {
+      const dune = leftMass(g.cx, g.cy) || rightMass(g.cx, g.cy) || g.cy > floorY(g.cx);
+      const fills = dune ? duneFills : plasterFills;
+      return { pts: g.pts, fill: fills[Math.round(g.u * (fills.length - 1))] };
+    });
 
     return {
       show01: focus === 'All' || focus === 'Facet',
-      show02: focus === 'All' || focus === 'Mesh',
-      show03: focus === 'All' || focus === 'Khatam',
+      show02: focus === 'All' || focus === 'Khatam',
+      show03: focus === 'All' || focus === 'Pinboard',
       mapDots,
       scoreDots,
       roomDots,
@@ -856,7 +928,10 @@ class Component extends DCLogic {
       muralTris,
       facetHeroTris,
       facetCoverTris,
-      sedimentBands,
+      facetLightPolys,
+      facetBannerPolys,
+      duneScale1, duneScale2, duneScale3,
+      plasterScale1, plasterScale2, plasterScale3,
     };
   }
 }
