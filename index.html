@@ -207,8 +207,7 @@
               </div>
               <div style="position:relative;padding:28px 22px 0">
                 <img src="assets/noon-logo.svg" style="height:24px">
-                <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:27px;letter-spacing:-.01em;line-height:1.1;margin-top:112px">Welcome<br>back, Salim.</div>
-                <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:14px;color:rgba(38,40,46,.5);margin-top:6px">أهلاً بعودتك</div>
+                <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:27px;letter-spacing:-.01em;line-height:1.1;margin-top:64px">Welcome<br>back, Salim.</div>
               </div>
               <div style="position:absolute;left:22px;right:22px;bottom:24px">
                 <div style="background:#fff;border:1px solid rgba(38,40,46,.16);border-radius:8px;padding:12px 14px;font-size:13px;color:rgba(38,40,46,.45)">Phone number</div>
@@ -838,14 +837,14 @@ class Component extends DCLogic {
       const trnd = () => { ts = (ts * 16807) % 2147483647; return (ts - 1) / 2147483646; };
       const TW = 1180, H = 460, mStep = TW / 26;
       const layers = [
-        { y: 142, amp: 34, fills: ['#EBDFC8', '#E2D2B2'] },
-        { y: 176, amp: 42, fills: ['#DBC49C', '#D2B586'] },
-        { y: 214, amp: 48, fills: ['#D2AE7C', '#C49A60'] },
-        { y: 254, amp: 50, fills: ['#CB7A50', '#B8633C'] },
-        { y: 298, amp: 46, fills: ['#BC5A37', '#AC5230'] },
-        { y: 342, amp: 40, fills: ['#A44C2C', '#964526'] },
-        { y: 386, amp: 34, fills: ['#8A3F26', '#7C3620'] },
-        { y: 426, amp: 24, fills: ['#733321', '#662C1C'] },
+        { y: 138, amp: 24, fills: ['#EBDFC8', '#E2D2B2'] },
+        { y: 172, amp: 30, fills: ['#DBC49C', '#D2B586'] },
+        { y: 210, amp: 34, fills: ['#D2AE7C', '#C49A60'] },
+        { y: 250, amp: 36, fills: ['#CB7A50', '#B8633C'] },
+        { y: 295, amp: 34, fills: ['#BC5A37', '#AC5230'] },
+        { y: 340, amp: 30, fills: ['#A44C2C', '#964526'] },
+        { y: 385, amp: 26, fills: ['#8A3F26', '#7C3620'] },
+        { y: 425, amp: 18, fills: ['#733321', '#662C1C'] },
       ];
       layers.forEach((ly, i) => { ly.ph0 = i * 1.7; ly.ph1 = i * 0.8 + 1.1; });
       const rawY = (ly, x) => ly.y + ly.amp * Math.sin((x / mStep) * 0.9 + ly.ph0) + ly.amp * 0.4 * Math.sin((x / mStep) * 2.1 + ly.ph1);
@@ -854,11 +853,11 @@ class Component extends DCLogic {
       const ridges = layers.map((ly, i) => {
         const pts = [[0, yEff(i, 0)]];
         let x = 0;
-        while (x < TW) { x = Math.min(TW, x + 105 + trnd() * 165); pts.push([x, yEff(i, x)]); }
+        while (x < TW) { x = Math.min(TW, x + 78 + trnd() * 120); pts.push([x, yEff(i, x)]); }
         return pts;
       });
       const floor = [[0, H]];
-      { let x = 0; while (x < TW) { x = Math.min(TW, x + 125 + trnd() * 185); floor.push([x, H]); } }
+      { let x = 0; while (x < TW) { x = Math.min(TW, x + 90 + trnd() * 140); floor.push([x, H]); } }
       ridges.push(floor);
       const P = (p) => `${p[0].toFixed(1)},${p[1].toFixed(1)}`;
       const tris = [];
