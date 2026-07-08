@@ -40,9 +40,11 @@
     <img src="assets/noon-logo.svg" alt="noon" style="height:54px;width:auto;display:block">
     <nav style="display:flex;gap:24px;align-items:baseline;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap">
       <a href="#brand" style="color:rgba(38,40,46,.8);text-decoration:none">{{ L.navBrand }}</a>
+      <a href="#logo" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navLogo }}</a>
       <a href="#palette" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navPalette }}</a>
-      <a href="#patterns" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navPatterns }}</a>
       <a href="#type" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navType }}</a>
+      <a href="#grid" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navGrid }}</a>
+      <a href="#patterns" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navPatterns }}</a>
       <a href="#icons" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navIcons }}</a>
       <a href="#application" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navApp }}</a>
       <a href="#progression" style="color:rgba(38,40,46,.55);text-decoration:none">{{ L.navProg }}</a>
@@ -75,15 +77,92 @@
     </div>
   </div>
 
-  <!-- ============ PALETTE ============ -->
-  <section id="palette" style="margin-top:104px">
+  <!-- voice principles -->
+  <div style="margin-top:44px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin-bottom:14px">{{ L.voiceT }}</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+      <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.vo1t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.vo1 }}</div></div>
+      <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.vo2t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.vo2 }}</div></div>
+      <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.vo3t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.vo3 }}</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
+      <div style="border:1px solid rgba(107,174,147,.5);border-radius:4px;padding:14px 18px;display:flex;gap:12px;align-items:baseline"><span style="color:#4F6157;font-weight:700">✓</span><span style="font-size:14px;color:rgba(38,40,46,.78)">{{ L.voGood }}</span></div>
+      <div style="border:1px solid rgba(188,90,55,.5);border-radius:4px;padding:14px 18px;display:flex;gap:12px;align-items:baseline"><span style="color:#BC5A37;font-weight:700">✕</span><span style="font-size:14px;color:rgba(38,40,46,.55)">{{ L.voBad }}</span></div>
+    </div>
+  </div>
+
+  <!-- ============ 01 · LOGO ============ -->
+  <section id="logo" style="margin-top:96px">
     <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
       <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">01</span>
+      <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.logoT }}</h2>
+      <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.logoG }}</span>
+    </div>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 36px">The mark is the one element that never changes. It appears in ink on light grounds and cream on dark, always level, always breathing. Everything below is non-negotiable.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 36px">العلامة هي العنصر الوحيد الذي لا يتغيّر. تظهر بالحبر على الأرضيات الفاتحة وبالكريمي على الداكنة، مستوية دائماً، تتنفّس دائماً. كل ما يلي غير قابل للتفاوض.</p></sc-if>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div><div style="height:190px;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center"><img src="assets/noon-logo.svg" style="height:44px"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Primary · ink on light</div></div>
+      <div><div style="height:190px;border-radius:4px;background:#26282E;display:flex;align-items:center;justify-content:center"><img src="assets/noon-logo-light.svg" style="height:44px"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Reversed · cream on ink</div></div>
+      <div><div style="position:relative;height:190px;border-radius:4px;overflow:hidden;background:#BC5A37;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 560 190" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.35)" stroke-width="1"><sc-for list="{{ facetBannerPolys }}" as="t" hint-placeholder-count="60"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg><img src="assets/noon-logo-light.svg" style="position:relative;height:44px"></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">On brand colour · always over pattern</div></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-top:24px">
+      <div>
+        <div style="height:230px;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center">
+          <div style="position:relative;border:1.5px dashed rgba(188,90,55,.6);padding:34px 46px">
+            <img src="assets/noon-logo.svg" style="height:34px;display:block">
+            <span style="position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:#BC5A37">x</span>
+            <span style="position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:#BC5A37">x</span>
+            <span style="position:absolute;left:-16px;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:#BC5A37">x</span>
+            <span style="position:absolute;right:-16px;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:11px;color:#BC5A37">x</span>
+          </div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.lgClearC }}</div>
+        <div style="font-size:13px;color:rgba(38,40,46,.6);margin-top:4px;max-width:440px">{{ L.lgClearN }}</div>
+      </div>
+      <div>
+        <div style="height:230px;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px">
+          <img src="assets/noon-logo.svg" style="height:44px">
+          <img src="assets/noon-logo.svg" style="height:32px">
+          <div style="display:flex;align-items:center;gap:10px"><img src="assets/noon-logo.svg" style="height:24px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.5)">24PX · MIN</span></div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.lgMinC }}</div>
+        <div style="font-size:13px;color:rgba(38,40,46,.6);margin-top:4px">{{ L.lgMinN }}</div>
+      </div>
+    </div>
+
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:34px 0 14px">{{ L.lgMisT }}</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div><div style="position:relative;height:110px;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="assets/noon-logo.svg" style="height:30px;filter:hue-rotate(160deg) saturate(2)"><span style="position:absolute;top:8px;right:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#BC5A37">✕</span></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.mis1 }}</div></div>
+      <div><div style="position:relative;height:110px;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="assets/noon-logo.svg" style="height:30px;transform:scaleX(1.7)"><span style="position:absolute;top:8px;right:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#BC5A37">✕</span></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.mis2 }}</div></div>
+      <div><div style="position:relative;height:110px;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="assets/noon-logo.svg" style="height:30px;transform:rotate(-14deg)"><span style="position:absolute;top:8px;right:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#BC5A37">✕</span></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.mis3 }}</div></div>
+      <div><div style="position:relative;height:110px;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="assets/noon-logo.svg" style="height:30px;filter:drop-shadow(3px 5px 4px rgba(38,40,46,.55))"><span style="position:absolute;top:8px;right:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#BC5A37">✕</span></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.mis4 }}</div></div>
+      <div><div style="position:relative;height:110px;border-radius:4px;background:#BC5A37;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="assets/noon-logo-light.svg" style="height:30px"><span style="position:absolute;top:8px;right:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#F1EBDD">✕</span></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.mis5 }}</div></div>
+      <div><div style="position:relative;height:110px;border-radius:4px;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="assets/noon-logo.svg" style="height:30px;opacity:.3"><span style="position:absolute;top:8px;right:10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#BC5A37">✕</span></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.mis6 }}</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · COLOUR ============ -->
+  <section id="palette" style="margin-top:96px">
+    <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">02</span>
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.paletteT }}</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.paletteG }}</span>
     </div>
     <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">Locked from the physical concept. Heritage moves to future, left to right, earth, timber, intelligence.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">مثبّتة من المفهوم المادي. من التراث إلى المستقبل: الأرض، ثم الخشب، ثم الذكاء.</p></sc-if>
 
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:34px 0 14px">{{ L.propT }}</div>
+    <div style="display:flex;height:56px;border-radius:4px;overflow:hidden;border:1px solid rgba(38,40,46,.12)">
+      <div style="flex:0 0 60%;background:#EFF1EE;display:flex;align-items:center;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:rgba(38,40,46,.55)">60 · FOG / PLASTER</span></div>
+      <div style="flex:0 0 25%;background:#26282E;display:flex;align-items:center;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:rgba(241,235,221,.7)">25 · INK</span></div>
+      <div style="flex:0 0 10%;background:#BC5A37;display:flex;align-items:center;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:rgba(241,235,221,.85)">10</span></div>
+      <div style="flex:0 0 2.5%;background:#6BAE93"></div>
+      <div style="flex:0 0 1.5%;background:#4A6B8A"></div>
+      <div style="flex:0 0 1%;background:#5A4A7D"></div>
+    </div>
+    <p style="font-size:13px;color:rgba(38,40,46,.6);max-width:680px;margin:10px 0 0">{{ L.propN }}</p>
+
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:34px 0 14px">{{ L.heroT }}</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
       <!-- Terracotta -->
       <div>
@@ -139,12 +218,203 @@
       <div><div style="display:flex;height:44px;border-radius:3px;overflow:hidden;border:1px solid rgba(38,40,46,.1)"><div style="flex:1;background:#D3B4C4"></div><div style="flex:1;background:#AC7F97"></div><div style="flex:1;background:#7D5468"></div></div><div style="font-weight:600;font-size:13px;margin-top:9px">Plum</div><div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(38,40,46,.5);margin-top:3px">#D3B4C4 · #AC7F97 · #7D5468</div></div>
     </div>
     <p style="font-family:'Hanken Grotesk';font-size:12.5px;color:rgba(38,40,46,.55);max-width:680px;margin:12px 0 0">{{ L.decoNote }}</p>
+
+    <!-- contrast & accessibility -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:34px 0 14px">{{ L.conT }}</div>
+    <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:8px 20px 4px">
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#EFF1EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(38,40,46,.12)"><span style="color:#26282E;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Ink on Fog</div><div style="font-size:12px;color:rgba(38,40,46,.55)">body text · the everyday ground</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">13.0 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#4F8a70;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#F1EBDD;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(38,40,46,.12)"><span style="color:#26282E;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Ink on Plaster</div><div style="font-size:12px;color:rgba(38,40,46,.55)">reading surfaces</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">12.4 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#4F8a70;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#26282E;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#F1EBDD;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Cream on Ink</div><div style="font-size:12px;color:rgba(38,40,46,.55)">focus & immersion</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">12.4 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#4F8a70;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#BC5A37;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#F1EBDD;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Cream on Terracotta</div><div style="font-size:12px;color:rgba(38,40,46,.55)">display type over pattern bands</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">3.8 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#A8873E;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA LARGE</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#6BAE93;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#0D2C22;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Deep green on Action</div><div style="font-size:12px;color:rgba(38,40,46,.55)">button labels</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">5.8 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#4F8a70;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#4A6B8A;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#F1EBDD;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Cream on Water</div><div style="font-size:12px;color:rgba(38,40,46,.55)">selection chips</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">4.7 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#4F8a70;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#4F6157;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#F1EBDD;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Cream on Teal</div><div style="font-size:12px;color:rgba(38,40,46,.55)">intelligence surfaces</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">5.6 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#4F8a70;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#5A4A7D;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#F1EBDD;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Cream on AI purple</div><div style="font-size:12px;color:rgba(38,40,46,.55)">tutor messages</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">6.5 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#4F8a70;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#26282E;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#E8663A;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Ember on Ink</div><div style="font-size:12px;color:rgba(38,40,46,.55)">signals on the instrument surface</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">4.5 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#A8873E;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA LARGE</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <div style="width:110px;height:40px;border-radius:4px;background:#26282E;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#7C99B4;font-weight:600;font-size:14px">Aa</span></div>
+        <div style="flex:1;min-width:0"><div style="font-weight:600;font-size:13px">Water on Ink</div><div style="font-size:12px;color:rgba(38,40,46,.55)">progress on dark</div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(38,40,46,.6);width:64px;text-align:right">5.0 : 1</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#fff;background:#4F8a70;padding:3px 8px;border-radius:3px;width:74px;text-align:center;flex-shrink:0">AA</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:rgba(38,40,46,.6);max-width:680px;margin:10px 0 0">{{ L.conN }}</p>
   </section>
 
-  <!-- ============ PATTERN SYSTEM INTRO ============ -->
+  <!-- ============ 03 · TYPOGRAPHY ============ -->
+  <section id="type" style="margin-top:96px">
+    <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">03</span>
+      <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.typeT }}</h2>
+      <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.typeG }}</span>
+    </div>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">One disciplined bilingual system, set heavy. Display type is big, bold and chunky — painted-on-the-wall weight (700–800), cropped tight. A humanist grotesque for Latin, a modern Arabic that sits beside it as an equal, mono for the numeric and cartographic.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">نظام ثنائي اللغة منضبط واحد، بوزن ثقيل. خط العرض كبير وجريء وسميك — بوزن الطلاء على الجدار (٧٠٠–٨٠٠)، مقصوص بإحكام. غروتسك إنساني للاتينية، وعربية حديثة تجلس بجانبها ندّاً، ومونو للأرقام والخرائط.</p></sc-if>
+
+    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:stretch">
+      <!-- the wall: heavy display on terracotta -->
+      <div style="background:#BC5A37;border-radius:4px;padding:40px 42px;display:flex;flex-direction:column;min-height:520px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,235,221,.75)">Display · on terracotta</div>
+        <div style="color:#F1EBDD;font-weight:800;font-size:clamp(56px,7vw,92px);line-height:.98;letter-spacing:-.03em;margin-top:auto">Inspire.<br>Learn.<br>Grow.</div>
+        <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:baseline;color:#F1EBDD;margin-top:34px;padding-top:22px;border-top:1px solid rgba(241,235,221,.25)">
+          <span style="font-weight:800;font-size:22px">Aa</span><span style="font-weight:600;font-size:22px">Aa</span><span style="font-weight:400;font-size:22px">Aa</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:rgba(241,235,221,.75)">0123456789</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:rgba(241,235,221,.6);margin-left:auto">HANKEN GROTESK 800 · 600 · 400</span>
+        </div>
+      </div>
+      <!-- the door: giant bold Arabic, run vertically -->
+      <div style="background:#26282E;border-radius:4px;padding:34px 30px;display:flex;flex-direction:column;min-height:520px;position:relative;overflow:hidden">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,235,221,.55)">Environmental · on ink</div>
+        <div style="flex:1;display:flex;align-items:center;justify-content:flex-end;padding-right:6px">
+          <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:700;font-size:96px;line-height:1.04;color:#F1EBDD;writing-mode:vertical-rl;letter-spacing:.02em">بيت العلم</div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:rgba(241,235,221,.5)">IBM PLEX SANS ARABIC 700 · DOOR SCALE</div>
+      </div>
+    </div>
+
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 6px">{{ L.tsT }}</div>
+    <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:8px 28px 4px">
+      <div style="display:grid;grid-template-columns:130px 1fr 200px 220px;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(38,40,46,.55)">DISPLAY</span>
+        <span style="font-weight:800;font-size:64px;letter-spacing:-.03em;line-height:1;white-space:nowrap;overflow:hidden">Aa</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(38,40,46,.6)">96 / 800 / −.03em</span>
+        <span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.ts1 }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:130px 1fr 200px 220px;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(38,40,46,.55)">HEADLINE</span>
+        <span style="font-weight:800;font-size:44px;letter-spacing:-.025em;line-height:1;white-space:nowrap;overflow:hidden">Aa</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(38,40,46,.6)">56 / 800 / −.025em</span>
+        <span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.ts2 }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:130px 1fr 200px 220px;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(38,40,46,.55)">TITLE</span>
+        <span style="font-weight:500;font-size:30px;letter-spacing:-.015em;line-height:1.1;white-space:nowrap;overflow:hidden">Aa</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(38,40,46,.6)">30 / 500 / −.015em</span>
+        <span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.ts3 }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:130px 1fr 200px 220px;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(38,40,46,.55)">SUBTITLE</span>
+        <span style="font-weight:600;font-size:23px;line-height:1.2;white-space:nowrap;overflow:hidden">Aa</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(38,40,46,.6)">23 / 600</span>
+        <span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.ts4 }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:130px 1fr 200px 220px;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(38,40,46,.1)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(38,40,46,.55)">BODY</span>
+        <span style="font-weight:400;font-size:15px;line-height:1.55;white-space:nowrap;overflow:hidden">Aa — The route is drawn before it is walked.</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(38,40,46,.6)">15 / 400 / 1.55</span>
+        <span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.ts5 }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:130px 1fr 200px 220px;gap:18px;align-items:center;padding:16px 0;border-bottom:none">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(38,40,46,.55)">LABEL</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;overflow:hidden">Day 14 · 24.7136° N</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(38,40,46,.6)">11 / 500 / MONO · CAPS</span>
+        <span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.ts6 }}</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:baseline;margin-top:10px"><span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:700;font-size:20px;color:rgba(38,40,46,.7)">الرُّبع الخالي</span><span style="font-size:12.5px;color:rgba(38,40,46,.55)">{{ L.tsNote }}</span></div>
+
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">{{ L.tvT }}</div>
+    <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:36px 38px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px">
+        <div style="font-weight:800;font-size:56px;letter-spacing:-.025em;line-height:1">Day 14<span style="color:rgba(38,40,46,.3)"> / 28</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(38,40,46,.55)">24.7136° N · 46.6753° E</div>
+      </div>
+      <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:700;font-size:30px;color:rgba(38,40,46,.78);margin-top:14px">حيث تنتهي الكثبان، نبدأ</div>
+      <sc-if value="{{ isEN }}"><p style="font-size:14px;line-height:1.65;color:rgba(38,40,46,.62);max-width:640px;margin:22px 0 0">Type is the fourth pattern. Display settings are heavy (800) and large, cropped tight — type behaves like the murals, painted on, not printed. Arabic is never a caption, it leads at the same scale. Mono numerals act as cartographic labels: coordinates, day counts, distances. Over pattern, type only sits on a gradient or a plain band, never directly on the lattice.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:14.5px;line-height:1.9;color:rgba(38,40,46,.62);max-width:640px;margin:22px 0 0">الخط هو النمط الرابع. أحجام العرض ثقيلة (٨٠٠) وكبيرة، مقصوصة بإحكام — يتصرّف الخط كالجداريات، مطليّاً لا مطبوعاً. العربية ليست ترجمة هامشية، بل تتقدّم بالمقياس نفسه. أرقام المونو تعمل كعلامات خرائطية: إحداثيات، عدّ الأيام، مسافات. فوق النمط، لا يجلس النص إلا على تدرّج أو شريط سادة، لا على الشبكة مباشرة.</p></sc-if>
+    </div>
+  </section>
+
+
+  <!-- ============ 04 · GRID & SPACING ============ -->
+  <section id="grid" style="margin-top:96px">
+    <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">04</span>
+      <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.gridT }}</h2>
+      <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.gridG }}</span>
+    </div>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">Everything sits on an 8px base unit. Layouts run on a 12-column grid, max width 1180, 28px margins. A small radius scale keeps surfaces consistent — sharp for documents, soft only for the phone frame.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">كل شيء يقوم على وحدة أساس ٨ بكسل. التخطيطات تعمل على شبكة من ١٢ عموداً، بعرض أقصى ١١٨٠ وهوامش ٢٨ بكسل. مقياس استدارة صغير يحافظ على اتساق الأسطح — حادّ للمستندات، وناعم لإطار الهاتف فقط.</p></sc-if>
+    <div style="display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;align-items:stretch">
+      <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:20px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.55);margin-bottom:14px">{{ L.grBaseT }}</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55);width:34px;text-align:right">4</span><div style="height:14px;width:4px;background:#BC5A37;border-radius:2px"></div></div>
+      <div style="display:flex;align-items:center;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55);width:34px;text-align:right">8</span><div style="height:14px;width:8px;background:#BC5A37;border-radius:2px"></div></div>
+      <div style="display:flex;align-items:center;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55);width:34px;text-align:right">16</span><div style="height:14px;width:16px;background:#BC5A37;border-radius:2px"></div></div>
+      <div style="display:flex;align-items:center;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55);width:34px;text-align:right">24</span><div style="height:14px;width:24px;background:#BC5A37;border-radius:2px"></div></div>
+      <div style="display:flex;align-items:center;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55);width:34px;text-align:right">36</span><div style="height:14px;width:36px;background:#BC5A37;border-radius:2px"></div></div>
+      <div style="display:flex;align-items:center;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55);width:34px;text-align:right">56</span><div style="height:14px;width:56px;background:#BC5A37;border-radius:2px"></div></div>
+      <div style="display:flex;align-items:center;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55);width:34px;text-align:right">96</span><div style="height:14px;width:96px;background:#BC5A37;border-radius:2px"></div></div>
+        </div>
+        <div style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.55;margin-top:14px">{{ L.grBase }}</div>
+      </div>
+      <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:20px;display:flex;flex-direction:column">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.55);margin-bottom:14px">{{ L.grColT }}</div>
+        <div style="flex:1;border:1px dashed rgba(188,90,55,.55);border-radius:2px;padding:10px 18px;min-height:180px;display:grid;grid-template-columns:repeat(12,1fr);gap:10px"><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div><div style="background:rgba(188,90,55,.18);border-radius:2px"></div></div>
+        <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9.5px;color:rgba(38,40,46,.5);margin-top:8px"><span>MARGIN 28</span><span>12 COL · GUTTER 20</span><span>MAX 1180</span></div>
+        <div style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.55;margin-top:12px">{{ L.grCol }}</div>
+      </div>
+      <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:20px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.55);margin-bottom:18px">{{ L.grRadT }}</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;background:#F1EBDD;border:1.5px solid #BC5A37;border-radius:3px"></div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55)">3</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;background:#F1EBDD;border:1.5px solid #BC5A37;border-radius:4px"></div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55)">4</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;background:#F1EBDD;border:1.5px solid #BC5A37;border-radius:8px"></div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55)">8</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;background:#F1EBDD;border:1.5px solid #BC5A37;border-radius:12px"></div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55)">12</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;background:#F1EBDD;border:1.5px solid #BC5A37;border-radius:28px"></div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55)">28</span></div>
+        </div>
+        <div style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.55;margin-top:16px">{{ L.grRad }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · PATTERN SYSTEM ============ -->
   <section id="patterns" style="margin-top:96px">
     <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">02</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">05</span>
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.patternsT }}</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.patternsG }}</span>
     </div>
@@ -154,6 +424,14 @@
       <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.pr1t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.pr1 }}</div></div>
       <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.pr2t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.pr2 }}</div></div>
       <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.pr3t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.pr3 }}</div></div>
+    </div>
+
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">{{ L.pmT }}</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+      <div><div style="position:relative;height:120px;border:1px solid rgba(38,40,46,.12);border-radius:4px;overflow:hidden"><div style="position:absolute;inset:0;background:#BC5A37"></div><svg style="position:absolute;inset:0;width:100%;height:100%"><rect width="100%" height="100%" fill="url(#oct-tc)"></rect></svg><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#F1EBDD;font-weight:800;font-size:22px;letter-spacing:-.02em">Learn.</div></div><div style="display:flex;gap:8px;align-items:baseline;margin-top:8px"><span style="color:#BC5A37;font-weight:700;font-size:13px">✕</span><span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.pm1 }}</span></div></div>
+      <div><div style="position:relative;height:120px;border:1px solid rgba(38,40,46,.12);border-radius:4px;overflow:hidden"><div style="position:absolute;inset:0;background:#F1EBDD"></div><svg style="position:absolute;inset:0;width:100%;height:100%"><defs><pattern id="oct-bad" width="56" height="56" patternUnits="userSpaceOnUse"><g fill="#4F6157"><rect x="8.2" y="8.2" width="39.6" height="39.6"></rect><polygon points="28,0 56,28 28,56 0,28"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-bad)"></rect></svg></div><div style="display:flex;gap:8px;align-items:baseline;margin-top:8px"><span style="color:#BC5A37;font-weight:700;font-size:13px">✕</span><span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.pm2 }}</span></div></div>
+      <div><div style="position:relative;height:120px;border:1px solid rgba(38,40,46,.12);border-radius:4px;overflow:hidden"><div style="position:absolute;inset:0;background:#F1EBDD"></div><div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(188,90,55,.28) 2.1px,transparent 2.6px);background-size:17px 17px"></div></div><div style="display:flex;gap:8px;align-items:baseline;margin-top:8px"><span style="color:#BC5A37;font-weight:700;font-size:13px">✕</span><span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.pm3 }}</span></div></div>
+      <div><div style="position:relative;height:120px;border:1px solid rgba(38,40,46,.12);border-radius:4px;overflow:hidden"><div style="position:absolute;inset:0;background:#F1EBDD"></div><svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.8"><rect width="100%" height="100%" fill="url(#oct-teal)"></rect></svg><div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,#BC5A37 2.1px,transparent 2.6px);background-size:17px 17px"></div></div><div style="display:flex;gap:8px;align-items:baseline;margin-top:8px"><span style="color:#BC5A37;font-weight:700;font-size:13px">✕</span><span style="font-size:12.5px;color:rgba(38,40,46,.62);line-height:1.5">{{ L.pm4 }}</span></div></div>
     </div>
   </section>
 
@@ -258,52 +536,10 @@
       </section>
   </sc-if>
 
-  <!-- ============ TYPE ============ -->
-  <section id="type" style="margin-top:96px">
-    <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">03</span>
-      <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.typeT }}</h2>
-      <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.typeG }}</span>
-    </div>
-    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">One disciplined bilingual system, set heavy. Display type is big, bold and chunky — painted-on-the-wall weight (700–800), cropped tight. A humanist grotesque for Latin, a modern Arabic that sits beside it as an equal, mono for the numeric and cartographic.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">نظام ثنائي اللغة منضبط واحد، بوزن ثقيل. خط العرض كبير وجريء وسميك — بوزن الطلاء على الجدار (٧٠٠–٨٠٠)، مقصوص بإحكام. غروتسك إنساني للاتينية، وعربية حديثة تجلس بجانبها ندّاً، ومونو للأرقام والخرائط.</p></sc-if>
-
-    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:stretch">
-      <!-- the wall: heavy display on terracotta -->
-      <div style="background:#BC5A37;border-radius:4px;padding:40px 42px;display:flex;flex-direction:column;min-height:520px">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,235,221,.75)">Display · on terracotta</div>
-        <div style="color:#F1EBDD;font-weight:800;font-size:clamp(56px,7vw,92px);line-height:.98;letter-spacing:-.03em;margin-top:auto">Inspire.<br>Learn.<br>Grow.</div>
-        <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:baseline;color:#F1EBDD;margin-top:34px;padding-top:22px;border-top:1px solid rgba(241,235,221,.25)">
-          <span style="font-weight:800;font-size:22px">Aa</span><span style="font-weight:600;font-size:22px">Aa</span><span style="font-weight:400;font-size:22px">Aa</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:rgba(241,235,221,.75)">0123456789</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:rgba(241,235,221,.6);margin-left:auto">HANKEN GROTESK 800 · 600 · 400</span>
-        </div>
-      </div>
-      <!-- the door: giant bold Arabic, run vertically -->
-      <div style="background:#26282E;border-radius:4px;padding:34px 30px;display:flex;flex-direction:column;min-height:520px;position:relative;overflow:hidden">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,235,221,.55)">Environmental · on ink</div>
-        <div style="flex:1;display:flex;align-items:center;justify-content:center">
-          <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:700;font-size:96px;line-height:1.04;color:#F1EBDD;writing-mode:vertical-rl;letter-spacing:.02em">بيت العلم</div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:rgba(241,235,221,.5)">IBM PLEX SANS ARABIC 700 · DOOR SCALE</div>
-      </div>
-    </div>
-
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">{{ L.tvT }}</div>
-    <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:36px 38px">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px">
-        <div style="font-weight:800;font-size:56px;letter-spacing:-.025em;line-height:1">Day 14<span style="color:rgba(38,40,46,.3)"> / 28</span></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(38,40,46,.55)">24.7136° N · 46.6753° E</div>
-      </div>
-      <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:700;font-size:30px;color:rgba(38,40,46,.78);margin-top:14px">حيث تنتهي الكثبان، نبدأ</div>
-      <sc-if value="{{ isEN }}"><p style="font-size:14px;line-height:1.65;color:rgba(38,40,46,.62);max-width:640px;margin:22px 0 0">Type is the fourth pattern. Display settings are heavy (800) and large, cropped tight — type behaves like the murals, painted on, not printed. Arabic is never a caption, it leads at the same scale. Mono numerals act as cartographic labels: coordinates, day counts, distances. Over pattern, type only sits on a gradient or a plain band, never directly on the lattice.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:14.5px;line-height:1.9;color:rgba(38,40,46,.62);max-width:640px;margin:22px 0 0">الخط هو النمط الرابع. أحجام العرض ثقيلة (٨٠٠) وكبيرة، مقصوصة بإحكام — يتصرّف الخط كالجداريات، مطليّاً لا مطبوعاً. العربية ليست ترجمة هامشية، بل تتقدّم بالمقياس نفسه. أرقام المونو تعمل كعلامات خرائطية: إحداثيات، عدّ الأيام، مسافات. فوق النمط، لا يجلس النص إلا على تدرّج أو شريط سادة، لا على الشبكة مباشرة.</p></sc-if>
-    </div>
-  </section>
-
-
-  <!-- ============ 04 · ICONOGRAPHY ============ -->
+  <!-- ============ 06 · ICONOGRAPHY ============ -->
   <section id="icons" style="margin-top:96px">
     <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">04</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">06</span>
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.iconsT }}</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.iconsG }}</span>
     </div>
@@ -314,6 +550,16 @@
     <div style="background:#26282E;border-radius:4px;display:grid;grid-template-columns:repeat(6,1fr);margin-top:20px"><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#F1EBDD"><use href="#ic-dallah"></use></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#F1EBDD;opacity:.75">{{ L.ic1 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#F1EBDD"><use href="#ic-jug"></use></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#F1EBDD;opacity:.75">{{ L.ic2 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#F1EBDD"><use href="#ic-astrolabe"></use></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#F1EBDD;opacity:.75">{{ L.ic3 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#F1EBDD"><use href="#ic-lantern"></use></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#F1EBDD;opacity:.75">{{ L.ic4 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#F1EBDD"><use href="#ic-well"></use></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#F1EBDD;opacity:.75">{{ L.ic5 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#F1EBDD"><use href="#ic-sundial"></use></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#F1EBDD;opacity:.75">{{ L.ic6 }}</span></div></div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.iconsCapD }}</div>
 
+
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:24px 28px;margin-top:24px">
+      <svg width="168" height="168" viewBox="0 0 64 64" style="color:#26282E"><g stroke="rgba(188,90,55,.45)" stroke-width="1" stroke-dasharray="3 3" fill="none"><rect x="0.5" y="0.5" width="63" height="63"></rect><line x1="32" y1="0" x2="32" y2="64"></line><line x1="0" y1="32" x2="64" y2="32"></line><rect x="8" y="8" width="48" height="48"></rect><circle cx="32" cy="32" r="24"></circle></g><use href="#ic-jug"></use></svg>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(38,40,46,.55)">{{ L.icSpecT }}</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#BC5A37;margin-top:10px">GRID 64 · LIVE AREA 48 · STROKE 2 · CAPS ROUND · JOINS ROUND</div>
+        <div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:10px;max-width:520px">{{ L.icSpec }}</div>
+      </div>
+    </div>
+
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px">
       <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.ir1t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.ir1 }}</div></div>
       <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.ir2t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.ir2 }}</div></div>
@@ -321,10 +567,10 @@
     </div>
   </section>
 
-  <!-- ============ 05 · APPLICATION ============ -->
+  <!-- ============ 07 · APPLICATION ============ -->
   <section id="application" style="margin-top:96px">
     <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">05</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">07</span>
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.appT }}</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.appG }}</span>
     </div>
@@ -464,10 +710,10 @@
     </div>
   </section>
 
-  <!-- ============ 06 · PROGRESSION ============ -->
+  <!-- ============ 08 · PROGRESSION ============ -->
   <section id="progression" style="margin-top:96px">
     <div style="display:flex;align-items:baseline;gap:18px;border-top:1px solid rgba(38,40,46,.2);padding-top:16px;margin-bottom:8px">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">06</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(38,40,46,.55)">08</span>
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.progT }}</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.progG }}</span>
     </div>
@@ -533,7 +779,37 @@ class Component extends DCLogic {
     const isEN = lang !== 'AR', isAR = !isEN;
     const dir = isAR ? 'rtl' : 'ltr';
     const EN = {
-      navBrand: 'Brand', navPalette: 'Palette', navPatterns: 'Patterns', navType: 'Typography', navIcons: 'Iconography', navApp: 'Application', navProg: 'Progression',
+      navBrand: 'Brand', navLogo: 'Logo', navPalette: 'Colour', navPatterns: 'Patterns', navType: 'Typography', navGrid: 'Grid', navIcons: 'Iconography', navApp: 'Application', navProg: 'Progression',
+      voiceT: 'Voice',
+      vo1t: 'Calm, not loud', vo1: 'We state, we don\u2019t shout. No exclamation stacking, no emoji confetti. The desert doesn\u2019t raise its voice.',
+      vo2t: 'Specific, not generic', vo2: 'Praise names the thing: the pace, the streak, the distance covered. Generic cheerleading is noise.',
+      vo3t: 'Bilingual as equals', vo3: 'Arabic is written, never translated as an afterthought. Both languages carry the same register and the same information.',
+      voGood: '\u201CYou\u2019re on pace \u2014 92% through week two.\u201D',
+      voBad: '\u201CGreat job!! Keep it up \uD83C\uDF89\uD83D\uDD25\u201D',
+      logoT: 'Logo', logoG: '\u0627\u0644\u0634\u0639\u0627\u0631',
+      lgClearC: 'Clearspace', lgClearN: 'Minimum clearspace on all sides equals the x-height of the wordmark. Nothing enters this zone \u2014 no type, no pattern, no edge.',
+      lgMinC: 'Minimum size', lgMinN: 'Never smaller than 24px on screen or 8mm in print. Below that, use the glyph alone.',
+      lgMisT: 'Logo misuse',
+      mis1: 'Don\u2019t recolour the logo.', mis2: 'Don\u2019t stretch or condense it.', mis3: 'Don\u2019t rotate it.', mis4: 'Don\u2019t add shadows or effects.', mis5: 'Don\u2019t place it on bare terracotta without pattern.', mis6: 'Don\u2019t reduce its opacity.',
+      propT: 'Proportion of use', propN: 'Roughly 60% quiet ground (fog and plaster), 30% ink, 10% terracotta \u2014 with green, water and purple as functional slivers. If a screen feels loud, the ratio has slipped.',
+      heroT: 'The three anchors',
+      conT: 'Contrast', conN: 'Measured, not eyeballed. Body text pairs must reach AA (4.5:1); display type at 24px+ may use AA Large (3:1). Anything marked FAIL is decorative only \u2014 never text.',
+      tsT: 'Type scale',
+      ts1: 'Hero statements, murals, cover typography. One line, cropped tight.',
+      ts2: 'Section openers and screen titles.',
+      ts3: 'Card titles and content headings.',
+      ts4: 'Emphasis within content, stat callouts.',
+      ts5: 'Reading text. Never lighter than 400 on plaster.',
+      ts6: 'Cartographic labels: coordinates, day counts, metadata. Always mono, always caps.',
+      tsNote: 'Arabic pairs one step heavier: IBM Plex Sans Arabic 700 sits visually equal to Hanken Grotesk 800.',
+      gridT: 'Grid & spacing', gridG: '\u0627\u0644\u0634\u0628\u0643\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u0641\u0627\u062A',
+      grBaseT: 'Spacing scale \u00B7 base 8', grBase: 'All spacing is a multiple of 8, with 4 as the only half-step. If a gap isn\u2019t on the scale, it\u2019s wrong.',
+      grColT: 'Layout grid', grCol: '12 columns, 20px gutters, 28px margins, 1180px max. Content spans full columns \u2014 nothing hangs between them.',
+      grRadT: 'Radius', grRad: '3\u20134 for chips and inputs, 8 for cards, 12 for modals, 28 only for the device frame. One radius per surface.',
+      pmT: 'Pattern misuse',
+      pm1: 'Don\u2019t set text directly on the lattice \u2014 use a gradient or plain band.', pm2: 'Don\u2019t fill khatam shapes solid \u2014 it is always a line pattern.', pm3: 'Don\u2019t fade pinboard dots \u2014 they are full-strength or absent.', pm4: 'Don\u2019t mix two pattern languages on one surface.',
+      icSpecT: 'Construction',
+      icSpec: 'Every icon is drawn on a 64 grid with a 48 live area, one 2px stroke, round caps and joins. No fills, no second weight, no detail smaller than 2px. If it can\u2019t survive these constraints, simplify the object.',
       paletteT: 'Palette', paletteG: 'اللون', typeT: 'Typography', typeG: 'الخط', patternsT: 'Pattern system', patternsG: 'الأنماط',
       appT: 'Application', appG: 'التطبيق', iconsT: 'Iconography', iconsG: 'الأيقونات', progT: 'Progression', progG: 'التقدّم',
       facetTag: 'the classroom wall, broken to planes', khatamTag: 'the eight-point star, drawn in line', pinTag: 'the perforated panel, the dotted map',
@@ -568,7 +844,37 @@ class Component extends DCLogic {
       progCapL: 'The route · light · water blue only, green at arrival', progCapD: 'The route · dark · water lightens to #7C99B4',
     };
     const AR = {
-      navBrand: 'العلامة', navPalette: 'الألوان', navPatterns: 'الأنماط', navType: 'الخط', navIcons: 'الأيقونات', navApp: 'التطبيق', navProg: 'التقدّم',
+      navBrand: '\u0627\u0644\u0639\u0644\u0627\u0645\u0629', navLogo: '\u0627\u0644\u0634\u0639\u0627\u0631', navPalette: '\u0627\u0644\u0623\u0644\u0648\u0627\u0646', navPatterns: '\u0627\u0644\u0623\u0646\u0645\u0627\u0637', navType: '\u0627\u0644\u062E\u0637', navGrid: '\u0627\u0644\u0634\u0628\u0643\u0629', navIcons: '\u0627\u0644\u0623\u064A\u0642\u0648\u0646\u0627\u062A', navApp: '\u0627\u0644\u062A\u0637\u0628\u064A\u0642', navProg: '\u0627\u0644\u062A\u0642\u062F\u0651\u0645',
+      voiceT: 'الصوت',
+      vo1t: 'هادئ لا صاخب', vo1: 'نقرّر ولا نصرخ. لا تكديس لعلامات التعجب ولا مطر من الرموز التعبيرية. الصحراء لا ترفع صوتها.',
+      vo2t: 'محدّد لا عام', vo2: 'الثناء يسمّي الشيء: الوتيرة، السلسلة، المسافة المقطوعة. التشجيع العام ضجيج.',
+      vo3t: 'لغتان متكافئتان', vo3: 'العربية تُكتب، لا تُترجم كفكرة لاحقة. اللغتان تحملان السجلّ نفسه والمعلومة نفسها.',
+      voGood: '«أنت على الوتيرة — ٩٢٪ من الأسبوع الثاني.»',
+      voBad: '«عمل رائع!! واصل \uD83C\uDF89\uD83D\uDD25»',
+      logoT: 'الشعار', logoG: 'الشعار',
+      lgClearC: 'مساحة الأمان', lgClearN: 'الحدّ الأدنى للمساحة حول الشعار من كل الجهات يساوي ارتفاع x في الكلمة. لا شيء يدخل هذه المنطقة — لا نص ولا نمط ولا حافة.',
+      lgMinC: 'الحجم الأدنى', lgMinN: 'لا يصغر عن ٢٤ بكسل على الشاشة أو ٨ ملم في الطباعة. دون ذلك يُستخدم الرمز وحده.',
+      lgMisT: 'إساءة استخدام الشعار',
+      mis1: 'لا تُعِد تلوين الشعار.', mis2: 'لا تمدّده ولا تضغطه.', mis3: 'لا تُدِره.', mis4: 'لا تضف ظلالاً أو مؤثرات.', mis5: 'لا تضعه على الطين الصريح دون نمط.', mis6: 'لا تخفّض شفافيته.',
+      propT: 'نسب الاستخدام', propN: 'تقريباً ٦٠٪ أرضية هادئة (الضباب والجصّ)، ٣٠٪ حبر، ١٠٪ طين — مع الأخضر والماء والبنفسجي كشرائح وظيفية. إذا بدت الشاشة صاخبة فقد انزلقت النسبة.',
+      heroT: 'المراسي الثلاث',
+      conT: 'التباين', conN: 'يُقاس ولا يُقدَّر بالعين. أزواج نص القراءة يجب أن تبلغ AA (٤٫٥:١)؛ خط العرض من ٢٤ بكسل فأكثر يجوز له AA Large (٣:١). كل ما عليه علامة FAIL زخرفي فقط — ليس نصاً أبداً.',
+      tsT: 'مقياس الخط',
+      ts1: 'عبارات البطل والجداريات وأغلفة الخط. سطر واحد مقصوص بإحكام.',
+      ts2: 'فواتح الأقسام وعناوين الشاشات.',
+      ts3: 'عناوين البطاقات وعناوين المحتوى.',
+      ts4: 'التوكيد داخل المحتوى وإبراز الأرقام.',
+      ts5: 'نص القراءة. لا يخفّ عن ٤٠٠ على الجصّ.',
+      ts6: 'علامات خرائطية: إحداثيات وعدّ أيام وبيانات وصفية. دائماً مونو ودائماً كبيرة.',
+      tsNote: 'العربية تقترن بدرجة أثقل: IBM Plex Sans Arabic 700 تجلس بصرياً نداً لـ Hanken Grotesk 800.',
+      gridT: 'الشبكة والمسافات', gridG: 'الشبكة والمسافات',
+      grBaseT: 'مقياس المسافات · أساس ٨', grBase: 'كل المسافات مضاعفات ٨، و٤ هي نصف الخطوة الوحيد. إن لم تكن الفجوة على المقياس فهي خاطئة.',
+      grColT: 'شبكة التخطيط', grCol: '١٢ عموداً، فواصل ٢٠ بكسل، هوامش ٢٨ بكسل، وعرض أقصى ١١٨٠. المحتوى يمتد على أعمدة كاملة — لا شيء يتدلى بينها.',
+      grRadT: 'الاستدارة', grRad: '٣–٤ للرقاقات والحقول، ٨ للبطاقات، ١٢ للنوافذ، و٢٨ لإطار الجهاز فقط. استدارة واحدة لكل سطح.',
+      pmT: 'إساءة استخدام الأنماط',
+      pm1: 'لا تضع النص على الشبكة مباشرة — استخدم تدرّجاً أو شريطاً سادة.', pm2: 'لا تملأ أشكال الخاتم بلون صريح — هو نمط خطوط دائماً.', pm3: 'لا تبهت نقاط التنقيط — إما بكامل قوتها أو غائبة.', pm4: 'لا تمزج لغتي نمط على سطح واحد.',
+      icSpecT: 'البناء',
+      icSpec: 'كل أيقونة تُرسم على شبكة ٦٤ بمساحة حيّة ٤٨، بخط واحد ٢ بكسل، ورؤوس ووصلات مستديرة. لا تعبئة، لا وزن ثانٍ، لا تفصيل أصغر من ٢ بكسل. إن لم يصمد الغرض لهذه القيود فبسّطه.',
       paletteT: 'اللون', paletteG: 'Palette', typeT: 'الخط', typeG: 'Typography', patternsT: 'نظام الأنماط', patternsG: 'Patterns',
       appT: 'التطبيق', appG: 'Application', iconsT: 'الأيقونات', iconsG: 'Iconography', progT: 'التقدّم', progG: 'Progression',
       facetTag: 'جدار الفصل، مكسوراً إلى مستويات', khatamTag: 'نجمة الثماني، مرسومة بالخط', pinTag: 'اللوح المثقّب، الخريطة المنقّطة',
