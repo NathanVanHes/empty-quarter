@@ -19,6 +19,10 @@
   body{background:#EFE8DA;color:#26282E;font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   ::selection{background:#4A6B8A;color:#F1EBDD}
   @keyframes routeDraw{from{stroke-dashoffset:520}to{stroke-dashoffset:0}}
+  @keyframes mpdBase{0%{fill:#BC5A37}32%{fill:rgba(188,90,55,.38)}88%{fill:rgba(188,90,55,.38)}100%{fill:#BC5A37}}
+  @keyframes mpdHot{0%{fill:#BC5A37}32%{fill:rgba(188,90,55,.38)}46%{fill:rgba(188,90,55,.38)}60%{fill:#6BAE93}88%{fill:#6BAE93}100%{fill:#BC5A37}}
+  .mpd{animation:mpdBase 7s ease-in-out infinite}
+  .mpd-hot{animation:mpdHot 7s ease-in-out infinite}
 </style>
 </helmet>
 
@@ -346,6 +350,15 @@
     </div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facet · plaster · the light voice, larger planes, white seams</div>
 
+    <!-- terrain, the 3d representation: shaded planes over dune ridges -->
+    <div style="position:relative;overflow:hidden;border-radius:4px;border:1px solid rgba(38,40,46,.14);margin-top:24px">
+      <svg viewBox="0 0 1180 460" style="width:100%;height:auto;display:block">
+        <rect x="0" y="0" width="1180" height="460" fill="#EFE7D5"></rect>
+        <sc-for list="{{ muralTris }}" as="t" hint-placeholder-count="150"><polygon points="{{ t.pts }}" fill="{{ t.fill }}" stroke="rgba(255,255,255,.4)" stroke-width="1"></polygon></sc-for>
+      </svg>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facet · terrain · the 3D representation, shaded planes over dune ridges</div>
+
     <!-- scale study, same lattice, three densities -->
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">At scale · the same lattice, three densities</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
@@ -494,12 +507,6 @@
     <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:15px;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 16px">The presenter opening, live and interactive: countdowns, team-up lobby, slides and stage, built entirely on the V2.2 tokens — Action carries every button, Water carries progression, Heat marks the now-node, and the decorative families name the teams.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:14.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 16px">افتتاح العرض، حيّ وتفاعلي: العدّ التنازلي، ردهة تكوين الفرق، الشرائح والمسرح، مبني بالكامل على رموز الإصدار ٢٫٢ — الأخضر الفعلي يحمل كل زر، والماء يحمل التقدّم، والحرارة تعلّم نقطة الآن، والعائلات الزخرفية تسمّي الفرق.</p></sc-if>
     <div style="margin-top:24px">
       <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#26282E;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
-        <iframe src="presenter-opening.html?view=mission" title="Countdown A · mission control · heat marks the now-node" loading="lazy" scrolling="no" style="width:1440px;height:810px;border:0;transform-origin:0 0;transform:scale(.8194);pointer-events:none;display:block"></iframe>
-      </div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Countdown A · mission control · heat marks the now-node</div>
-    </div>
-    <div style="margin-top:24px">
-      <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#26282E;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
         <iframe src="presenter-opening.html?view=sands" title="Countdown C · drifting sands · grain + khatam ceremony" loading="lazy" scrolling="no" style="width:1440px;height:810px;border:0;transform-origin:0 0;transform:scale(.8194);pointer-events:none;display:block"></iframe>
       </div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Countdown C · drifting sands · grain + khatam ceremony</div>
@@ -522,18 +529,10 @@
 
     <!-- patterns doing their work in product -->
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.piuT }}</div>
-    <div style="border-radius:4px;overflow:hidden;border:1px solid rgba(38,40,46,.14)">
-      <svg viewBox="0 0 1180 460" style="width:100%;height:auto;display:block">
-        <rect x="0" y="0" width="1180" height="460" fill="#EFE7D5"></rect>
-        <sc-for list="{{ muralTris }}" as="t" hint-placeholder-count="150"><polygon points="{{ t.pts }}" fill="{{ t.fill }}" stroke="rgba(255,255,255,.4)" stroke-width="1"></polygon></sc-for>
-      </svg>
-    </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facet applied · terrain · murals, projections, hero moments</div>
-
-    <div style="margin-top:24px">
+    <div>
       <div style="position:relative;height:440px;border-radius:12px;overflow:hidden;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center">
         <svg viewBox="0 0 400 320" style="height:92%;width:auto;display:block">
-          <sc-for list="{{ mapDots }}" as="d" hint-placeholder-count="200"><circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.f }}"></circle></sc-for>
+          <sc-for list="{{ mapDots }}" as="d" hint-placeholder-count="200"><circle class="{{ d.k }}" cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.f }}"></circle></sc-for>
         </svg>
       </div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Pinboard applied · the community map · green marks the live pin</div>
@@ -673,7 +672,7 @@ class Component extends DCLogic {
       for (let x = step / 2; x < 400; x += step) {
         if (inside(x, y)) {
           const hot = cities.some(c => Math.hypot(x - c[0], y - c[1]) < 8);
-          mapDots.push({ cx: x, cy: y, r: 2.3, f: hot ? '#6BAE93' : 'rgba(188,90,55,.38)' });
+          mapDots.push({ cx: x, cy: y, r: 2.3, f: hot ? '#6BAE93' : 'rgba(188,90,55,.38)', k: hot ? 'mpd-hot' : 'mpd' });
         }
       }
     }
