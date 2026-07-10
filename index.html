@@ -468,13 +468,12 @@
     </div>
     <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">Where the system does its work, broken down by audience: the teacher's desktop, the student's app, and the shared classroom screens. Layouts are drawn as single-weight line plans — the same hand as the iconography — and the presenter opening below is a live prototype.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">حيث يقوم النظام بعمله، مقسّماً حسب الجمهور: سطح مكتب المعلّم، تطبيق الطالب، وشاشات الفصل المشتركة. التصاميم مرسومة كمخطّطات خطية بوزن واحد — بنفس يد الأيقونات — والافتتاح المباشر أدناه نموذج حيّ.</p></sc-if>
 
-    <div id="teacher" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:0 0 14px">{{ L.teacherT }}</div>
-    <div style="background:#26282E;border-radius:16px;padding:12px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
-      <div style="background:#F1EBDD;border-radius:8px;height:520px;display:flex;align-items:center;justify-content:center">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.35)">{{ L.teacherLbl }}</span>
+    <div style="margin-top:0">
+      <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#26282E;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
+        <iframe src="presenter-opening.html?view=teamup" title="Team-up · the lobby · decorative families name the teams" loading="lazy" scrolling="no" style="width:1440px;height:810px;border:0;transform-origin:0 0;transform:scale(.8194);pointer-events:none;display:block"></iframe>
       </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Team-up · the lobby · decorative families name the teams</div>
     </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.teacherCap }}</div>
 
     <div id="student" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.studentT }}</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
@@ -490,29 +489,9 @@
       </sc-for>
     </div>
 
-    <div id="classroom" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.classT }}</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <sc-for list="{{ classScreens }}" as="s" hint-placeholder-count="8">
-        <div>
-          <div style="background:{{ s.frame }};border-radius:12px;padding:9px">
-            <div style="background:{{ s.bg }};border-radius:6px;height:280px;display:flex;align-items:center;justify-content:center">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:{{ s.fg }}">{{ s.lbl }}</span>
-            </div>
-          </div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ s.cap }}</div>
-        </div>
-      </sc-for>
-    </div>
-
-    <!-- live prototype Â· presenter opening (Ji) -->
+    <!-- live prototype · presenter opening (Ji) -->
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.prodT }}</div>
-    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:15px;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 16px">The presenter opening, live and interactive: countdowns, team-up lobby, slides and stage, built entirely on the V2.2 tokens — Action carries every button, Water carries progression, Heat marks the now-node, and the decorative families name the teams.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:14.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 16px">Ø§ÙØªØªØ§Ø­ Ø§ÙØ¹Ø±Ø¶Ø Ø­ÙÙ ÙØªÙØ§Ø¹ÙÙ: Ø§ÙØ¹Ø¯Ù Ø§ÙØªÙØ§Ø²ÙÙØ Ø±Ø¯ÙØ© ØªÙÙÙÙ Ø§ÙÙØ±ÙØ Ø§ÙØ´Ø±Ø§Ø¦Ø­ ÙØ§ÙÙØ³Ø±Ø­Ø ÙØ¨ÙÙ Ø¨Ø§ÙÙØ§ÙÙ Ø¹ÙÙ Ø±ÙÙØ² Ø§ÙØ¥ØµØ¯Ø§Ø± Ù¢Ù«Ù¢ â Ø§ÙØ£Ø®Ø¶Ø± Ø§ÙÙØ¹ÙÙ ÙØ­ÙÙ ÙÙ Ø²Ø±Ø ÙØ§ÙÙØ§Ø¡ ÙØ­ÙÙ Ø§ÙØªÙØ¯ÙÙØ ÙØ§ÙØ­Ø±Ø§Ø±Ø© ØªØ¹ÙÙÙ ÙÙØ·Ø© Ø§ÙØ¢ÙØ ÙØ§ÙØ¹Ø§Ø¦ÙØ§Øª Ø§ÙØ²Ø®Ø±ÙÙØ© ØªØ³ÙÙÙ Ø§ÙÙØ±Ù.</p></sc-if>
-    <div style="margin-top:24px">
-      <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#26282E;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
-        <iframe src="presenter-opening.html?view=teamup" title="Team-up · the lobby · decorative families name the teams" loading="lazy" scrolling="no" style="width:1440px;height:810px;border:0;transform-origin:0 0;transform:scale(.8194);pointer-events:none;display:block"></iframe>
-      </div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Team-up · the lobby · decorative families name the teams</div>
-    </div>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:15px;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 16px">The presenter opening, live and interactive: countdowns, team-up lobby, slides and stage, built entirely on the V2.2 tokens — Action carries every button, Water carries progression, Heat marks the now-node, and the decorative families name the teams.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:14.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 16px">افتتاح العرض، حيّ وتفاعلي: العدّ التنازلي، ردهة تكوين الفرق، الشرائح والمسرح، مبني بالكامل على رموز الإصدار ٢٫٢ — الأخضر الفعلي يحمل كل زر، والماء يحمل التقدّم، والحرارة تعلّم نقطة الآن، والعائلات الزخرفية تسمّي الفرق.</p></sc-if>
     <div style="margin-top:24px">
       <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#26282E;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
         <iframe src="presenter-opening.html?view=mission" title="Countdown A · mission control · heat marks the now-node" loading="lazy" scrolling="no" style="width:1440px;height:810px;border:0;transform-origin:0 0;transform:scale(.8194);pointer-events:none;display:block"></iframe>
@@ -527,6 +506,12 @@
     </div>
     <div style="margin-top:24px">
       <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#26282E;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
+        <iframe src="presenter-opening.html?view=teacher" title="Teacher solo · teacher at the centre of the screen" loading="lazy" scrolling="no" style="width:1440px;height:810px;border:0;transform-origin:0 0;transform:scale(.8194);pointer-events:none;display:block"></iframe>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Teacher solo · teacher at the centre of the screen</div>
+    </div>
+    <div style="margin-top:24px">
+      <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#26282E;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
         <iframe src="presenter-opening.html?view=stage" title="Stage view · active speaker" loading="lazy" scrolling="no" style="width:1440px;height:810px;border:0;transform-origin:0 0;transform:scale(.8194);pointer-events:none;display:block"></iframe>
       </div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Stage view · active speaker</div>
@@ -535,7 +520,32 @@
       <a href="presenter-opening.html" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BC5A37;text-decoration:none">{{ L.prodOpen }} ↗</a>
     </div>
 
+    <!-- patterns doing their work in product -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.piuT }}</div>
+    <div style="border-radius:4px;overflow:hidden;border:1px solid rgba(38,40,46,.14)">
+      <svg viewBox="0 0 1180 460" style="width:100%;height:auto;display:block">
+        <rect x="0" y="0" width="1180" height="460" fill="#EFE7D5"></rect>
+        <sc-for list="{{ muralTris }}" as="t" hint-placeholder-count="150"><polygon points="{{ t.pts }}" fill="{{ t.fill }}" stroke="rgba(255,255,255,.4)" stroke-width="1"></polygon></sc-for>
+      </svg>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facet applied · terrain · murals, projections, hero moments</div>
 
+    <div style="margin-top:24px">
+      <div style="position:relative;height:440px;border-radius:12px;overflow:hidden;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center">
+        <svg viewBox="0 0 400 320" style="height:92%;width:auto;display:block">
+          <sc-for list="{{ mapDots }}" as="d" hint-placeholder-count="200"><circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.f }}"></circle></sc-for>
+        </svg>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Pinboard applied · the community map · green marks the live pin</div>
+    </div>
+
+    <div id="teacher" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.teacherT }}</div>
+    <div style="background:#26282E;border-radius:16px;padding:12px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
+      <div style="background:#F1EBDD;border-radius:8px;height:520px;display:flex;align-items:center;justify-content:center">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.35)">{{ L.teacherLbl }}</span>
+      </div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.teacherCap }}</div>
 
   </section>
 
@@ -587,14 +597,14 @@ class Component extends DCLogic {
       pr1t: 'Facet · the landscape', pr1: 'Hero surfaces and moments of arrival: murals, welcome headers, terrain, splash. Big and warm, never behind dense text.',
       pr2t: 'Khatam · the ceremony', pr2: 'Certificates, milestones, signage and dividers. Always line, never fill, used sparingly: when it appears, it means something.',
       pr3t: 'Pinboard · the map', pr3: 'Maps, facades and quiet texture behind surfaces. A clean even field; green marks only the highlighted pin.',
-      teacherT: 'Teacher', studentT: 'Student', classT: 'Classroom', piuT: 'Patterns in product',      iconsCapL: 'Heritage set · terracotta line on plaster', iconsCapD: 'Heritage set · cream line on ink',
+      teacherT: 'Teacher', studentT: 'Student', piuT: 'Patterns in product',      iconsCapL: 'Heritage set · terracotta line on plaster', iconsCapD: 'Heritage set · cream line on ink',
       ic1: 'Dallah', ic2: 'Water jug', ic3: 'Astrolabe', ic4: 'Lantern', ic5: 'The well', ic6: 'Sundial',
       ir1t: 'One line, one weight', ir1: 'A single 2px stroke, no fills, geometry over realism. If it needs shading, it is too detailed.',
       ir2t: 'Drawn like a plan', ir2: 'Objects are reduced to their construction — circles, facets and seams, the same discipline as the patterns.',
       ir3t: 'Brand colours only', ir3: 'Terracotta on light grounds, cream on ink. Never blue, never green — colour roles belong to the UI, not the drawings.',
       teacherLbl: 'Teacher · main view', teacherCap: 'Teacher · main view · desktop',
       light: 'light', dark: 'dark',
-      schedule: 'Schedule', progression: 'Progression', timer: 'Timer', teamup: 'Team up', slide: 'Slide view', stage: 'Stage view',
+      schedule: 'Schedule', progression: 'Progression',
     };
     const AR = {
       navBrand: '\u0627\u0644\u0639\u0644\u0627\u0645\u0629', navLogo: '\u0627\u0644\u0634\u0639\u0627\u0631', navPalette: '\u0627\u0644\u0623\u0644\u0648\u0627\u0646', navPatterns: '\u0627\u0644\u0623\u0646\u0645\u0627\u0637', navType: '\u0627\u0644\u062E\u0637', navIcons: '\u0627\u0644\u0623\u064A\u0642\u0648\u0646\u0627\u062A', navApp: '\u0627\u0644\u062A\u0637\u0628\u064A\u0642',
@@ -631,7 +641,7 @@ class Component extends DCLogic {
       pr1t: 'الأوجه · المشهد', pr1: 'أسطح البطولة ولحظات الوصول: الجداريات، ترويسات الترحيب، التضاريس، شاشة البداية. كبير ودافئ، ولا يقف خلف نص كثيف أبداً.',
       pr2t: 'الخاتم · الاحتفاء', pr2: 'الشهادات والمحطات واللافتات والفواصل. خط دائماً لا تعبئة، ويُستخدم باقتصاد: حين يظهر فهو يعني شيئاً.',
       pr3t: 'التنقيط · الخريطة', pr3: 'الخرائط والواجهات والنسيج الهادئ خلف الأسطح. حقل نظيف متساوٍ؛ الأخضر يعلّم الدبوس المميّز فقط.',
-      teacherT: 'المعلّم', studentT: 'الطالب', classT: 'الفصل', piuT: 'الأنماط في المنتج',
+      teacherT: 'المعلّم', studentT: 'الطالب', piuT: 'الأنماط في المنتج',
       iconsCapL: 'المجموعة التراثية · خط طيني على الجصّ', iconsCapD: 'المجموعة التراثية · خط كريمي على الحبر',
       ic1: 'الدلّة', ic2: 'جرّة الماء', ic3: 'الأسطرلاب', ic4: 'الفانوس', ic5: 'البئر', ic6: 'المزولة',
       ir1t: 'خط واحد، وزن واحد', ir1: 'ضربة واحدة بسماكة ٢ بكسل، بلا تعبئة، هندسة لا واقعية. إن احتاج تظليلاً فهو مفصّل أكثر من اللازم.',
@@ -639,14 +649,13 @@ class Component extends DCLogic {
       ir3t: 'ألوان العلامة فقط', ir3: 'الطيني على الأرضيات الفاتحة، والكريمي على الحبر. لا أزرق ولا أخضر — أدوار اللون للواجهة لا للرسوم.',
       teacherLbl: 'المعلّم · العرض الرئيسي', teacherCap: 'المعلّم · العرض الرئيسي · سطح المكتب',
       light: 'فاتح', dark: 'داكن',
-      schedule: 'الجدول', progression: 'التقدّم', timer: 'المؤقّت', teamup: 'تكوين الفرق', slide: 'عرض الشرائح', stage: 'عرض المسرح',
+      schedule: 'الجدول', progression: 'التقدّم',
     };
     const L = isAR ? AR : EN;
     const frame = (lbl, mode) => mode === 'light'
       ? { lbl, cap: lbl + ' · ' + L.light, frame: '#26282E', bg: '#F1EBDD', fg: 'rgba(38,40,46,.4)' }
       : { lbl, cap: lbl + ' · ' + L.dark, frame: '#0D1016', bg: '#161A21', fg: 'rgba(241,235,221,.4)' };
     const studentScreens = [L.schedule, L.progression].flatMap(lbl => [frame(lbl, 'light'), frame(lbl, 'dark')]);
-    const classScreens = [L.timer, L.teamup, L.slide, L.stage].flatMap(lbl => [frame(lbl, 'light'), frame(lbl, 'dark')]);
     const poly = [[60,70],[250,40],[300,70],[322,128],[338,120],[330,152],[362,176],[312,262],[232,300],[150,232],[118,176],[88,128]];
     const inside = (x,y) => {
       let c = false;
@@ -802,7 +811,7 @@ class Component extends DCLogic {
       show01: focus === 'All' || focus === 'Facet',
       show02: focus === 'All' || focus === 'Khatam',
       show03: focus === 'All' || focus === 'Pinboard',
-      L, dir, isEN, isAR, studentScreens, classScreens,
+      L, dir, isEN, isAR, studentScreens,
       mapDots,
       facadeDots,
       muralTris,
