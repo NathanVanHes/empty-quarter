@@ -3564,5 +3564,32 @@
     startSequence();
   }
 </script>
+<script>
+/* Embed mode — ?view=teamup|mission|cinema|sands|teacher|slides|stage
+   pins the app on one screen, hides the control panel, mutes sound. */
+(function () {
+  var view = new URLSearchParams(location.search).get('view');
+  if (!view) return;
+  var css = document.createElement('style');
+  css.textContent = '#cp{display:none !important} html,body{overflow:hidden}';
+  document.head.appendChild(css);
+  function click(attr, val) {
+    var b = document.querySelector('.cp-tabs[data-attr="' + attr + '"] button[data-value="' + val + '"]');
+    if (b) b.click();
+  }
+  var isCountdown = view === 'mission' || view === 'cinema' || view === 'sands';
+  function go() {
+    click('data-sound', 'off');
+    if (isCountdown) {
+      click('data-countdown', view);
+      click('data-phase', 'countdown');
+    } else {
+      click('data-phase', view);
+    }
+  }
+  setTimeout(go, 300);
+  if (isCountdown) setInterval(go, 22000);
+})();
+</script>
 </body>
 </html>
