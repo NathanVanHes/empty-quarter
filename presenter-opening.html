@@ -135,7 +135,10 @@
      doesn't spin — it lives. Countdown phase only; never wallpaper.
      Mission keeps its own instrument ring, so the Khatam yields there. */
   .khatam {
-    position: absolute; left: 50%; top: 50%;
+    /* +32px: .main sits below the 64px topbar row, so everything that
+       centers in it (countdown numeral, teacher circle) is 32px below
+       viewport center — offset the khatam to stay concentric with them */
+    position: absolute; left: 50%; top: calc(50% + 32px);
     width: 88vh; height: 88vh;
     margin: -44vh 0 0 -44vh;
     pointer-events: none; z-index: 2;
