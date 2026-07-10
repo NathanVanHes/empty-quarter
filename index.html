@@ -19,10 +19,10 @@
   body{background:#EFE8DA;color:#26282E;font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   ::selection{background:#4A6B8A;color:#F1EBDD}
   @keyframes routeDraw{from{stroke-dashoffset:520}to{stroke-dashoffset:0}}
-  @keyframes mpdBase{0%{fill:#BC5A37}32%{fill:rgba(188,90,55,.38)}88%{fill:rgba(188,90,55,.38)}100%{fill:#BC5A37}}
-  @keyframes mpdHot{0%{fill:#BC5A37}32%{fill:rgba(188,90,55,.38)}46%{fill:rgba(188,90,55,.38)}60%{fill:#6BAE93}88%{fill:#6BAE93}100%{fill:#BC5A37}}
-  .mpd{animation:mpdBase 7s ease-in-out infinite}
-  .mpd-hot{animation:mpdHot 7s ease-in-out infinite}
+  @keyframes mpdBase{0%{opacity:0;fill:#BC5A37}7%{opacity:1;fill:#BC5A37}38%{fill:rgba(188,90,55,.38)}90%{fill:rgba(188,90,55,.38);opacity:1}100%{opacity:0;fill:rgba(188,90,55,.38)}}
+  @keyframes mpdHot{0%{opacity:0;fill:#BC5A37;r:2.3}7%{opacity:1;fill:#BC5A37}38%{fill:rgba(188,90,55,.38);r:2.3}52%{fill:rgba(188,90,55,.38)}62%{fill:#6BAE93;r:4.6}70%{r:3.4}90%{fill:#6BAE93;opacity:1;r:3.4}100%{opacity:0;r:2.3}}
+  .mpd{animation:mpdBase 6.5s ease-in-out infinite backwards}
+  .mpd-hot{animation:mpdHot 6.5s ease-in-out infinite backwards}
 </style>
 </helmet>
 
@@ -532,7 +532,7 @@
     <div>
       <div style="position:relative;height:440px;border-radius:12px;overflow:hidden;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center">
         <svg viewBox="0 0 400 320" style="height:92%;width:auto;display:block">
-          <sc-for list="{{ mapDots }}" as="d" hint-placeholder-count="200"><circle class="{{ d.k }}" cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.f }}"></circle></sc-for>
+          <sc-for list="{{ mapDots }}" as="d" hint-placeholder-count="200"><circle class="{{ d.k }}" style="animation-delay:{{ d.dly }}ms" cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.f }}"></circle></sc-for>
         </svg>
       </div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Pinboard applied · the community map · green marks the live pin</div>
@@ -672,7 +672,7 @@ class Component extends DCLogic {
       for (let x = step / 2; x < 400; x += step) {
         if (inside(x, y)) {
           const hot = cities.some(c => Math.hypot(x - c[0], y - c[1]) < 8);
-          mapDots.push({ cx: x, cy: y, r: 2.3, f: hot ? '#6BAE93' : 'rgba(188,90,55,.38)', k: hot ? 'mpd-hot' : 'mpd' });
+          mapDots.push({ cx: x, cy: y, r: 2.3, f: hot ? '#6BAE93' : 'rgba(188,90,55,.38)', k: hot ? 'mpd-hot' : 'mpd', dly: Math.round(x * 2.4 + y * 1.1 + ((x * 7 + y * 13) % 9) * 30 ) });
         }
       }
     }

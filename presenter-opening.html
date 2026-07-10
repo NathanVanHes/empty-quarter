@@ -3587,7 +3587,18 @@
       click('data-phase', view);
     }
   }
-  setTimeout(go, 300);
+  // each embed shows only its own screen: if the sequence tries to advance
+  // to the next phase, snap straight back (which replays this phase)
+  var wantPhase = isCountdown ? 'countdown' : view;
+  setTimeout(function () {
+    go();
+    var app = document.querySelector('.app');
+    if (app) {
+      new MutationObserver(function () {
+        if (app.getAttribute('data-phase') !== wantPhase) go();
+      }).observe(app, { attributes: true, attributeFilter: ['data-phase'] });
+    }
+  }, 300);
   // hold countdown embeds on the countdown screen — restart before the
   // sequence advances to teacher/slides
   if (isCountdown) setInterval(go, 9000);
