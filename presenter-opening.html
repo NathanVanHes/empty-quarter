@@ -3588,7 +3588,9 @@
     }
   }
   setTimeout(go, 300);
-  if (isCountdown) setInterval(go, 22000);
+  // hold countdown embeds on the countdown screen — restart before the
+  // sequence advances to teacher/slides
+  if (isCountdown) setInterval(go, 9000);
 })();
 </script>
 </body>
