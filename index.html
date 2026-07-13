@@ -470,6 +470,31 @@
       <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.ir2t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.ir2 }}</div></div>
       <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.ir3t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.ir3 }}</div></div>
     </div>
+
+    <!-- subject covers · hinted line at scale -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.covT }}</div>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:15px;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 16px">The same hinted line carries session covers. Each subject holds its own ground colour and one motif from its icon, drawn in cream at low opacity and bleeding off the edge. The session title is the hero; the grid, type and lockup stay put.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:14.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 16px">الخط الموحى نفسه يحمل أغلفة الجلسات. لكل مادة أرضيتها اللونية وزخرفة واحدة من أيقونتها، مرسومة بالكريمي بشفافية منخفضة وتنساب خارج الحافة. عنوان الجلسة هو البطل؛ الشبكة والخط والشعار ثابتة.</p></sc-if>
+    <div style="margin-top:24px">
+      <div class="eq-shot" data-w="1280" data-h="720" style="position:relative;overflow:hidden;border-radius:10px;background:#6E5824;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
+        <iframe src="subject-covers.html?slide=1" title="Session cover · chemistry" loading="lazy" scrolling="no" style="width:1280px;height:720px;border:0;transform-origin:0 0;transform:scale(.9219);pointer-events:none;display:block"></iframe>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Session cover · chemistry · hinted line on subject ground</div>
+    </div>
+    <div style="margin-top:24px">
+      <div class="eq-shot" data-w="1280" data-h="720" style="position:relative;overflow:hidden;border-radius:10px;background:#634A59;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
+        <iframe src="subject-covers.html?slide=2" title="Session cover · biology" loading="lazy" scrolling="no" style="width:1280px;height:720px;border:0;transform-origin:0 0;transform:scale(.9219);pointer-events:none;display:block"></iframe>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Session cover · biology · the cell drawn as concentric line</div>
+    </div>
+    <div style="margin-top:24px">
+      <div class="eq-shot" data-w="1280" data-h="720" style="position:relative;overflow:hidden;border-radius:10px;background:#4E5A43;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
+        <iframe src="subject-covers.html?slide=3" title="Session cover · future skills" loading="lazy" scrolling="no" style="width:1280px;height:720px;border:0;transform-origin:0 0;transform:scale(.9219);pointer-events:none;display:block"></iframe>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Session cover · future skills · flask and sparks</div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:10px">
+      <a href="subject-covers.html" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BC5A37;text-decoration:none">{{ L.covOpen }} ↗</a>
+    </div>
   </section>
 
   <!-- ============ 06 · APPLICATION ============ -->
@@ -553,12 +578,15 @@
     </div>
 
     <div id="teacher" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.teacherT }}</div>
-    <div style="background:#26282E;border-radius:16px;padding:12px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
-      <div style="background:#F1EBDD;border-radius:8px;height:520px;display:flex;align-items:center;justify-content:center">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.35)">{{ L.teacherLbl }}</span>
+    <div>
+      <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#F7F3EA;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
+        <iframe src="teacher-classroom.html" title="Teacher · live classroom · paper white" loading="lazy" scrolling="no" style="width:1440px;height:810px;border:0;transform-origin:0 0;transform:scale(.8194);pointer-events:none;display:block"></iframe>
       </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Teacher · live classroom · paper white · desktop</div>
     </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.teacherCap }}</div>
+    <div style="display:flex;justify-content:flex-end;margin-top:10px">
+      <a href="teacher-classroom.html" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#BC5A37;text-decoration:none">{{ L.prodOpen }} ↗</a>
+    </div>
 
   </section>
 
@@ -584,6 +612,7 @@ class Component extends DCLogic {
       voGood: '\u201CYou\u2019re on pace \u2014 92% through week two.\u201D',
       voBad: '\u201CGreat job!! Keep it up \uD83C\uDF89\uD83D\uDD25\u201D',
       prodT: 'Product · presenter opening · live prototype', prodOpen: 'Open full screen',
+      covT: 'Subject covers', covOpen: 'Open full screen',
       logoT: 'Logo', logoG: '\u0627\u0644\u0634\u0639\u0627\u0631',
       lgClearC: 'Clearspace', lgClearN: 'Minimum clearspace on all sides equals the x-height of the wordmark. Nothing enters this zone \u2014 no type, no pattern, no edge.',
       lgMinC: 'Minimum size', lgMinN: 'Never smaller than 24px on screen or 8mm in print. Below that, use the glyph alone.',
@@ -614,7 +643,6 @@ class Component extends DCLogic {
       ir1t: 'One line, one weight', ir1: 'A single 2px stroke, no fills, geometry over realism. If it needs shading, it is too detailed.',
       ir2t: 'Drawn like a plan', ir2: 'Objects are reduced to their construction — circles, facets and seams, the same discipline as the patterns.',
       ir3t: 'Brand colours only', ir3: 'Terracotta on light grounds, cream on ink. Never blue, never green — colour roles belong to the UI, not the drawings.',
-      teacherLbl: 'Teacher · main view', teacherCap: 'Teacher · main view · desktop',
     };
     const AR = {
       navBrand: '\u0627\u0644\u0639\u0644\u0627\u0645\u0629', navLogo: '\u0627\u0644\u0634\u0639\u0627\u0631', navPalette: '\u0627\u0644\u0623\u0644\u0648\u0627\u0646', navPatterns: '\u0627\u0644\u0623\u0646\u0645\u0627\u0637', navType: '\u0627\u0644\u062E\u0637', navIcons: '\u0627\u0644\u0623\u064A\u0642\u0648\u0646\u0627\u062A', navApp: '\u0627\u0644\u062A\u0637\u0628\u064A\u0642',
@@ -625,6 +653,7 @@ class Component extends DCLogic {
       voGood: '«أنت على الوتيرة — ٩٢٪ من الأسبوع الثاني.»',
       voBad: '«عمل رائع!! واصل \uD83C\uDF89\uD83D\uDD25»',
       prodT: 'المنتج · افتتاح العرض · نموذج حيّ', prodOpen: 'افتح بملء الشاشة',
+      covT: 'أغلفة المواد', covOpen: 'افتح بملء الشاشة',
       logoT: 'الشعار', logoG: 'الشعار',
       lgClearC: 'مساحة الأمان', lgClearN: 'الحدّ الأدنى للمساحة حول الشعار من كل الجهات يساوي ارتفاع x في الكلمة. لا شيء يدخل هذه المنطقة — لا نص ولا نمط ولا حافة.',
       lgMinC: 'الحجم الأدنى', lgMinN: 'لا يصغر عن ٢٤ بكسل على الشاشة أو ٨ ملم في الطباعة. دون ذلك يُستخدم الرمز وحده.',
@@ -657,7 +686,6 @@ class Component extends DCLogic {
       ir1t: 'خط واحد، وزن واحد', ir1: 'ضربة واحدة بسماكة ٢ بكسل، بلا تعبئة، هندسة لا واقعية. إن احتاج تظليلاً فهو مفصّل أكثر من اللازم.',
       ir2t: 'مرسوم كمخطّط', ir2: 'تُختزل الأغراض إلى بنيتها — دوائر وأوجه ودروز، الانضباط نفسه كالأنماط.',
       ir3t: 'ألوان العلامة فقط', ir3: 'الطيني على الأرضيات الفاتحة، والكريمي على الحبر. لا أزرق ولا أخضر — أدوار اللون للواجهة لا للرسوم.',
-      teacherLbl: 'المعلّم · العرض الرئيسي', teacherCap: 'المعلّم · العرض الرئيسي · سطح المكتب',
     };
     const L = isAR ? AR : EN;
     const poly = [[60,70],[250,40],[300,70],[322,128],[338,120],[330,152],[362,176],[312,262],[232,300],[150,232],[118,176],[88,128]];
@@ -850,9 +878,10 @@ class Component extends DCLogic {
     document.querySelectorAll('.eq-shot').forEach(function (w) {
       var f = w.querySelector('iframe');
       if (!f || !w.clientWidth) return;
-      var sc = w.clientWidth / 1440;
+      var W = +w.dataset.w || 1440, H = +w.dataset.h || 810;
+      var sc = w.clientWidth / W;
       f.style.transform = 'scale(' + sc + ')';
-      w.style.height = Math.round(810 * sc) + 'px';
+      w.style.height = Math.round(H * sc) + 'px';
     });
   }
   window.addEventListener('scroll', spy, { passive: true });
