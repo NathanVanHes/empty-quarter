@@ -23,8 +23,6 @@
   @keyframes mpdHot{0%{opacity:0;fill:#BC5A37;r:2.3}7%{opacity:1;fill:#BC5A37}38%{fill:rgba(188,90,55,.38);r:2.3}52%{fill:rgba(188,90,55,.38)}62%{fill:#6BAE93;r:4.6}70%{r:3.4}90%{fill:#6BAE93;opacity:1;r:3.4}100%{opacity:0;r:2.3}}
   .mpd{animation:mpdBase 6.5s ease-in-out infinite backwards}
   .mpd-hot{animation:mpdHot 6.5s ease-in-out infinite backwards}
-  @keyframes ktmDraw{0%{stroke-dashoffset:272;opacity:0}10%{opacity:.85}42%{stroke-dashoffset:0;opacity:.85}64%{opacity:0;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:0}}
-  .ktm-anim{fill:none;stroke:#F1EBDD;stroke-width:1.2;stroke-dasharray:272 272;animation:ktmDraw 5.2s linear infinite}
   /* ── responsive: the document is inline-styled, so structure collapses via attribute overrides ── */
   @media (max-width:900px){
     [style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr)!important}
@@ -35,8 +33,9 @@
     [style*="max-width:1180px"]{padding:32px 16px 80px!important}
     header[style]{flex-wrap:wrap!important;gap:10px!important;padding:10px 0!important}
     header[style] img{height:34px!important}
-    header[style] nav{width:100%;flex-wrap:nowrap!important;gap:16px!important;overflow-x:auto;white-space:nowrap;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    header[style] nav{width:calc(100% + 32px);margin:0 -16px;padding:2px 16px 8px;flex-wrap:nowrap!important;gap:8px!important;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 40px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 40px),transparent 100%)}
     header[style] nav::-webkit-scrollbar{display:none}
+    header[style] nav a{flex:none;padding:8px 14px;border:1px solid rgba(38,40,46,.18);border-radius:999px;font-size:10px!important}
     [id]{scroll-margin-top:96px}
   }
   @media (max-width:560px){
@@ -68,8 +67,7 @@
 
   <div id="brand" style="padding:64px 0 8px">
     <h1 style="font-family:'Hanken Grotesk';font-weight:300;font-size:clamp(48px,8vw,104px);line-height:.96;letter-spacing:-.025em;margin:0">The Empty<br>Quarter</h1>
-    <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:300;font-size:clamp(30px,5vw,56px);color:rgba(38,40,46,.42);margin-top:14px;letter-spacing:0;text-align:right">الرُّبع الخالي</div>
-    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-weight:400;font-size:19px;line-height:1.55;color:rgba(38,40,46,.72);max-width:620px;margin:34px 0 0">An exploration into a visual language for noon. It starts from the physical classroom designs — the faceted walls, the star screens, the perforated panels — and carries those patterns over into the UI of the platform. Built from the geometry of the desert, not its picture: terracotta, warm oak and future teal, held by three pattern systems that live on a wall and inside the app alike.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:17px;line-height:1.9;color:rgba(38,40,46,.72);max-width:620px;margin:34px 0 0">استكشاف للغة بصرية لنون. يبدأ من تصاميم الفصول المادية — الجدران المسطّحة الأوجه، وشبكات النجمة، والألواح المثقّبة — ويحمل تلك الأنماط إلى واجهة المنصة. مبني من هندسة الصحراء لا من صورتها: الطين والبلوط الدافئ والأزرق المخضرّ المستقبلي، تحملها ثلاثة أنظمة أنماط تعيش على الجدار وداخل التطبيق سواء.</p></sc-if>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-weight:400;font-size:19px;line-height:1.55;color:rgba(38,40,46,.72);max-width:620px;margin:18px 0 0">An exploration into a visual language for noon. It starts from the physical classroom designs: the faceted walls, the star screens, the perforated panels. It carries those patterns over into the UI of the platform. Built from the geometry of the desert, not its picture: terracotta, warm oak and future teal, held by three pattern systems that live on a wall and inside the app alike.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:17px;line-height:1.9;color:rgba(38,40,46,.72);max-width:620px;margin:18px 0 0">استكشاف للغة بصرية لنون. يبدأ من تصاميم الفصول المادية: الجدران المسطّحة الأوجه، وشبكات النجمة، والألواح المثقّبة، ويحمل تلك الأنماط إلى واجهة المنصة. مبني من هندسة الصحراء لا من صورتها: الطين والبلوط الدافئ والأزرق المخضرّ المستقبلي، تحملها ثلاثة أنظمة أنماط تعيش على الجدار وداخل التطبيق سواء.</p></sc-if>
   </div>
 
   <!-- three-language hero band -->
@@ -258,7 +256,7 @@
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.typeT }}</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.typeG }}</span>
     </div>
-    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">One disciplined bilingual system, set heavy. Display type is big, bold and chunky — painted-on-the-wall weight (700–800), cropped tight. A humanist grotesque for Latin, a modern Arabic that sits beside it as an equal, mono for the numeric and cartographic.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">نظام ثنائي اللغة منضبط واحد، بوزن ثقيل. خط العرض كبير وجريء وسميك — بوزن الطلاء على الجدار (٧٠٠–٨٠٠)، مقصوص بإحكام. غروتسك إنساني للاتينية، وعربية حديثة تجلس بجانبها ندّاً، ومونو للأرقام والخرائط.</p></sc-if>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">One disciplined bilingual system, set heavy. Display type is big, bold and chunky, painted-on-the-wall weight (700–800), cropped tight. A humanist grotesque for Latin, a modern Arabic that sits beside it as an equal, mono for the numeric and cartographic.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:560px;margin:0 0 36px">نظام ثنائي اللغة منضبط واحد، بوزن ثقيل. خط العرض كبير وجريء وسميك، بوزن الطلاء على الجدار (٧٠٠–٨٠٠)، مقصوص بإحكام. غروتسك إنساني للاتينية، وعربية حديثة تجلس بجانبها ندّاً، ومونو للأرقام والخرائط.</p></sc-if>
 
     <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:stretch">
       <!-- the wall: heavy display on terracotta -->
@@ -365,15 +363,6 @@
     </div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Khatam · dark</div>
 
-    <!-- motion band: the star draws itself, a wave travelling the lattice -->
-    <div style="position:relative;height:240px;overflow:hidden;border-radius:4px;background:#26282E;margin-top:24px">
-      <svg viewBox="0 0 1180 240" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
-        <rect width="1180" height="240" fill="url(#oct-cream)" opacity=".4"></rect>
-        <sc-for list="{{ khatamCells }}" as="k" hint-placeholder-count="39"><g class="ktm-anim" style="animation-delay:{{ k.dly }}ms"><rect x="{{ k.x }}" y="{{ k.y }}" width="68" height="68"></rect><polygon points="{{ k.di }}"></polygon></g></sc-for>
-      </svg>
-    </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Khatam · motion</div>
-
     <!-- scale study -->
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">At scale · the same star, three densities</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
@@ -420,6 +409,28 @@
       </section>
   </sc-if>
 
+  <!-- khatam in ceremony: the certificate -->
+  <section style="margin-top:56px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:0 0 14px">Khatam in ceremony · certificate</div>
+    <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.14);border-radius:6px;overflow:hidden;max-width:840px;margin:0 auto;box-shadow:0 30px 60px -30px rgba(38,40,46,.35)">
+      <svg viewBox="0 0 840 44" preserveAspectRatio="xMidYMid slice" style="display:block;width:100%;height:44px"><defs><pattern id="oct-cert" width="64" height="64" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(38,40,46,.16)" stroke-width="1"><rect x="9.3" y="9.3" width="45.4" height="45.4"></rect><polygon points="32,0 64,32 32,64 0,32"></polygon></g></pattern></defs><rect width="840" height="44" fill="url(#oct-cert)"></rect></svg>
+      <div style="padding:44px 48px 40px;text-align:center">
+        <svg viewBox="0 0 72 72" style="width:56px;height:56px;display:block;margin:0 auto"><g fill="none" stroke="#BC5A37" stroke-width="1.4"><rect x="14" y="14" width="44" height="44"></rect><polygon points="36,4 68,36 36,68 4,36"></polygon></g></svg>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#BC5A37;margin-top:22px">Certificate of completion</div>
+        <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:13px;color:rgba(38,40,46,.45);margin-top:6px">شهادة إتمام</div>
+        <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:42px;letter-spacing:-.02em;color:#26282E;margin-top:18px">Ali Al-Harbi</div>
+        <div style="font-size:15px;color:rgba(38,40,46,.62);margin-top:10px">has completed Qudrat · Level 1 · thirteen blocks mastered</div>
+        <div style="display:flex;justify-content:center;align-items:center;gap:28px;margin-top:30px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:rgba(38,40,46,.5)">20 NOV 2026</span>
+          <span style="width:1px;height:16px;background:rgba(38,40,46,.2)"></span>
+          <img src="assets/noon-logo.svg" style="height:20px">
+        </div>
+      </div>
+      <svg viewBox="0 0 840 44" preserveAspectRatio="xMidYMid slice" style="display:block;width:100%;height:44px"><rect width="840" height="44" fill="url(#oct-cert)"></rect></svg>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px;text-align:center">Khatam · line only, the pattern as ceremony</div>
+  </section>
+
   <section style="margin-top:40px">
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">{{ L.pmT }}</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
@@ -439,7 +450,7 @@
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.iconsT }}</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.iconsG }}</span>
     </div>
-    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 36px">Illustration is drawn like a technical plan of a heritage object: a single line weight, geometry over realism, the object reduced to its construction. Low fidelity on purpose — these are diagrams of things, not pictures of them.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 36px">يُرسم التوضيح كمخطّط تقني لغرضٍ تراثي: وزن خط واحد، هندسة لا واقعية، والغرض مختزل إلى بنيته. دقّة منخفضة عمداً — هذه مخطّطات للأشياء، لا صور لها.</p></sc-if>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 36px">Illustration is drawn like a technical plan of a heritage object: a single line weight, geometry over realism, the object reduced to its construction. Low fidelity on purpose: these are diagrams of things, not pictures of them.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:620px;margin:0 0 36px">يُرسم التوضيح كمخطّط تقني لغرضٍ تراثي: وزن خط واحد، هندسة لا واقعية، والغرض مختزل إلى بنيته. دقّة منخفضة عمداً: هذه مخطّطات للأشياء، لا صور لها.</p></sc-if>
 
     <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;display:grid;grid-template-columns:repeat(6,1fr)"><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#BC5A37"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M26 26 L26 20 L38 20 L38 26 M32 20 L32 14"></path><circle cx="32" cy="11.5" r="2.5"></circle><path d="M24 26 L40 26 M23 26 L21 48 Q21 52 27 52 L37 52 Q43 52 43 48 L41 26"></path><path d="M22 30 L12 22 L15 34"></path><path d="M42 31 Q52 33 44 42"></path></g></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#BC5A37;opacity:.75">{{ L.ic1 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#BC5A37"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M26 13 L38 13 M27 13 L25 23 M37 13 L39 23"></path><path d="M25 23 Q16 30 18 40 Q20 50 32 50 Q44 50 46 40 Q48 30 39 23"></path><path d="M39 21 Q48 24 44 32"></path><path d="M26 40 Q29 37 32 40 Q35 43 38 40"></path></g></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#BC5A37;opacity:.75">{{ L.ic2 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#BC5A37"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="10" r="3"></circle><path d="M32 13 L32 18"></path><circle cx="32" cy="38" r="18"></circle><circle cx="32" cy="38" r="10.5"></circle><path d="M32 20 L32 56 M14 38 L50 38 M23 29 L41 47"></path></g></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#BC5A37;opacity:.75">{{ L.ic3 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#BC5A37"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="8" r="2.5"></circle><path d="M32 10.5 L32 14"></path><path d="M22 20 Q32 12 42 20 L22 20"></path><path d="M23 20 L21 44 L43 44 L41 20"></path><path d="M28 22 L27 42 M36 22 L37 42"></path><path d="M24 44 L22 50 L42 50 L40 44"></path></g></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#BC5A37;opacity:.75">{{ L.ic4 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#BC5A37"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 52 L28 16 M50 52 L36 16 M28 16 L36 16"></path><circle cx="32" cy="21" r="5"></circle><path d="M32 26 L32 42"></path><path d="M26 42 L38 42 L36 50 L28 50 Z"></path></g></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#BC5A37;opacity:.75">{{ L.ic5 }}</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:26px 8px 18px"><svg width="56" height="56" viewBox="0 0 64 64" style="color:#BC5A37"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 52 L54 52"></path><path d="M14 52 A18 18 0 0 1 50 52"></path><path d="M32 52 L32 36 L43 52"></path><path d="M18 43 L21 45 M25 35.5 L27 38.5 M46 43 L43 45"></path></g></svg><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#BC5A37;opacity:.75">{{ L.ic6 }}</span></div></div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">{{ L.iconsCapL }}</div>
@@ -460,8 +471,8 @@
         <div style="border-radius:8px;overflow:hidden;background:#6E5824">
           <svg viewBox="0 0 640 360" style="display:block;width:100%">
             <sc-for list="{{ chemHexes }}" as="h" hint-placeholder-count="60"><polygon points="{{ h.pts }}" fill="none" stroke="#F1EBDD" stroke-opacity="{{ h.op }}" stroke-width="{{ h.w }}"></polygon></sc-for>
-            <path d="{{ chemBonds }}" fill="none" stroke="#F1EBDD" stroke-opacity=".5" stroke-width="1.7" stroke-linecap="round"></path>
-            <sc-for list="{{ chemDots }}" as="d" hint-placeholder-count="4"><circle cx="{{ d.x }}" cy="{{ d.y }}" r="3.2" fill="#F1EBDD" fill-opacity=".55"></circle></sc-for>
+            <path d="{{ chemBonds }}" fill="none" stroke="#F1EBDD" stroke-opacity=".5" stroke-width="2.4" stroke-linecap="round"></path>
+            <sc-for list="{{ chemDots }}" as="d" hint-placeholder-count="4"><circle cx="{{ d.x }}" cy="{{ d.y }}" r="5" fill="#F1EBDD" fill-opacity=".55"></circle></sc-for>
           </svg>
         </div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Chemistry</div>
@@ -524,26 +535,18 @@
       <div style="width:100%;max-width:340px;min-width:0">
         <div class="eq-phone" style="width:340px;background:#26282E;border-radius:32px;padding:10px;box-shadow:0 20px 40px -24px rgba(38,40,46,.5)">
           <div style="background:#F1EBDD;border-radius:24px;height:700px;overflow:hidden;display:flex;flex-direction:column;font-family:'Hanken Grotesk',sans-serif">
-            <div style="position:relative;height:200px;flex:none">
-              <svg viewBox="0 0 320 200" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.35)" stroke-width="1"><polygon points="0,0 110,0 60,95" fill="#C1603B"></polygon><polygon points="110,0 220,0 160,120 60,95" fill="#B65534"></polygon><polygon points="220,0 320,0 320,80 160,120" fill="#C6663F"></polygon><polygon points="0,0 60,95 0,140" fill="#B04F30"></polygon><polygon points="0,140 60,95 160,120 100,200 0,200" fill="#BC5A37"></polygon><polygon points="160,120 320,80 320,200 100,200" fill="#B04F30"></polygon></g></svg>
-              <img src="assets/noon-logo-light.svg" style="position:absolute;top:18px;left:20px;height:20px">
-              <div style="position:absolute;left:20px;bottom:16px;color:#F1EBDD"><div style="font-size:23px;font-weight:500;letter-spacing:-.01em">Good evening, Ali</div><div style="font-size:13px;opacity:.8;margin-top:2px">Thursday 2 Oct · two classes today</div></div>
+            <div style="position:relative;height:280px;flex:none">
+              <svg viewBox="0 0 320 280" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.35)" stroke-width="1"><polygon points="0,0 110,0 60,130" fill="#C1603B"></polygon><polygon points="110,0 220,0 160,165 60,130" fill="#B65534"></polygon><polygon points="220,0 320,0 320,110 160,165" fill="#C6663F"></polygon><polygon points="0,0 60,130 0,195" fill="#B04F30"></polygon><polygon points="0,195 60,130 160,165 100,280 0,280" fill="#BC5A37"></polygon><polygon points="160,165 320,110 320,280 100,280" fill="#B04F30"></polygon></g></svg>
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(241,235,221,0) 35%,#F1EBDD 100%)"></div>
+              <img src="assets/noon-logo-light.svg" style="position:absolute;top:20px;left:20px;height:22px">
             </div>
-            <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
-              <div style="background:#6BAE93;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#26282E">Join live class · 20 min</div>
-              <div style="display:flex;gap:12px">
-                <div style="flex:1;background:#F7F3EA;border:1px solid rgba(38,40,46,.12);border-radius:12px;padding:12px"><div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5)">TODAY</div><div style="font-size:19px;font-weight:500;color:#26282E;margin-top:4px">2 classes</div></div>
-                <div style="flex:1;background:#F7F3EA;border:1px solid rgba(38,40,46,.12);border-radius:12px;padding:12px"><div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5)">STREAK</div><div style="font-size:19px;font-weight:500;color:#26282E;margin-top:4px">6 days</div></div>
-              </div>
-              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.12);border-radius:12px;padding:14px">
-                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5)">UP NEXT</div>
-                <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:6px"><span style="font-size:15px;color:#26282E">Qudrat · Algebra drills</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55)">6:00 PM</span></div>
-                <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:8px"><span style="font-size:15px;color:#26282E">ESL · Class 5 of 10</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55)">7:30 PM</span></div>
-              </div>
-              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.12);border-radius:12px;padding:14px">
-                <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5)">BLOCK 6 PROGRESS</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(38,40,46,.55)">60%</span></div>
-                <div style="height:6px;border-radius:3px;background:rgba(38,40,46,.1);margin-top:10px"><div style="width:60%;height:100%;border-radius:3px;background:#7C99B4"></div></div>
-              </div>
+            <div style="padding:8px 24px 0;text-align:center">
+              <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:32px;letter-spacing:-.02em;color:#26282E">Welcome, Salim</div>
+              <div style="font-size:14px;color:rgba(38,40,46,.55);margin-top:8px">Your classroom is ready.</div>
+            </div>
+            <div style="margin-top:auto;padding:0 20px 26px">
+              <div style="background:#6BAE93;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#26282E">Sign in</div>
+              <div style="text-align:center;font-size:12.5px;color:rgba(38,40,46,.5);margin-top:14px">New here? <span style="color:#BC5A37">Create an account</span></div>
             </div>
           </div>
         </div>
@@ -592,38 +595,44 @@
       <div style="width:100%;max-width:340px;min-width:0">
         <div class="eq-phone" style="width:340px;background:#26282E;border-radius:32px;padding:10px;box-shadow:0 20px 40px -24px rgba(38,40,46,.5)">
           <div style="background:#F1EBDD;border-radius:24px;height:700px;overflow:hidden;display:flex;flex-direction:column;font-family:'Hanken Grotesk',sans-serif">
-            <div style="padding:26px 22px 0;flex:1">
-              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;color:#BC5A37">JOIN A TRACK</div>
-              <div style="font-size:23px;font-weight:500;letter-spacing:-.01em;color:#26282E;margin-top:6px">Tell us where to start</div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5);margin:22px 0 6px">NAME</div>
-              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.15);border-radius:10px;padding:12px;font-size:15px;color:#26282E">Ali Al-Harbi</div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5);margin:16px 0 6px">GRADE</div>
-              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.15);border-radius:10px;padding:12px;font-size:15px;color:#26282E;display:flex;justify-content:space-between"><span>Grade 11</span><span style="color:rgba(38,40,46,.4)">▾</span></div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5);margin:16px 0 6px">TRACK</div>
-              <div style="border:1.5px solid #7C99B4;background:rgba(124,153,180,.08);border-radius:10px;padding:12px;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="width:16px;height:16px;border-radius:50%;border:1.5px solid #7C99B4;display:flex;align-items:center;justify-content:center;flex:none"><span style="width:8px;height:8px;border-radius:50%;background:#7C99B4"></span></span><span><span style="font-size:15px;color:#26282E">Qudrat</span><span style="font-size:12px;color:rgba(38,40,46,.5);display:block">Exam prep · Level 1</span></span></div>
-              <div style="border:1px solid rgba(38,40,46,.15);border-radius:10px;padding:12px;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(38,40,46,.3);flex:none"></span><span><span style="font-size:15px;color:#26282E">ESL</span><span style="font-size:12px;color:rgba(38,40,46,.5);display:block">Course · 10 classes</span></span></div>
-              <div style="border:1px solid rgba(38,40,46,.15);border-radius:10px;padding:12px;display:flex;align-items:center;gap:10px"><span style="width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(38,40,46,.3);flex:none"></span><span><span style="font-size:15px;color:#26282E">Future Skills</span><span style="font-size:12px;color:rgba(38,40,46,.5);display:block">Course · 10 classes</span></span></div>
-              <div style="background:#6BAE93;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#26282E;margin-top:20px">Continue</div>
+            <div style="padding:26px 22px 22px;flex:1;display:flex;flex-direction:column">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;color:#BC5A37">YOUR AMBITION</div>
+              <div style="font-size:23px;font-weight:500;letter-spacing:-.01em;color:#26282E;margin-top:6px">Tell us where you're headed</div>
+              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.14);border-radius:14px;padding:22px 18px 20px;text-align:center;margin-top:20px">
+                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;color:rgba(38,40,46,.5)">TARGET QUDRAT SCORE</div>
+                <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:58px;line-height:1;letter-spacing:-.02em;color:#26282E;margin-top:10px">92</div>
+                <div style="position:relative;height:4px;border-radius:2px;background:rgba(38,40,46,.12);margin:18px 6px 0">
+                  <div style="position:absolute;left:0;top:0;height:4px;width:78%;border-radius:2px;background:#7C99B4"></div>
+                  <div style="position:absolute;left:78%;top:50%;width:18px;height:18px;border-radius:50%;background:#F7F3EA;border:2px solid #7C99B4;transform:translate(-50%,-50%)"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;margin:8px 6px 0;font-family:'JetBrains Mono',monospace;font-size:8.5px;color:rgba(38,40,46,.4)"><span>60</span><span>100</span></div>
+                <div style="font-size:12px;color:rgba(38,40,46,.55);margin-top:12px">Top 8% of last year's cohort</div>
+              </div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5);margin:18px 0 6px">DREAM UNIVERSITY</div>
+              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.15);border-radius:10px;padding:12px;font-size:15px;color:#26282E;display:flex;justify-content:space-between"><span>King Fahd University</span><span style="color:rgba(38,40,46,.4)">▾</span></div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5);margin:14px 0 6px">FIELD OF STUDY</div>
+              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.15);border-radius:10px;padding:12px;font-size:15px;color:#26282E;display:flex;justify-content:space-between"><span>Engineering</span><span style="color:rgba(38,40,46,.4)">▾</span></div>
+              <div style="background:#6BAE93;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#26282E;margin-top:auto">Continue</div>
             </div>
             <svg viewBox="0 0 320 56" preserveAspectRatio="xMidYMid slice" style="display:block;width:100%;height:56px;flex:none"><defs><pattern id="oct-enrol" width="64" height="64" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(38,40,46,.14)" stroke-width="1"><rect x="9.3" y="9.3" width="45.4" height="45.4"></rect><polygon points="32,0 64,32 32,64 0,32"></polygon></g></pattern></defs><rect width="320" height="56" fill="url(#oct-enrol)"></rect></svg>
           </div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Enrol · light</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Ambition · light</div>
       </div>
       <div style="width:100%;max-width:340px;min-width:0">
         <div class="eq-phone" style="width:340px;background:#0D1016;border-radius:32px;padding:10px;box-shadow:0 20px 40px -24px rgba(38,40,46,.5)">
           <div style="background:#161A21;border-radius:24px;height:700px;overflow:hidden;font-family:'Hanken Grotesk',sans-serif;padding:24px 18px">
-            <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:23px;font-weight:500;letter-spacing:-.01em;color:#F1EBDD">Schedule</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(241,235,221,.45)">WEEK 6 · OCT</span></div>
-            <div style="display:flex;gap:5px;margin-top:16px">
-              <div style="flex:1;background:#1D222B;border-radius:10px;padding:8px 0;text-align:center;opacity:.45"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:rgba(241,235,221,.6)">SUN</div><div style="font-size:14px;color:#F1EBDD;margin-top:3px">28</div></div>
-              <div style="flex:1;background:#1D222B;border-radius:10px;padding:8px 0;text-align:center;opacity:.45"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:rgba(241,235,221,.6)">MON</div><div style="font-size:14px;color:#F1EBDD;margin-top:3px">29</div></div>
-              <div style="flex:1;background:#1D222B;border-radius:10px;padding:8px 0;text-align:center;opacity:.45"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:rgba(241,235,221,.6)">TUE</div><div style="font-size:14px;color:#F1EBDD;margin-top:3px">30</div></div>
-              <div style="flex:1;background:#1D222B;border-radius:10px;padding:8px 0;text-align:center;opacity:.45"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:rgba(241,235,221,.6)">WED</div><div style="font-size:14px;color:#F1EBDD;margin-top:3px">1</div></div>
-              <div style="flex:1;background:#64D8AE;border-radius:10px;padding:8px 0;text-align:center"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:rgba(22,26,33,.7)">THU</div><div style="font-size:14px;font-weight:600;color:#161A21;margin-top:3px">2</div></div>
-              <div style="flex:1;background:#1D222B;border-radius:10px;padding:8px 0;text-align:center"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:rgba(241,235,221,.6)">FRI</div><div style="font-size:14px;color:#F1EBDD;margin-top:3px">3</div></div>
-              <div style="flex:1;background:#1D222B;border-radius:10px;padding:8px 0;text-align:center"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:rgba(241,235,221,.6)">SAT</div><div style="font-size:14px;color:#F1EBDD;margin-top:3px">4</div></div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:23px;font-weight:500;letter-spacing:-.01em;color:#F1EBDD">Today</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(241,235,221,.45)">THU 2 OCT · 5 CLASSES</span></div>
+            <div style="background:#1D222B;border-radius:12px;padding:14px;margin-top:20px;margin-bottom:8px;opacity:.6">
+              <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(241,235,221,.5)">2:00 PM</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:#7C99B4">▸ REPLAY</span></div>
+              <div style="font-size:15px;color:#F1EBDD;margin-top:5px">Qudrat · Verbal reasoning</div>
+              <div style="font-size:12px;color:rgba(241,235,221,.45);margin-top:2px">Block 5 · Ms. Sara</div>
             </div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;color:rgba(241,235,221,.4);margin:20px 0 8px">TODAY</div>
+            <div style="background:#1D222B;border-radius:12px;padding:14px;margin-bottom:8px;opacity:.6">
+              <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(241,235,221,.5)">3:30 PM</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:#7C99B4">▸ REPLAY</span></div>
+              <div style="font-size:15px;color:#F1EBDD;margin-top:5px">ESL · Class 4 of 10</div>
+              <div style="font-size:12px;color:rgba(241,235,221,.45);margin-top:2px">Listening practice · Mr. Omar</div>
+            </div>
             <div style="background:#1D222B;border-radius:12px;padding:14px;border-left:3px solid #64D8AE;margin-bottom:8px">
               <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(241,235,221,.5)">6:00 PM</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:#64D8AE">● LIVE</span></div>
               <div style="font-size:15px;color:#F1EBDD;margin-top:5px">Qudrat · Algebra drills</div>
@@ -634,15 +643,10 @@
               <div style="font-size:15px;color:#F1EBDD;margin-top:5px">ESL · Class 5 of 10</div>
               <div style="font-size:12px;color:rgba(241,235,221,.45);margin-top:2px">Speaking practice · Mr. Omar</div>
             </div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;color:rgba(241,235,221,.4);margin:16px 0 8px">TOMORROW</div>
-            <div style="background:#1D222B;border-radius:12px;padding:14px;margin-bottom:8px">
-              <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(241,235,221,.5)">5:00 PM</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:rgba(241,235,221,.4)">QUIZ</span></div>
+            <div style="background:#1D222B;border-radius:12px;padding:14px">
+              <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(241,235,221,.5)">8:30 PM</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:rgba(241,235,221,.4)">QUIZ</span></div>
               <div style="font-size:15px;color:#F1EBDD;margin-top:5px">Qudrat · Block 6 quiz</div>
               <div style="font-size:12px;color:rgba(241,235,221,.45);margin-top:2px">4 concepts · 80% gate</div>
-            </div>
-            <div style="background:#1D222B;border-radius:12px;padding:14px">
-              <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(241,235,221,.5)">YESTERDAY</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:#7C99B4">▸ REPLAY</span></div>
-              <div style="font-size:15px;color:#F1EBDD;margin-top:5px">Future Skills · Creative thinking</div>
             </div>
           </div>
         </div>
@@ -785,7 +789,7 @@ class Component extends DCLogic {
       teacherT: 'Teacher', studentT: 'Student', piuT: 'Patterns in product',      iconsCapL: 'Heritage set · light', iconsCapD: 'Heritage set · dark',
       ic1: 'Dallah', ic2: 'Water jug', ic3: 'Astrolabe', ic4: 'Lantern', ic5: 'The well', ic6: 'Sundial',
       ir1t: 'One line, one weight', ir1: 'A single 2px stroke, no fills, geometry over realism. If it needs shading, it is too detailed.',
-      ir2t: 'Drawn like a plan', ir2: 'Objects are reduced to their construction — circles, facets and seams, the same discipline as the patterns.',
+      ir2t: 'Drawn like a plan', ir2: 'Objects are reduced to their construction: circles, facets and seams, the same discipline as the patterns.',
       ir3t: 'Brand colours only', ir3: 'Terracotta or cream, following the surface. Colour roles belong to the UI, not the drawings.',
     };
     const AR = {
@@ -796,7 +800,7 @@ class Component extends DCLogic {
       propT: 'نسب الاستخدام', propN: 'نسبة واحدة على السطحين: نحو ٦٠٪ أرضية هادئة، ٢٥٪ اللون المقابل، ١٠٪ طين، مع شرائح وظيفية رفيعة. الفاتح والداكن متساويان في الوزن، وحين تنقلب الأرضية يتبادل كل لون مع نظيره. إذا بدت الشاشة صاخبة فقد انزلقت النسبة.',
       conT: 'التباين', conN: 'يُقاس ولا يُقدَّر بالعين. أزواج نص القراءة يجب أن تبلغ AA (٤٫٥:١)؛ خط العرض من ٢٤ بكسل فأكثر يجوز له AA Large (٣:١). كل ما عليه علامة FAIL زخرفي فقط.',
       pmT: 'إساءة استخدام الأنماط',
-      pm1: 'لا تضع النص على الشبكة مباشرة — استخدم تدرّجاً أو شريطاً سادة.', pm2: 'لا تملأ أشكال الخاتم بلون صريح — هو نمط خطوط دائماً.', pm3: 'لا تبهت نقاط التنقيط — إما بكامل قوتها أو غائبة.', pm4: 'لا تمزج لغتي نمط على سطح واحد.',
+      pm1: 'لا تضع النص على الشبكة مباشرة، استخدم تدرّجاً أو شريطاً سادة.', pm2: 'لا تملأ أشكال الخاتم بلون صريح، فهو نمط خطوط دائماً.', pm3: 'لا تبهت نقاط التنقيط، إما بكامل قوتها أو غائبة.', pm4: 'لا تمزج لغتي نمط على سطح واحد.',
       paletteT: 'اللون', paletteG: 'Palette', typeT: 'الخط', typeG: 'Typography', patternsT: 'نظام الأنماط', patternsG: 'Patterns',
       appT: 'التطبيق', appG: 'Application', iconsT: 'الأيقونات', iconsG: 'Iconography',
       facetTag: 'جدار الفصل، مكسوراً إلى مستويات', khatamTag: 'نجمة الثماني، مرسومة بالخط', pinTag: 'اللوح المثقّب، الخريطة المنقّطة',
@@ -816,7 +820,7 @@ class Component extends DCLogic {
       iconsCapL: 'المجموعة التراثية · فاتح', iconsCapD: 'المجموعة التراثية · داكن',
       ic1: 'الدلّة', ic2: 'جرّة الماء', ic3: 'الأسطرلاب', ic4: 'الفانوس', ic5: 'البئر', ic6: 'المزولة',
       ir1t: 'خط واحد، وزن واحد', ir1: 'ضربة واحدة بسماكة ٢ بكسل، بلا تعبئة، هندسة لا واقعية. إن احتاج تظليلاً فهو مفصّل أكثر من اللازم.',
-      ir2t: 'مرسوم كمخطّط', ir2: 'تُختزل الأغراض إلى بنيتها — دوائر وأوجه ودروز، الانضباط نفسه كالأنماط.',
+      ir2t: 'مرسوم كمخطّط', ir2: 'تُختزل الأغراض إلى بنيتها: دوائر وأوجه ودروز، الانضباط نفسه كالأنماط.',
       ir3t: 'ألوان العلامة فقط', ir3: 'طيني أو كريمي بحسب السطح. أدوار اللون للواجهة لا للرسوم.',
     };
     const L = isAR ? AR : EN;
@@ -970,35 +974,23 @@ class Component extends DCLogic {
     })();
 
     // chemistry cover motif: honeycomb grid with a highlighted molecule cluster
-    // animated khatam: one 96px cell per grid position, delay staggered on the diagonal
-    const khatamCells = [];
-    for (let kr = 0; kr < 3; kr++) {
-      for (let kc = 0; kc < 13; kc++) {
-        const kx = kc * 96, ky = kr * 96 - 24;
-        khatamCells.push({
-          x: kx + 14, y: ky + 14,
-          di: `${kx + 48},${ky} ${kx + 96},${ky + 48} ${kx + 48},${ky + 96} ${kx},${ky + 48}`,
-          dly: ((kr + kc) * 260) % 5200
-        });
-      }
-    }
     const chemHexes = [], chemDots = [];
     let chemBonds = '';
     {
-      const R = 36, W = R * 1.732, ctr = {};
-      const hot = { '2,4': 1, '3,4': 1, '3,5': 1, '4,5': 1 };
-      for (let row = 0; row < 8; row++) {
-        for (let col = -1; col < 11; col++) {
-          const cx = 40 + col * W + (row % 2 ? W / 2 : 0);
-          const cy = -6 + row * R * 1.5;
+      const R = 64, W = R * 1.732, ctr = {};
+      const hot = { '1,2': 1, '2,2': 1, '2,3': 1, '3,2': 1 };
+      for (let row = 0; row < 5; row++) {
+        for (let col = -1; col < 8; col++) {
+          const cx = 30 + col * W + (row % 2 ? W / 2 : 0);
+          const cy = -10 + row * R * 1.5;
           const key = row + ',' + col;
           ctr[key] = [cx, cy];
           const pts = [[0, -1], [.866, -.5], [.866, .5], [0, 1], [-.866, .5], [-.866, -.5]]
             .map(p => (cx + p[0] * R).toFixed(1) + ',' + (cy + p[1] * R).toFixed(1)).join(' ');
-          chemHexes.push({ pts, op: hot[key] ? '.45' : '.12', w: hot[key] ? '1.8' : '1.2' });
+          chemHexes.push({ pts, op: hot[key] ? '.45' : '.12', w: hot[key] ? '2.2' : '1.4' });
         }
       }
-      const seq = ['2,4', '3,4', '3,5', '4,5'];
+      const seq = ['2,3', '1,2', '2,2', '3,2'];
       chemBonds = 'M' + seq.map(k => ctr[k][0].toFixed(1) + ' ' + ctr[k][1].toFixed(1)).join(' L');
       seq.forEach(k => chemDots.push({ x: ctr[k][0].toFixed(1), y: ctr[k][1].toFixed(1) }));
     }
@@ -1008,7 +1000,7 @@ class Component extends DCLogic {
       show02: focus === 'All' || focus === 'Khatam',
       show03: focus === 'All' || focus === 'Pinboard',
       L, dir, isEN, isAR,
-      chemHexes, chemBonds, chemDots, khatamCells,
+      chemHexes, chemBonds, chemDots,
       mapDots,
       facadeDots,
       muralTris,
@@ -1024,17 +1016,25 @@ class Component extends DCLogic {
 <script>
 (function () {
   var IDS = ['brand', 'logo', 'palette', 'type', 'patterns', 'icons', 'application'];
+  var lastCurrent = null;
   function spy() {
     var current = IDS[0];
     for (var i = 0; i < IDS.length; i++) {
       var el = document.getElementById(IDS[i]);
       if (el && el.getBoundingClientRect().top <= 140) current = IDS[i];
     }
+    var changed = current !== lastCurrent;
+    lastCurrent = current;
     IDS.forEach(function (id) {
       document.querySelectorAll('a[href="#' + id + '"]').forEach(function (a) {
         var on = id === current;
         a.style.color = on ? '#BC5A37' : 'rgba(38,40,46,.55)';
         a.style.fontWeight = on ? '700' : '500';
+        var nav = a.parentElement;
+        if (on && changed && nav && nav.scrollWidth > nav.clientWidth) {
+          var x = a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2;
+          nav.scrollTo({ left: x, behavior: 'smooth' });
+        }
       });
     });
   }
