@@ -290,7 +290,7 @@
       <h2 style="font-family:'Hanken Grotesk';font-weight:500;font-size:30px;letter-spacing:-.015em;margin:0">{{ L.patternsT }}</h2>
       <span dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:22px;color:rgba(38,40,46,.45);margin-left:auto">{{ L.patternsG }}</span>
     </div>
-    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 14px">Three pattern languages: Facet, Khatam and Pinboard. Each is shown in both voices, at scale, and in UI. Facet is taken directly from the classroom walls: one faceted lattice in two intensities, dunes (orange) and plaster (light). Abstract, the desert as geometry, from a wall mural down to a 14px app texture.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 14px">ثلاث لغات أنماط: الأوجه، الخاتم، والتنقيط. تُعرض كل واحدة بالصوتين، وبمقاييس مختلفة، وفي الواجهة. الأوجه مأخوذة مباشرة من جدران الفصول: شبكة مسطّحة واحدة بكثافتين، الكثبان (البرتقالي) والجصّ (الفاتح). تجريدية، الصحراء كهندسة، من جدارية حائط إلى نسيج تطبيق بحجم ١٤ بكسل.</p></sc-if>
+    <sc-if value="{{ isEN }}"><p style="font-family:'Hanken Grotesk';font-size:16px;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 14px">Three pattern languages: Facet, Khatam and Pinboard. Each is shown in both voices, at scale, and in UI. Facet is taken directly from the classroom walls: one faceted pattern in two intensities, dunes (orange) and plaster (light). Abstract, the desert as geometry, from a wall mural down to a 14px app texture.</p></sc-if><sc-if value="{{ isAR }}"><p dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:15.5px;line-height:1.9;color:rgba(38,40,46,.66);max-width:600px;margin:0 0 14px">ثلاث لغات أنماط: الأوجه، الخاتم، والتنقيط. تُعرض كل واحدة بالصوتين، وبمقاييس مختلفة، وفي الواجهة. الأوجه مأخوذة مباشرة من جدران الفصول: شبكة مسطّحة واحدة بكثافتين، الكثبان (البرتقالي) والجصّ (الفاتح). تجريدية، الصحراء كهندسة، من جدارية حائط إلى نسيج تطبيق بحجم ١٤ بكسل.</p></sc-if>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:24px 0 14px">{{ L.prT }}</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
       <div style="background:#F1EBDD;border:1px solid rgba(38,40,46,.12);border-radius:4px;padding:18px"><div style="font-weight:600;font-size:14px">{{ L.pr1t }}</div><div style="font-size:13px;color:rgba(38,40,46,.62);line-height:1.6;margin-top:6px">{{ L.pr1 }}</div></div>
@@ -329,8 +329,8 @@
     </div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Facet · terrain</div>
 
-    <!-- scale study, same lattice, three densities -->
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">At scale · the same lattice, three densities</div>
+    <!-- scale study, same pattern, three densities -->
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">At scale · the same pattern, three densities</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
       <div><div style="position:relative;height:200px;border-radius:3px;overflow:hidden;background:#BC5A37"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.35)" stroke-width="1.4"><sc-for list="{{ duneScale1 }}" as="t" hint-placeholder-count="12"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Wall · 1×</div></div>
       <div><div style="position:relative;height:200px;border-radius:3px;overflow:hidden;background:#BC5A37"><svg viewBox="0 0 380 220" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.35)" stroke-width="1"><sc-for list="{{ duneScale2 }}" as="t" hint-placeholder-count="40"><polygon points="{{ t.pts }}" fill="{{ t.fill }}"></polygon></sc-for></g></svg></div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Card · 2×</div></div>
@@ -409,23 +409,6 @@
       </section>
   </sc-if>
 
-  <!-- khatam in ceremony: the certificate -->
-  <section style="margin-top:56px">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:0 0 14px">Khatam in ceremony · certificate</div>
-    <div style="position:relative;background:#F7F3EA;border:1px solid rgba(38,40,46,.14);border-radius:6px;overflow:hidden;max-width:840px;margin:0 auto;box-shadow:0 30px 60px -30px rgba(38,40,46,.35)">
-      <svg style="position:absolute;inset:0;width:100%;height:100%"><defs><pattern id="oct-cert" width="60" height="60" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(38,40,46,.07)" stroke-width="1"><rect x="8.7" y="8.7" width="42.6" height="42.6"></rect><polygon points="30,0 60,30 30,60 0,30"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-cert)"></rect></svg>
-      <div style="position:relative;padding:48px 48px 42px;text-align:center">
-        <img src="assets/noon-logo.svg" style="height:30px;display:block;margin:0 auto">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#BC5A37;margin-top:24px">Certificate of completion</div>
-        <div dir="rtl" style="font-family:'IBM Plex Sans Arabic';font-size:13px;color:rgba(38,40,46,.45);margin-top:6px">شهادة إتمام</div>
-        <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:42px;letter-spacing:-.02em;color:#26282E;margin-top:18px">Ali Al-Harbi</div>
-        <div style="font-size:15px;color:rgba(38,40,46,.62);margin-top:10px">has completed Qudrat · Level 1 · thirteen blocks mastered</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:rgba(38,40,46,.5);margin-top:30px">20 NOV 2026</div>
-      </div>
-    </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px;text-align:center">Khatam · line only, the pattern as ground</div>
-  </section>
-
   <section style="margin-top:40px">
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:28px 0 14px">{{ L.pmT }}</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
@@ -465,12 +448,23 @@
       <div style="min-width:0">
         <div style="border-radius:8px;overflow:hidden;background:#6E5824">
           <svg viewBox="0 0 640 360" style="display:block;width:100%">
-            <sc-for list="{{ chemHexes }}" as="h" hint-placeholder-count="60"><polygon points="{{ h.pts }}" fill="none" stroke="#F1EBDD" stroke-opacity="{{ h.op }}" stroke-width="{{ h.w }}"></polygon></sc-for>
-            <path d="{{ chemBonds }}" fill="none" stroke="#F1EBDD" stroke-opacity=".5" stroke-width="2.4" stroke-linecap="round"></path>
-            <sc-for list="{{ chemDots }}" as="d" hint-placeholder-count="4"><circle cx="{{ d.x }}" cy="{{ d.y }}" r="5" fill="#F1EBDD" fill-opacity=".55"></circle></sc-for>
+            <g fill="none" stroke="#F1EBDD" stroke-opacity=".12" stroke-width="1.4" stroke-linejoin="round">
+              <path d="M-2,-40 h114 a18,18 0 0 1 18,18 v52 a18,18 0 0 1 -18,18 h-64 l-16,20 v-20 h-34 a18,18 0 0 1 -18,-18 v-52 a18,18 0 0 1 18,-18 z"></path>
+              <path d="M418,-40 h114 a18,18 0 0 1 18,18 v52 a18,18 0 0 1 -18,18 h-64 l-16,20 v-20 h-34 a18,18 0 0 1 -18,-18 v-52 a18,18 0 0 1 18,-18 z"></path>
+              <path d="M-72,100 h114 a18,18 0 0 1 18,18 v52 a18,18 0 0 1 -18,18 h-64 l-16,20 v-20 h-34 a18,18 0 0 1 -18,-18 v-52 a18,18 0 0 1 18,-18 z"></path>
+              <path d="M488,100 h114 a18,18 0 0 1 18,18 v52 a18,18 0 0 1 -18,18 h-64 l-16,20 v-20 h-34 a18,18 0 0 1 -18,-18 v-52 a18,18 0 0 1 18,-18 z"></path>
+              <path d="M-2,240 h114 a18,18 0 0 1 18,18 v52 a18,18 0 0 1 -18,18 h-64 l-16,20 v-20 h-34 a18,18 0 0 1 -18,-18 v-52 a18,18 0 0 1 18,-18 z"></path>
+              <path d="M208,-40 h114 a18,18 0 0 1 18,18 v52 a18,18 0 0 1 -18,18 h-64 l-16,20 v-20 h-34 a18,18 0 0 1 -18,-18 v-52 a18,18 0 0 1 18,-18 z"></path>
+              <path d="M418,240 h114 a18,18 0 0 1 18,18 v52 a18,18 0 0 1 -18,18 h-64 l-16,20 v-20 h-34 a18,18 0 0 1 -18,-18 v-52 a18,18 0 0 1 18,-18 z"></path>
+            </g>
+            <path d="M158,100 h204 a22,22 0 0 1 22,22 v72 a22,22 0 0 1 -22,22 h-134 l-22,26 v-26 h-48 a22,22 0 0 1 -22,-22 v-72 a22,22 0 0 1 22,-22 z" fill="none" stroke="#F1EBDD" stroke-opacity=".45" stroke-width="2.2" stroke-linejoin="round"></path>
+            <circle cx="228" cy="158" r="5" fill="#F1EBDD" fill-opacity=".55"></circle>
+            <circle cx="260" cy="158" r="5" fill="#F1EBDD" fill-opacity=".55"></circle>
+            <circle cx="292" cy="158" r="5" fill="#F1EBDD" fill-opacity=".55"></circle>
+            <path d="M148,270 h44 M148,286 h72" stroke="#F1EBDD" stroke-opacity=".3" stroke-width="2" stroke-linecap="round"></path>
           </svg>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Chemistry</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">English · ESL</div>
       </div>
       <div style="min-width:0">
         <div style="border-radius:8px;overflow:hidden;background:#4E5A68">
@@ -530,19 +524,26 @@
       <div style="width:100%;max-width:340px;min-width:0">
         <div class="eq-phone" style="width:340px;background:#26282E;border-radius:32px;padding:10px;box-shadow:0 20px 40px -24px rgba(38,40,46,.5)">
           <div style="background:#F1EBDD;border-radius:24px;height:700px;overflow:hidden;display:flex;flex-direction:column;font-family:'Hanken Grotesk',sans-serif">
-            <div style="position:relative;height:280px;flex:none">
-              <svg viewBox="0 0 320 280" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.35)" stroke-width="1"><polygon points="0,0 110,0 60,130" fill="#C1603B"></polygon><polygon points="110,0 220,0 160,165 60,130" fill="#B65534"></polygon><polygon points="220,0 320,0 320,110 160,165" fill="#C6663F"></polygon><polygon points="0,0 60,130 0,195" fill="#B04F30"></polygon><polygon points="0,195 60,130 160,165 100,280 0,280" fill="#BC5A37"></polygon><polygon points="160,165 320,110 320,280 100,280" fill="#B04F30"></polygon></g></svg>
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(241,235,221,0) 35%,#F1EBDD 100%)"></div>
-              <img src="assets/noon-logo-light.svg" style="position:absolute;top:20px;left:20px;height:22px">
+            <div style="position:relative;height:300px;flex:none">
+              <svg viewBox="0 0 320 300" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.35)" stroke-width="1"><polygon points="0,0 110,0 60,130" fill="#C1603B"></polygon><polygon points="110,0 220,0 160,165 60,130" fill="#B65534"></polygon><polygon points="220,0 320,0 320,110 160,165" fill="#C6663F"></polygon><polygon points="0,0 60,130 0,195" fill="#B04F30"></polygon><polygon points="0,195 60,130 160,165 100,300 0,300" fill="#BC5A37"></polygon><polygon points="160,165 320,110 320,300 100,300" fill="#B04F30"></polygon></g></svg>
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(241,235,221,0) 40%,#F1EBDD 100%)"></div>
+              <img src="assets/noon-logo-light.svg" style="position:absolute;top:24px;left:24px;height:24px">
             </div>
-            <div style="padding:8px 24px 0">
-              <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:32px;letter-spacing:-.02em;color:#26282E">Welcome, Salim</div>
-              <div style="font-size:14px;color:rgba(38,40,46,.55);margin-top:8px">Your classroom is ready.</div>
-              <div style="background:#6BAE93;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#26282E;margin-top:24px">Sign in</div>
+            <div style="padding:0 24px;flex:1;display:flex;flex-direction:column">
+              <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:34px;line-height:1.1;letter-spacing:-.02em;color:#26282E">Every desert<br><span style="font-weight:600">has a crossing.</span></div>
+              <div style="font-size:14.5px;color:rgba(38,40,46,.55);margin-top:10px">Live classes, real teachers, one path.</div>
+              <div style="margin-top:auto;padding-bottom:24px">
+                <div style="background:#6BAE93;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#26282E">Continue with phone</div>
+                <div style="display:flex;gap:10px;margin-top:10px">
+                  <div style="flex:1;border:1px solid rgba(38,40,46,.2);border-radius:12px;padding:12px;text-align:center;font-weight:600;font-size:14px;color:#26282E">&#63743; Apple</div>
+                  <div style="flex:1;border:1px solid rgba(38,40,46,.2);border-radius:12px;padding:12px;text-align:center;font-weight:600;font-size:14px;color:#26282E">G&nbsp; Google</div>
+                </div>
+                <div style="text-align:center;font-size:11px;color:rgba(38,40,46,.4);margin-top:14px">By continuing you agree to the Terms &amp; Privacy Policy</div>
+              </div>
             </div>
           </div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Welcome · light</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Sign in · light</div>
       </div>
       <div style="width:100%;max-width:340px;min-width:0">
         <div class="eq-phone" style="width:340px;background:#0D1016;border-radius:32px;padding:10px;box-shadow:0 20px 40px -24px rgba(38,40,46,.5)">
@@ -555,12 +556,15 @@
               <circle cx="205" cy="128" r="16" fill="none" stroke="rgba(241,235,221,.22)" stroke-width="1.6"></circle>
               <rect x="199" y="127" width="12" height="9" rx="2" fill="rgba(241,235,221,.28)"></rect><path d="M201 127 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="rgba(241,235,221,.28)" stroke-width="1.5"></path>
               <path d="M205 144 C205 168 115 168 115 189" fill="none" stroke="rgba(241,235,221,.14)" stroke-width="2.5" stroke-dasharray="1 8" stroke-linecap="round"></path>
-              <circle cx="115" cy="208" r="26" fill="none" stroke="rgba(100,216,174,.25)" stroke-width="1.5"></circle>
+              <circle cx="115" cy="208" r="34" fill="none" stroke="rgba(100,216,174,.14)" stroke-width="1" stroke-dasharray="2 5"></circle>
               <circle cx="115" cy="208" r="19" fill="none" stroke="#64D8AE" stroke-width="2.4"></circle>
               <circle cx="115" cy="208" r="11" fill="#64D8AE"></circle>
               <text x="115" y="212.5" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700" fill="#161A21">6</text>
-              <text x="152" y="204" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#64D8AE">BLOCK 6 · NOW</text>
-              <circle cx="152" cy="216" r="2.8" fill="#7C99B4"></circle><circle cx="166" cy="216" r="2.8" fill="#7C99B4"></circle><circle cx="180" cy="216" r="2.8" fill="#E8663A"></circle><circle cx="194" cy="216" r="2.8" fill="rgba(241,235,221,.25)"></circle>
+              <text x="160" y="204" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#64D8AE">BLOCK 6 · NOW</text>
+              <circle cx="91" cy="184" r="3.4" fill="#7C99B4"><animate attributeName="opacity" values="1;.45;1" dur="2.4s" repeatCount="indefinite"></animate></circle>
+              <circle cx="139" cy="184" r="3.4" fill="#7C99B4"><animate attributeName="opacity" values="1;.45;1" dur="2.4s" begin=".6s" repeatCount="indefinite"></animate></circle>
+              <circle cx="91" cy="232" r="3.4" fill="#E8663A"><animate attributeName="opacity" values="1;.45;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"></animate></circle>
+              <circle cx="139" cy="232" r="3.4" fill="rgba(241,235,221,.3)"><animate attributeName="opacity" values="1;.45;1" dur="2.4s" begin="1.8s" repeatCount="indefinite"></animate></circle>
               <path d="M115 227 C115 252 160 252 160 274" fill="none" stroke="rgba(124,153,180,.5)" stroke-width="2.5" stroke-dasharray="1 8" stroke-linecap="round"></path>
               <polygon points="160,274 178,292 160,310 142,292" fill="none" stroke="#7C99B4" stroke-width="1.7"></polygon>
               <text x="160" y="296.5" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#7C99B4">✓</text>
@@ -568,15 +572,17 @@
               <path d="M160 310 C160 334 205 334 205 356" fill="none" stroke="rgba(124,153,180,.5)" stroke-width="2.5" stroke-dasharray="1 8" stroke-linecap="round"></path>
               <circle cx="205" cy="372" r="16" fill="#7C99B4"></circle>
               <text x="205" y="376.5" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#161A21">✓</text>
-              <circle cx="234" cy="372" r="2.8" fill="#7C99B4"></circle><circle cx="248" cy="372" r="2.8" fill="#7C99B4"></circle><circle cx="262" cy="372" r="2.8" fill="#7C99B4"></circle><circle cx="276" cy="372" r="2.8" fill="#7C99B4"></circle>
               <path d="M205 388 C205 412 115 412 115 436" fill="none" stroke="rgba(124,153,180,.5)" stroke-width="2.5" stroke-dasharray="1 8" stroke-linecap="round"></path>
+              <circle cx="115" cy="452" r="28" fill="none" stroke="rgba(232,102,58,.16)" stroke-width="1" stroke-dasharray="2 5"></circle>
               <circle cx="115" cy="452" r="16" fill="none" stroke="#E8663A" stroke-width="2"></circle>
               <text x="115" y="456.5" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700" fill="#E8663A">!</text>
-              <circle cx="44" cy="452" r="2.8" fill="#E8663A"></circle><circle cx="58" cy="452" r="2.8" fill="#E8663A"></circle><circle cx="72" cy="452" r="2.8" fill="#7C99B4"></circle><circle cx="86" cy="452" r="2.8" fill="#7C99B4"></circle>
+              <circle cx="95" cy="432" r="3.4" fill="#E8663A"><animate attributeName="opacity" values="1;.15;1" dur="1.2s" repeatCount="indefinite"></animate></circle>
+              <circle cx="135" cy="432" r="3.4" fill="#E8663A"><animate attributeName="opacity" values="1;.15;1" dur="1.2s" begin=".4s" repeatCount="indefinite"></animate></circle>
+              <circle cx="95" cy="472" r="3.4" fill="#7C99B4"></circle>
+              <circle cx="135" cy="472" r="3.4" fill="#7C99B4"></circle>
               <path d="M115 468 C115 492 205 492 205 516" fill="none" stroke="rgba(124,153,180,.5)" stroke-width="2.5" stroke-dasharray="1 8" stroke-linecap="round"></path>
               <circle cx="205" cy="532" r="16" fill="#7C99B4"></circle>
               <text x="205" y="536.5" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#161A21">✓</text>
-              <circle cx="234" cy="532" r="2.8" fill="#7C99B4"></circle><circle cx="248" cy="532" r="2.8" fill="#7C99B4"></circle><circle cx="262" cy="532" r="2.8" fill="#7C99B4"></circle>
               <path d="M205 548 C205 570 160 570 160 588" fill="none" stroke="rgba(124,153,180,.5)" stroke-width="2.5" stroke-dasharray="1 8" stroke-linecap="round"></path>
               <text x="160" y="606" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" letter-spacing="1.5" fill="rgba(241,235,221,.4)">SEMESTER START · 24 AUG</text>
             </svg>
@@ -587,38 +593,44 @@
       <div style="width:100%;max-width:340px;min-width:0">
         <div class="eq-phone" style="width:340px;background:#26282E;border-radius:32px;padding:10px;box-shadow:0 20px 40px -24px rgba(38,40,46,.5)">
           <div style="background:#F1EBDD;border-radius:24px;height:700px;overflow:hidden;display:flex;flex-direction:column;font-family:'Hanken Grotesk',sans-serif">
-            <div style="background:#BC5A37;padding:24px 22px 20px;flex:none;position:relative;overflow:hidden">
-              <svg viewBox="0 0 320 130" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="rgba(241,235,221,.22)" stroke-width="1" fill="none"><polygon points="0,0 90,0 40,130 0,130"></polygon><polygon points="90,0 200,0 150,130 40,130"></polygon><polygon points="200,0 320,0 320,60 150,130"></polygon><polygon points="320,60 320,130 150,130"></polygon></g></svg>
-              <div style="position:relative;display:flex;align-items:center;gap:12px">
-                <div style="width:46px;height:46px;border-radius:50%;background:#F1EBDD;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;color:#BC5A37;flex:none">SA</div>
-                <div>
-                  <div style="font-size:17px;font-weight:600;color:#F1EBDD;letter-spacing:-.01em">Salim Al-Harbi</div>
-                  <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(241,235,221,.75);margin-top:3px">GRADE 11 · RIYADH</div>
+            <div style="padding:22px 22px 0;flex:1;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:14px">
+                <span style="font-size:17px;color:rgba(38,40,46,.5)">&#8592;</span>
+                <div style="display:flex;gap:5px;flex:1">
+                  <span style="flex:1;height:3px;border-radius:2px;background:#7C99B4"></span>
+                  <span style="flex:1;height:3px;border-radius:2px;background:#7C99B4"></span>
+                  <span style="flex:1;height:3px;border-radius:2px;background:rgba(38,40,46,.14)"></span>
+                </div>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;color:rgba(38,40,46,.45)">2/3</span>
+              </div>
+              <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:30px;line-height:1.12;letter-spacing:-.02em;color:#26282E;margin-top:26px">What's the goal,<br><span style="font-weight:600">Salim?</span></div>
+              <div style="font-size:13.5px;color:rgba(38,40,46,.5);margin-top:8px">We'll shape your plan around it.</div>
+              <div style="text-align:center;margin-top:26px">
+                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;color:rgba(38,40,46,.5)">TARGET QUDRAT SCORE</div>
+                <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-top:6px">
+                  <span style="width:38px;height:38px;border-radius:50%;border:1px solid rgba(38,40,46,.2);display:flex;align-items:center;justify-content:center;font-size:18px;color:rgba(38,40,46,.55)">&#8722;</span>
+                  <span style="font-family:'Hanken Grotesk';font-weight:300;font-size:76px;line-height:1;letter-spacing:-.03em;color:#26282E">92</span>
+                  <span style="width:38px;height:38px;border-radius:50%;border:1px solid rgba(38,40,46,.2);display:flex;align-items:center;justify-content:center;font-size:18px;color:rgba(38,40,46,.55)">+</span>
+                </div>
+                <div style="display:inline-block;background:rgba(124,153,180,.16);border-radius:999px;padding:5px 14px;font-size:11.5px;font-weight:600;color:#26282E;margin-top:12px">Top 8% of last year's cohort</div>
+              </div>
+              <div style="margin-top:26px;display:flex;flex-direction:column;gap:10px">
+                <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.15);border-radius:12px;padding:13px 14px;display:flex;align-items:center;gap:12px">
+                  <svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none" fill="none" stroke="#BC5A37" stroke-width="1.5"><path d="M3 10 L12 5 L21 10 L12 15 Z"></path><path d="M7 12.5 V17 C7 18 9 19.5 12 19.5 C15 19.5 17 18 17 17 V12.5"></path><path d="M21 10 V15"></path></svg>
+                  <div style="flex:1"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.14em;color:rgba(38,40,46,.45)">DREAM UNIVERSITY</div><div style="font-size:14.5px;color:#26282E;margin-top:2px">King Fahd University</div></div>
+                  <span style="color:rgba(38,40,46,.4)">&#9662;</span>
+                </div>
+                <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.15);border-radius:12px;padding:13px 14px;display:flex;align-items:center;gap:12px">
+                  <svg viewBox="0 0 24 24" style="width:22px;height:22px;flex:none" fill="none" stroke="#BC5A37" stroke-width="1.5"><circle cx="12" cy="12" r="8"></circle><path d="M12 4 V12 L17.5 17.5"></path></svg>
+                  <div style="flex:1"><div style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.14em;color:rgba(38,40,46,.45)">FIELD OF STUDY</div><div style="font-size:14.5px;color:#26282E;margin-top:2px">Engineering</div></div>
+                  <span style="color:rgba(38,40,46,.4)">&#9662;</span>
                 </div>
               </div>
-              <div style="position:relative;font-family:'Hanken Grotesk';font-weight:300;font-size:27px;line-height:1.15;letter-spacing:-.02em;color:#F1EBDD;margin-top:18px">Where are you<br><span style="font-weight:600">headed, Salim?</span></div>
-            </div>
-            <div style="padding:18px 22px 22px;flex:1;display:flex;flex-direction:column">
-              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.14);border-radius:14px;padding:18px 18px 16px;text-align:center;position:relative;overflow:hidden">
-                <svg viewBox="0 0 280 40" style="position:absolute;top:0;left:0;width:100%;height:40px;opacity:.5"><rect width="280" height="40" fill="url(#oct-enrol)"></rect></svg>
-                <div style="position:relative">
-                  <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;color:#BC5A37">MY TARGET QUDRAT SCORE</div>
-                  <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:64px;line-height:1;letter-spacing:-.02em;color:#26282E;margin-top:8px">92</div>
-                  <div style="position:relative;height:4px;border-radius:2px;background:rgba(38,40,46,.12);margin:16px 6px 0">
-                    <div style="position:absolute;left:0;top:0;height:4px;width:78%;border-radius:2px;background:#7C99B4"></div>
-                    <div style="position:absolute;left:78%;top:50%;width:18px;height:18px;border-radius:50%;background:#F7F3EA;border:2px solid #7C99B4;transform:translate(-50%,-50%)"></div>
-                  </div>
-                  <div style="display:flex;justify-content:space-between;margin:8px 6px 0;font-family:'JetBrains Mono',monospace;font-size:8.5px;color:rgba(38,40,46,.4)"><span>60</span><span>100</span></div>
-                  <div style="display:inline-block;background:rgba(124,153,180,.14);border-radius:999px;padding:5px 12px;font-size:11.5px;font-weight:600;color:#26282E;margin-top:12px">Top 8% of last year's cohort ◆</div>
-                </div>
+              <div style="margin-top:auto;padding-bottom:22px">
+                <div style="background:#6BAE93;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#26282E">Set my goal</div>
+                <div style="text-align:center;font-size:12px;color:rgba(38,40,46,.45);margin-top:12px">I'll decide later</div>
               </div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5);margin:16px 0 6px">DREAM UNIVERSITY</div>
-              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.15);border-radius:10px;padding:12px;font-size:15px;color:#26282E;display:flex;justify-content:space-between"><span>King Fahd University</span><span style="color:rgba(38,40,46,.4)">▾</span></div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(38,40,46,.5);margin:12px 0 6px">FIELD OF STUDY</div>
-              <div style="background:#F7F3EA;border:1px solid rgba(38,40,46,.15);border-radius:10px;padding:12px;font-size:15px;color:#26282E;display:flex;justify-content:space-between"><span>Engineering</span><span style="color:rgba(38,40,46,.4)">▾</span></div>
-              <div style="background:#6BAE93;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#26282E;margin-top:auto">Set my ambition</div>
             </div>
-            <svg viewBox="0 0 320 56" preserveAspectRatio="xMidYMid slice" style="display:block;width:100%;height:56px;flex:none"><defs><pattern id="oct-enrol" width="64" height="64" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(38,40,46,.14)" stroke-width="1"><rect x="9.3" y="9.3" width="45.4" height="45.4"></rect><polygon points="32,0 64,32 32,64 0,32"></polygon></g></pattern></defs><rect width="320" height="56" fill="url(#oct-enrol)"></rect></svg>
           </div>
         </div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Ambition · light</div>
@@ -654,7 +666,7 @@
             </div>
           </div>
         </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Schedule · dark</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Today · dark</div>
       </div>
       <div style="width:100%;max-width:340px;min-width:0">
         <div class="eq-phone" style="width:340px;background:#0D1016;border-radius:32px;padding:10px;box-shadow:0 20px 40px -24px rgba(38,40,46,.5)">
@@ -740,6 +752,39 @@
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Pinboard applied · the community map</div>
     </div>
 
+    <div style="margin-top:24px">
+      <div style="position:relative;height:520px;border-radius:12px;overflow:hidden;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center">
+        <svg viewBox="0 0 720 420" style="height:88%;width:auto;display:block">
+          <rect x="280" y="30" width="160" height="5" rx="2.5" fill="rgba(38,40,46,.3)"></rect>
+          <text x="360" y="56" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="2" fill="rgba(38,40,46,.4)">FRONT</text>
+          <!-- table 1 -->
+          <g>
+            <circle cx="190" cy="170" r="40" fill="none" stroke="rgba(38,40,46,.28)" stroke-width="1.4"></circle>
+            <circle cx="190" cy="110" r="5" fill="#BC5A37"></circle><circle cx="242" cy="140" r="5" fill="#BC5A37"></circle><circle cx="190" cy="230" r="5" fill="#BC5A37"></circle><circle cx="138" cy="200" r="5" fill="#BC5A37"></circle><circle cx="138" cy="140" r="5" fill="#BC5A37"></circle>
+          </g>
+          <!-- table 2 · up to talk -->
+          <g>
+            <circle cx="530" cy="170" r="52" fill="none" stroke="rgba(107,174,147,.35)" stroke-width="1.2"><animate attributeName="r" values="46;58;46" dur="2.6s" repeatCount="indefinite"></animate><animate attributeName="opacity" values=".8;0;.8" dur="2.6s" repeatCount="indefinite"></animate></circle>
+            <circle cx="530" cy="170" r="40" fill="rgba(107,174,147,.14)" stroke="#6BAE93" stroke-width="2"></circle>
+            <circle cx="530" cy="110" r="5" fill="#6BAE93"></circle><circle cx="582" cy="140" r="5" fill="#6BAE93"></circle><circle cx="582" cy="200" r="5" fill="#6BAE93"></circle><circle cx="530" cy="230" r="5" fill="#6BAE93"></circle><circle cx="478" cy="200" r="5" fill="#6BAE93"></circle>
+            <circle cx="478" cy="140" r="7" fill="#6BAE93"><animate attributeName="r" values="5;8;5" dur="1.3s" repeatCount="indefinite"></animate></circle>
+            <text x="530" y="266" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" letter-spacing="2" fill="#6BAE93">UP TO TALK</text>
+          </g>
+          <!-- table 3 -->
+          <g>
+            <circle cx="190" cy="340" r="40" fill="none" stroke="rgba(38,40,46,.28)" stroke-width="1.4"></circle>
+            <circle cx="190" cy="280" r="5" fill="#BC5A37"></circle><circle cx="242" cy="310" r="5" fill="#BC5A37"></circle><circle cx="242" cy="370" r="5" fill="#BC5A37"></circle><circle cx="138" cy="370" r="5" fill="#BC5A37"></circle><circle cx="138" cy="310" r="5" fill="#BC5A37"></circle>
+          </g>
+          <!-- table 4 -->
+          <g>
+            <circle cx="530" cy="340" r="40" fill="none" stroke="rgba(38,40,46,.28)" stroke-width="1.4"></circle>
+            <circle cx="530" cy="280" r="5" fill="#BC5A37"></circle><circle cx="582" cy="310" r="5" fill="#BC5A37"></circle><circle cx="530" cy="400" r="5" fill="#BC5A37"></circle><circle cx="478" cy="370" r="5" fill="#BC5A37"></circle><circle cx="478" cy="310" r="5" fill="#BC5A37"></circle>
+          </g>
+        </svg>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Pinboard applied · the classroom, one table up to talk</div>
+    </div>
+
     <div id="teacher" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(38,40,46,.55);margin:36px 0 14px">{{ L.teacherT }}</div>
     <div>
       <div class="eq-shot" style="position:relative;overflow:hidden;border-radius:10px;background:#F7F3EA;height:664px;box-shadow:0 30px 60px -30px rgba(38,40,46,.5)">
@@ -775,7 +820,7 @@ class Component extends DCLogic {
       propT: 'Proportion of use', propN: 'One ratio, both surfaces: about 60% quiet ground, 25% counter-colour, 10% terracotta, with thin functional slivers. Light and dark carry equal weight, and when the ground inverts, every colour swaps to its counterpart. If a screen feels loud, the ratio has slipped.',
       conT: 'Contrast', conN: 'Measured, not eyeballed. Body text pairs must reach AA (4.5:1); display type at 24px+ may use AA Large (3:1). Anything marked FAIL is decorative only.',
       pmT: 'Pattern misuse',
-      pm1: 'Don\u2019t set text directly on the lattice \u2014 use a gradient or plain band.', pm2: 'Don\u2019t fill khatam shapes solid \u2014 it is always a line pattern.', pm3: 'Don\u2019t fade pinboard dots \u2014 they are full-strength or absent.', pm4: 'Don\u2019t mix two pattern languages on one surface.',
+      pm1: 'Don\u2019t set text directly on the pattern, use a gradient or plain band.', pm2: 'Don\u2019t fill khatam shapes solid, it is always a line pattern.', pm3: 'Don\u2019t fade pinboard dots, they are full-strength or absent.', pm4: 'Don\u2019t mix two pattern languages on one surface.',
       paletteT: 'Palette', paletteG: 'اللون', typeT: 'Typography', typeG: 'الخط', patternsT: 'Pattern system', patternsG: 'الأنماط',
       appT: 'Application', appG: 'التطبيق', iconsT: 'Iconography', iconsG: 'الأيقونات',      facetTag: 'the classroom wall, broken to planes', khatamTag: 'the eight-point star, drawn in line', pinTag: 'the perforated panel, the dotted map',
       labSurf: 'Surfaces & grounds', labRoles: 'Roles · on fog / on ink', labDeco: 'Decorative families · rationed',
@@ -787,9 +832,9 @@ class Component extends DCLogic {
       rlHeatT: 'Heat · Signal', rlHeat: 'Weak zones and urgency, split out of terracotta so surface can stay calm. Not a button, not a field.',
       decoNote: 'Five three-step families for subject tags, avatars and spot illustration. One family per element, no state meaning. Orange and violet are excluded: they belong to Heat and the AI.',
       prT: 'Which pattern, when',
-      pr1t: 'Facet · the landscape', pr1: 'Hero surfaces and moments of arrival: murals, welcome headers, terrain, splash. Big and warm, never behind dense text.',
-      pr2t: 'Khatam · the ceremony', pr2: 'Certificates, milestones, signage and dividers. Line only, used sparingly: when it appears, it means something.',
-      pr3t: 'Pinboard · the map', pr3: 'Maps, facades and quiet texture behind surfaces. A clean even field; green marks only the highlighted pin.',
+      pr1t: 'Facet · arrival', pr1: 'Opens a screen: splash, hero, cover, mural. One per surface, big and warm, never behind dense text. If it says welcome, it\u2019s Facet.',
+      pr2t: 'Khatam · honour', pr2: 'Marks a moment earned: certificate, milestone, final. Line only, and rare. If the moment isn\u2019t worth framing, no Khatam.',
+      pr3t: 'Pinboard · presence', pr3: 'Shows who and where: maps, classrooms, quiet ground texture. Every dot is a real thing; green marks the one that matters now.',
       teacherT: 'Teacher', studentT: 'Student', piuT: 'Patterns in product',      iconsCapL: 'Heritage set · light', iconsCapD: 'Heritage set · dark',
       ic1: 'Dallah', ic2: 'Water jug', ic3: 'Astrolabe', ic4: 'Lantern', ic5: 'The well', ic6: 'Sundial',
       ir1t: 'One line, one weight', ir1: 'A single 2px stroke, no fills, geometry over realism. If it needs shading, it is too detailed.',
@@ -817,9 +862,9 @@ class Component extends DCLogic {
       rlHeatT: 'الحرارة · الإشارة', rlHeat: 'مناطق الضعف والإلحاح، فُصلت عن الطين ليبقى السطح هادئاً. لا زرّاً ولا مساحة.',
       decoNote: 'خمس عائلات من ثلاث درجات لوسوم المواد والصور الرمزية والتوضيح. عائلة واحدة لكل عنصر، دون معنى حالة. البرتقالي والبنفسجي مستبعدان: هما للحرارة والذكاء.',
       prT: 'أي نمط، ومتى',
-      pr1t: 'الأوجه · المشهد', pr1: 'أسطح البطولة ولحظات الوصول: الجداريات، ترويسات الترحيب، التضاريس، شاشة البداية. كبير ودافئ، ولا يقف خلف نص كثيف أبداً.',
-      pr2t: 'الخاتم · الاحتفاء', pr2: 'الشهادات والمحطات واللافتات والفواصل. خط فقط، ويُستخدم باقتصاد: حين يظهر فهو يعني شيئاً.',
-      pr3t: 'التنقيط · الخريطة', pr3: 'الخرائط والواجهات والنسيج الهادئ خلف الأسطح. حقل نظيف متساوٍ؛ الأخضر يعلّم الدبوس المميّز فقط.',
+      pr1t: 'الأوجه · الوصول', pr1: 'يفتتح الشاشة: البداية، البطولة، الغلاف، الجدارية. واحد لكل سطح، كبير ودافئ، ولا يقف خلف نص كثيف أبداً. إن كان يقول أهلاً، فهو الأوجه.',
+      pr2t: 'الخاتم · التكريم', pr2: 'يعلّم لحظة مُستَحقّة: شهادة، محطة، نهائي. خط فقط، ونادر. إن لم تكن اللحظة تستحق الإطار، فلا خاتم.',
+      pr3t: 'التنقيط · الحضور', pr3: 'يُظهر مَن وأين: الخرائط، الفصول، النسيج الهادئ في الأرضية. كل نقطة شيء حقيقي؛ والأخضر يعلّم ما يهمّ الآن.',
       teacherT: 'المعلّم', studentT: 'الطالب', piuT: 'الأنماط في المنتج',
       iconsCapL: 'المجموعة التراثية · فاتح', iconsCapD: 'المجموعة التراثية · داكن',
       ic1: 'الدلّة', ic2: 'جرّة الماء', ic3: 'الأسطرلاب', ic4: 'الفانوس', ic5: 'البئر', ic6: 'المزولة',
@@ -977,34 +1022,11 @@ class Component extends DCLogic {
       return tris;
     })();
 
-    // chemistry cover motif: honeycomb grid with a highlighted molecule cluster
-    const chemHexes = [], chemDots = [];
-    let chemBonds = '';
-    {
-      const R = 64, W = R * 1.732, ctr = {};
-      const hot = { '1,2': 1, '2,2': 1, '2,3': 1, '3,2': 1 };
-      for (let row = 0; row < 5; row++) {
-        for (let col = -1; col < 8; col++) {
-          const cx = 30 + col * W + (row % 2 ? W / 2 : 0);
-          const cy = -10 + row * R * 1.5;
-          const key = row + ',' + col;
-          ctr[key] = [cx, cy];
-          const pts = [[0, -1], [.866, -.5], [.866, .5], [0, 1], [-.866, .5], [-.866, -.5]]
-            .map(p => (cx + p[0] * R).toFixed(1) + ',' + (cy + p[1] * R).toFixed(1)).join(' ');
-          chemHexes.push({ pts, op: hot[key] ? '.45' : '.12', w: hot[key] ? '2.2' : '1.4' });
-        }
-      }
-      const seq = ['2,3', '1,2', '2,2', '3,2'];
-      chemBonds = 'M' + seq.map(k => ctr[k][0].toFixed(1) + ' ' + ctr[k][1].toFixed(1)).join(' L');
-      seq.forEach(k => chemDots.push({ x: ctr[k][0].toFixed(1), y: ctr[k][1].toFixed(1) }));
-    }
-
     return {
       show01: focus === 'All' || focus === 'Facet',
       show02: focus === 'All' || focus === 'Khatam',
       show03: focus === 'All' || focus === 'Pinboard',
       L, dir, isEN, isAR,
-      chemHexes, chemBonds, chemDots,
       mapDots,
       facadeDots,
       muralTris,
