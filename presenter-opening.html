@@ -380,13 +380,10 @@
     text-shadow: 0 0 32px rgba(241,235,221,0.18);
   }
   .cin-label__en {
-    font-family: var(--font-mono);
-    font-size: 14px; font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    color: var(--fg-subtle);
-    /* trim trailing letter-spacing so the centering reads true */
-    padding-left: 0.4em;
+    font-family: var(--font-serif);
+    font-size: 30px; font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--fg);
   }
 
   .cin-stage {
@@ -473,8 +470,8 @@
     text-shadow: 0 0 16px rgba(210,164,122,0.3);
   }
   .sands-label__en {
-    font-family: var(--font-mono); font-size: 11px;
-    letter-spacing: 0.32em; text-transform: uppercase; color: var(--fg-faint);
+    font-family: var(--font-serif); font-size: 30px; font-weight: 500;
+    letter-spacing: -0.015em; color: var(--fg);
   }
   .sands-numeral {
     position: relative;
@@ -2745,16 +2742,10 @@
   };
 
   // Smooth integer tween for the count chips
-  function tweenNumber(el, from, to, duration) {
-    if (!el || from === to) { if (el) el.textContent = to; return; }
-    const start = performance.now();
-    function frame(now) {
-      const t = Math.min(1, (now - start) / duration);
-      const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = Math.round(from + (to - from) * eased);
-      if (t < 1) requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
+  function tweenNumber(el, from, to) {
+    // Solid numbers — overlapping rAF tweens made the chips glitch, so the
+    // count snaps straight to its new value.
+    if (el) el.textContent = to;
   }
 
   function renderTeamup() {
