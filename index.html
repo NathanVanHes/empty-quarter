@@ -724,13 +724,25 @@
         <div class="eq-phone" style="width:340px;background:#0D1016;border-radius:32px;padding:10px;box-shadow:0 20px 40px -24px rgba(38,40,46,.5)">
           <div style="background:#161A21;border-radius:24px;height:700px;overflow:hidden;display:flex;flex-direction:column;font-family:'Hanken Grotesk',sans-serif;padding:24px 18px">
             <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center">
-              <svg viewBox="0 0 120 120" style="width:110px;height:110px">
-                <polygon points="24,24 96,24 96,96 24,96" fill="none" stroke="#64D8AE" stroke-width="1.6" transform="rotate(45 60 60)"></polygon>
-                <polygon points="24,24 96,24 96,96 24,96" fill="none" stroke="#64D8AE" stroke-width="1.6"></polygon>
-                <circle cx="60" cy="60" r="7" fill="#64D8AE"></circle>
-              </svg>
-              <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:78px;line-height:1;letter-spacing:-.03em;color:#F1EBDD;margin-top:30px">8<span style="font-size:30px;color:rgba(241,235,221,.45)">/10</span></div>
-              <div style="font-size:14px;color:rgba(241,235,221,.55);margin-top:14px">Block 6 quiz passed</div>
+              <div style="position:relative;width:288px;height:288px;display:flex;align-items:center;justify-content:center">
+                <svg viewBox="-100 -100 200 200" style="position:absolute;inset:0;width:100%;height:100%">
+                  <g fill="none" stroke="#F1EBDD" stroke-opacity=".11" stroke-width=".45">
+                    <rect x="-52" y="-52" width="104" height="104"></rect>
+                    <polygon points="0,-73.5 73.5,0 0,73.5 -73.5,0"></polygon>
+                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="150s" repeatCount="indefinite"></animateTransform>
+                  </g>
+                  <g fill="none" stroke="#F1EBDD" stroke-opacity=".07" stroke-width=".32">
+                    <rect x="-30" y="-30" width="60" height="60"></rect>
+                    <polygon points="0,-42.4 42.4,0 0,42.4 -42.4,0"></polygon>
+                    <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="210s" repeatCount="indefinite"></animateTransform>
+                  </g>
+                </svg>
+                <div style="width:172px;height:172px;border-radius:50%;background:#64D8AE;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(100,216,174,.18)">
+                  <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:58px;line-height:1;letter-spacing:-.02em;color:#161A21">8<span style="font-size:24px;color:rgba(22,26,33,.55)">/10</span></div>
+                  <div style="font-size:13px;font-weight:600;color:rgba(22,26,33,.7);margin-top:6px">Passed</div>
+                </div>
+              </div>
+              <div style="font-size:14px;color:rgba(241,235,221,.55);margin-top:14px">Block 6 quiz</div>
             </div>
             <div style="background:#64D8AE;border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:15px;color:#161A21">Continue</div>
           </div>
