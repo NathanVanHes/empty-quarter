@@ -23,12 +23,8 @@
   @keyframes mpdHot{0%{opacity:0;fill:#BC5A37;r:2.3}7%{opacity:1;fill:#BC5A37}38%{fill:rgba(188,90,55,.38);r:2.3}52%{fill:rgba(188,90,55,.38)}62%{fill:#6BAE93;r:4.6}70%{r:3.4}90%{fill:#6BAE93;opacity:1;r:3.4}100%{opacity:0;r:2.3}}
   .mpd{animation:mpdBase 6.5s ease-in-out infinite backwards}
   .mpd-hot{animation:mpdHot 6.5s ease-in-out infinite backwards}
-  @keyframes cbdBase{0%{opacity:0;fill:#BC5A37}7%{opacity:1;fill:#BC5A37}38%{fill:rgba(188,90,55,.38)}90%{fill:rgba(188,90,55,.38);opacity:1}100%{opacity:0;fill:rgba(188,90,55,.38)}}
-  @keyframes cbdHot{0%{opacity:0;fill:#BC5A37;r:3.4}7%{opacity:1;fill:#BC5A37}38%{fill:rgba(188,90,55,.38);r:3.4}52%{fill:rgba(188,90,55,.38)}62%{fill:#6BAE93;r:4.6}70%{r:3.8}90%{fill:#6BAE93;opacity:1;r:3.8}100%{opacity:0;r:3.4}}
-  @keyframes cbdUp{0%,100%{r:4.6}50%{r:7.4}}
-  .cbd{animation:cbdBase 6.5s ease-in-out infinite backwards}
-  .cbd-hot{animation:cbdHot 6.5s ease-in-out infinite backwards}
-  .cbd-up{animation:cbdUp 1.4s ease-in-out infinite}
+  @keyframes cbdHot{0%,100%{fill:rgba(188,90,55,.38);r:3.4}25%{fill:#6BAE93;r:4.3}70%{fill:#6BAE93;r:4.3}85%{fill:rgba(188,90,55,.38)}}
+  .cbd-hot{animation:cbdHot 5.5s ease-in-out infinite}
   /* ── responsive: the document is inline-styled, so structure collapses via attribute overrides ── */
   @media (max-width:900px){
     [style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr)!important}
@@ -782,9 +778,7 @@
     <div style="margin-top:24px">
       <div style="position:relative;height:520px;border-radius:12px;overflow:hidden;background:#F1EBDD;border:1px solid rgba(38,40,46,.12);display:flex;align-items:center;justify-content:center">
         <svg viewBox="0 0 720 420" style="height:88%;width:auto;display:block">
-          <text x="360" y="56" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="2" fill="rgba(38,40,46,.4)">FRONT</text>
           <sc-for list="{{ tableDots }}" as="d" hint-placeholder-count="200"><circle class="{{ d.k }}" style="animation-delay:{{ d.dly }}ms" cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.f }}"></circle></sc-for>
-          <text x="535" y="234" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" letter-spacing="2" fill="#6BAE93">UP TO TALK</text>
         </svg>
       </div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Pinboard applied · the classroom, one table up to talk</div>
@@ -900,24 +894,25 @@ class Component extends DCLogic {
       }
     }
 
-    // Classroom birds-eye - four table clusters built from the same dot matrix
-    // as the community map; one cluster lights up, one dot swells to talk
+    // Classroom birds-eye - four uneven table clusters from the same dot matrix
+    // as the community map; the hot cluster lights up as a whole, blooming from its centre
     const tableDots = [];
     const tCenters = [[185,150],[535,150],[185,320],[535,320]];
     const tStep = 15;
-    for (let i = 0; i < 11; i++) tableDots.push({ cx: 285 + i * 15, cy: 30, r: 3, f: 'rgba(38,40,46,.35)', k: '', dly: 0 });
     for (let y = tStep / 2; y < 420; y += tStep) {
       for (let x = tStep / 2; x < 720; x += tStep) {
         for (let t = 0; t < 4; t++) {
-          if (Math.hypot(x - tCenters[t][0], y - tCenters[t][1]) < 58) {
+          const dx = x - tCenters[t][0], dy = y - tCenters[t][1];
+          const d = Math.hypot(dx, dy);
+          const a = Math.atan2(dy, dx);
+          const edge = 56 * (1 + .16 * Math.sin(3 * a + t * 1.9) + .11 * Math.sin(5 * a + t * 3.7));
+          if (d < edge) {
             const hot = t === 1;
-            const up = hot && Math.hypot(x - 487.5, y - 127.5) < 2;
             tableDots.push({
-              cx: x, cy: y,
-              r: up ? 4.6 : 3.4,
-              f: up ? '#6BAE93' : hot ? '#6BAE93' : 'rgba(188,90,55,.38)',
-              k: up ? 'cbd-up' : hot ? 'cbd-hot' : 'cbd',
-              dly: up ? 0 : Math.round(x * 1.6 + y * 1.1 + ((x * 7 + y * 13) % 9) * 30)
+              cx: x, cy: y, r: 3.4,
+              f: 'rgba(188,90,55,.38)',
+              k: hot ? 'cbd-hot' : '',
+              dly: hot ? Math.round(d * 9) : 0
             });
             break;
           }
