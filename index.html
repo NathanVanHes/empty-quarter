@@ -27,12 +27,12 @@
   .cf{position:absolute;left:50%;top:50%;width:12px;height:18px;border-radius:2px;animation:cfPop 2.4s cubic-bezier(.15,.55,.35,1) infinite}
   /* ── responsive: the document is inline-styled, so structure collapses via attribute overrides ── */
   @media (max-width:900px){
-    [style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr)!important}
-    [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important}
-    [style*="grid-template-columns:repeat(3"]{grid-template-columns:repeat(2,1fr)!important}
+    [style*="grid-template-columns:repeat(5"],[style*="grid-template-columns: repeat(5"]{grid-template-columns:repeat(2,1fr)!important}
+    [style*="grid-template-columns:repeat(4"],[style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,1fr)!important}
+    [style*="grid-template-columns:repeat(3"],[style*="grid-template-columns: repeat(3"]{grid-template-columns:repeat(2,1fr)!important}
   }
   @media (max-width:720px){
-    [style*="max-width:1180px"]{padding:32px 16px 80px!important}
+    [style*="max-width:1180px"],[style*="max-width: 1180px"]{padding:32px 16px 80px!important}
     header[style]{flex-wrap:wrap!important;gap:10px!important;padding:10px 0!important}
     header[style] img{height:48px!important}
     footer[style] img{height:48px!important}
@@ -40,21 +40,21 @@
     header[style] nav::-webkit-scrollbar{display:none}
     header[style] nav a{flex:none;padding:8px 14px;border:1px solid rgba(38,40,46,.18);border-radius:999px;font-size:10px!important}
     [id]{scroll-margin-top:96px}
-    [style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important;height:480px!important}
-    [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important}
-    [style*="grid-template-columns:repeat(2"]{grid-template-columns:1fr!important}
-    [style*="grid-template-columns:repeat(4,minmax"]{grid-template-columns:1fr!important}
-    [style*="grid-template-columns:1.6fr 1fr"]{grid-template-columns:1fr!important}
-    div[style*="height:664px"][style*="justify-content:center"]{height:440px!important}
-    [style*="font-size:52px"]{font-size:30px!important}
-    div[style*="width:240px;height:240px"],img[style*="width:240px"]{width:170px!important;height:170px!important}
-    svg[style*="height:92%"]{height:auto!important;width:92%!important}
+    [style*="grid-template-columns:1fr 1fr 1fr"],[style*="grid-template-columns: 1fr 1fr 1fr"]{grid-template-columns:1fr!important;height:480px!important}
+    [style*="grid-template-columns:repeat(3"],[style*="grid-template-columns: repeat(3"]{grid-template-columns:1fr!important}
+    [style*="grid-template-columns:repeat(2"],[style*="grid-template-columns: repeat(2"]{grid-template-columns:1fr!important}
+    [style*="grid-template-columns:repeat(4"],[style*="grid-template-columns: repeat(4"]{grid-template-columns:1fr!important}
+    [style*="grid-template-columns:1.6fr 1fr"],[style*="grid-template-columns: 1.6fr 1fr"]{grid-template-columns:1fr!important}
+    div[style*="height:664px"][style*="justify-content:center"],div[style*="height: 664px"][style*="justify-content: center"]{height:440px!important}
+    [style*="font-size:52px"],[style*="font-size: 52px"]{font-size:30px!important}
+    div[style*="width:240px;height:240px"],div[style*="width: 240px"][style*="height: 240px"],img[style*="width:240px"],img[style*="width: 240px"]{width:170px!important;height:170px!important}
+    svg[style*="height:92%"],svg[style*="height: 92%"]{height:auto!important;width:92%!important}
   }
   @media (max-width:560px){
-    [style*="grid-template-columns:repeat(3"],
-    [style*="grid-template-columns:repeat(2"],
-    [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
-    [style*="display:grid"]{justify-items:stretch}
+    [style*="grid-template-columns:repeat(3"],[style*="grid-template-columns: repeat(3"],
+    [style*="grid-template-columns:repeat(2"],[style*="grid-template-columns: repeat(2"],
+    [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important}
+    [style*="display:grid"],[style*="display: grid"]{justify-items:stretch}
   }
 </style>
 </helmet>
