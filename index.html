@@ -24,7 +24,7 @@
   .mpd{animation:mpdBase 6.5s ease-in-out infinite backwards}
   .mpd-hot{animation:mpdHot 6.5s ease-in-out infinite backwards}
   @keyframes cfPop{0%{transform:translate(-50%,-50%) translate(0,0) rotate(0deg);opacity:0}6%{opacity:1}72%{opacity:1}100%{transform:translate(-50%,-50%) translate(var(--dx),var(--dy)) rotate(var(--rot));opacity:0}}
-  .cf{position:absolute;left:50%;top:50%;width:9px;height:14px;border-radius:2px;animation:cfPop 2.8s cubic-bezier(.15,.55,.35,1) infinite}
+  .cf{position:absolute;left:50%;top:50%;width:12px;height:18px;border-radius:2px;animation:cfPop 2.4s cubic-bezier(.15,.55,.35,1) infinite}
   /* ── responsive: the document is inline-styled, so structure collapses via attribute overrides ── */
   @media (max-width:900px){
     [style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr)!important}
@@ -654,24 +654,29 @@
         <svg width="100%" height="100%" style="position:absolute;inset:0;display:block"><defs><pattern id="oct-celeb" width="96" height="96" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(241,235,221,.1)" stroke-width="1.1"><rect x="14" y="14" width="68" height="68"></rect><polygon points="48,0 96,48 48,96 0,48"></polygon></g></pattern></defs><rect width="100%" height="100%" fill="url(#oct-celeb)"></rect></svg>
         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(38,40,46,.85) 0%,rgba(38,40,46,0) 68%)"></div>
         <div style="position:relative;display:flex;flex-direction:column;align-items:center;font-family:'Hanken Grotesk',sans-serif">
-          <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:40px;letter-spacing:-.02em;color:#F1EBDD;margin-bottom:36px">Let's celebrate <span style="font-weight:600">Salim.</span></div>
-          <div style="position:relative;width:160px;height:160px">
-            <span class="cf" style="background:#64D8AE;--dx:-120px;--dy:-150px;--rot:260deg;animation-delay:0s"></span>
-            <span class="cf" style="background:#E8663A;--dx:96px;--dy:-176px;--rot:-320deg;animation-delay:.12s;width:7px;height:11px"></span>
-            <span class="cf" style="background:#7C99B4;--dx:-176px;--dy:-64px;--rot:200deg;animation-delay:.05s"></span>
-            <span class="cf" style="background:#9D8CFF;--dx:168px;--dy:-96px;--rot:-240deg;animation-delay:.2s;width:7px;height:11px"></span>
-            <span class="cf" style="background:#F1EBDD;--dx:-64px;--dy:-196px;--rot:300deg;animation-delay:.26s;width:6px;height:10px"></span>
-            <span class="cf" style="background:#64D8AE;--dx:190px;--dy:-30px;--rot:-200deg;animation-delay:.33s;width:6px;height:10px"></span>
-            <span class="cf" style="background:#E8663A;--dx:-150px;--dy:96px;--rot:220deg;animation-delay:.16s"></span>
-            <span class="cf" style="background:#9D8CFF;--dx:140px;--dy:120px;--rot:-280deg;animation-delay:.4s"></span>
-            <span class="cf" style="background:#7C99B4;--dx:36px;--dy:-200px;--rot:340deg;animation-delay:.46s;width:6px;height:9px"></span>
-            <span class="cf" style="background:#F1EBDD;--dx:200px;--dy:60px;--rot:-220deg;animation-delay:.52s;width:6px;height:9px"></span>
-            <span class="cf" style="background:#64D8AE;--dx:-200px;--dy:20px;--rot:240deg;animation-delay:.6s;width:7px;height:11px"></span>
-            <span class="cf" style="background:#E8663A;--dx:60px;--dy:170px;--rot:-300deg;animation-delay:.68s;width:6px;height:9px"></span>
-            <div style="width:160px;height:160px;border-radius:50%;background:#BC5A37;display:flex;align-items:center;justify-content:center;font-family:'Hanken Grotesk';font-weight:600;font-size:56px;color:#F1EBDD;box-shadow:0 0 80px rgba(188,90,55,.35)">S</div>
+          <div style="font-family:'Hanken Grotesk';font-weight:300;font-size:52px;letter-spacing:-.02em;color:#F1EBDD;margin-bottom:40px">Let's celebrate <span style="font-weight:600">Salim.</span></div>
+          <div style="position:relative;width:240px;height:240px">
+            <span class="cf" style="background:#64D8AE;--dx:-190px;--dy:-230px;--rot:260deg;animation-delay:0s"></span>
+            <span class="cf" style="background:#E8663A;--dx:150px;--dy:-260px;--rot:-320deg;animation-delay:.12s;width:9px;height:14px"></span>
+            <span class="cf" style="background:#7C99B4;--dx:-260px;--dy:-100px;--rot:200deg;animation-delay:.05s"></span>
+            <span class="cf" style="background:#9D8CFF;--dx:250px;--dy:-150px;--rot:-240deg;animation-delay:.2s;width:9px;height:14px"></span>
+            <span class="cf" style="background:#F1EBDD;--dx:-100px;--dy:-290px;--rot:300deg;animation-delay:.26s;width:8px;height:13px"></span>
+            <span class="cf" style="background:#64D8AE;--dx:290px;--dy:-50px;--rot:-200deg;animation-delay:.33s;width:8px;height:13px"></span>
+            <span class="cf" style="background:#E8663A;--dx:-230px;--dy:140px;--rot:220deg;animation-delay:.16s"></span>
+            <span class="cf" style="background:#9D8CFF;--dx:210px;--dy:180px;--rot:-280deg;animation-delay:.4s"></span>
+            <span class="cf" style="background:#7C99B4;--dx:50px;--dy:-300px;--rot:340deg;animation-delay:.46s;width:8px;height:12px"></span>
+            <span class="cf" style="background:#F1EBDD;--dx:300px;--dy:90px;--rot:-220deg;animation-delay:.52s;width:8px;height:12px"></span>
+            <span class="cf" style="background:#64D8AE;--dx:-300px;--dy:30px;--rot:240deg;animation-delay:.6s;width:9px;height:14px"></span>
+            <span class="cf" style="background:#E8663A;--dx:90px;--dy:260px;--rot:-300deg;animation-delay:.68s;width:8px;height:12px"></span>
+            <span class="cf" style="background:#9D8CFF;--dx:-140px;--dy:250px;--rot:280deg;animation-delay:.75s;width:9px;height:14px"></span>
+            <span class="cf" style="background:#64D8AE;--dx:20px;--dy:-330px;--rot:-260deg;animation-delay:.82s"></span>
+            <span class="cf" style="background:#E8663A;--dx:-310px;--dy:-40px;--rot:320deg;animation-delay:.9s;width:8px;height:13px"></span>
+            <span class="cf" style="background:#F1EBDD;--dx:270px;--dy:-210px;--rot:-340deg;animation-delay:.98s;width:8px;height:12px"></span>
+            <span class="cf" style="background:#7C99B4;--dx:-250px;--dy:-190px;--rot:230deg;animation-delay:1.06s;width:9px;height:14px"></span>
+            <span class="cf" style="background:#9D8CFF;--dx:170px;--dy:240px;--rot:-250deg;animation-delay:1.14s;width:8px;height:12px"></span>
+            <img src="assets/classroom-b.jpg" style="width:240px;height:240px;border-radius:50%;object-fit:cover;position:relative;border:4px solid #64D8AE;box-shadow:0 0 100px rgba(100,216,174,.3)">
           </div>
-          <div style="font-size:19px;font-weight:500;color:#F1EBDD;margin-top:26px">Salim Al-Harbi</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#64D8AE;margin-top:8px">Block 6 quiz · 10/10</div>
+          <div style="font-size:22px;font-weight:500;color:#F1EBDD;margin-top:28px">Salim Al-Harbi</div>
         </div>
       </div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,40,46,.6);margin-top:10px">Stage view · celebration</div>
